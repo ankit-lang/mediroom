@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-beige: #F5F0E5;
+  --color-olive: #7D8C6D;
+  --color-white: #FFFFFF;
+  --color-gold: #D4B98C;
+  --color-text-dark: #333333;
+  --color-text-light: #666666;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-beige text-text-dark;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+
+  .section-padding {
+    @apply py-16 px-4 md:px-8 lg:px-16;
+  }
+  
+  .transition-custom {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .btn-primary {
+    @apply bg-olive text-white py-3 px-6 rounded-md hover:bg-opacity-90 transition-custom;
+  }
+  
+  .btn-secondary {
+    @apply bg-gold text-white py-3 px-6 rounded-md hover:bg-opacity-90 transition-custom;
+  }
+
+  .input-field {
+    @apply w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-olive;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-olive;
+  }
+  
+  .section-subtitle {
+    @apply text-xl mb-4 text-text-light;
+  }
+}
+
+.rtl {
+  direction: rtl;
+}
