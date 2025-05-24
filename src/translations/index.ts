@@ -286,33 +286,36 @@ const translations: Translations = {
         name: "Standard Patient Room",
         description: "A comfortable space designed for patients, with medical-friendly features and all essential amenities.",
         features: [
-          "Adjustable beds for patient comfort", 
-          "En-suite bathroom with accessibility features", 
-          "High-speed Wi-Fi", 
-          "Air conditioning", 
-          "Mini refrigerator for medications"
+          "Spacious King - size Beds",
+          " Air Conditioning & Wi - Fi",
+          " Arabic Food on Request",
+          " Elevator Access",
+          " Daily Sanitization",
+          " 24 / 7 Helpdesk"
         ],
       },
       room2: {
         name: "Family Suite",
         description: "Spacious accommodation for patients traveling with family members, offering comfort for everyone.",
         features: [
-          "Separate bedroom and living area", 
-          "Kitchenette with basic cooking facilities", 
-          "Dining area", 
-          "Prayer space", 
-          "Extra storage for extended stays"
+          "Spacious King - size Beds",
+          " Air Conditioning & Wi - Fi",
+          " Arabic Food on Request",
+          " Elevator Access",
+          " Daily Sanitization",
+          " 24 / 7 Helpdesk"
         ],
       },
       room3: {
         name: "Premium Recovery Suite",
         description: "Our most comfortable option, perfect for post-treatment recovery in a peaceful environment.",
         features: [
-          "Large, luxurious space with premium furnishings", 
-          "Medical-grade air purification system", 
-          "Hospital-style adjustable bed", 
-          "Separate sitting area for visitors", 
-          "24/7 staff assistance"
+          "Spacious King - size Beds",
+          " Air Conditioning & Wi - Fi",
+          " Arabic Food on Request",
+          " Elevator Access",
+          " Daily Sanitization",
+          " 24 / 7 Helpdesk"
         ],
       },
     },
@@ -322,15 +325,15 @@ const translations: Translations = {
       specialtiesTitle: "Key Specialties",
       nearbyFacilitiesTitle: "Other Nearby Medical Facilities",
       max: {
-        distance: "5 minutes walking distance",
+        distance: " walking distance to Max Hospital",
         specialties: "Oncology, Cardiology, Neurology, Orthopedics, Transplants",
       },
       fortis: {
-        distance: "10 minutes by car",
+        distance: "Close distance ",
         specialties: "Cardiac Sciences, Orthopedics, Neurosciences, Renal Sciences",
       },
       apollo: {
-        distance: "15 minutes by car",
+        distance: "5minutes by car",
         specialties: "Robotic Surgery, Transplants, Cancer Treatment, Bariatric Surgery",
       },
       facilities: {
@@ -339,8 +342,8 @@ const translations: Translations = {
           description: "Multiple pharmacies within walking distance that operate around the clock for emergency medication needs.",
         },
         lab: {
-          name: "Diagnostic Labs",
-          description: "Several diagnostic centers for blood work, imaging, and other medical tests within 500 meters.",
+          name: "Nearest Metro",
+          description: "200m from Metro Station",
         },
       },
     },
@@ -348,14 +351,14 @@ const translations: Translations = {
       title: "Guest Testimonials",
       subtitle: "What our guests say about their stay with us",
       testimonial1: {
-        name: "Ahmed Al-Farsi",
+        name: "Ali M., Saudi Arabia",
         country: "Oman",
-        text: "The team at MediStay made a difficult time much easier. The proximity to Max Hospital was perfect for my father's daily treatments, and the staff understood our needs perfectly.",
+        text: "We came from Riyadh for my son’s treatment. Moydom felt like family. Everything from hospital coordination to meals was taken care of. Shukran!",
       },
       testimonial2: {
-        name: "Fatima Al-Nasser",
+        name: "Fatima A., Kuwait",
         country: "Saudi Arabia",
-        text: "As a woman traveling for medical treatment, I was concerned about comfort and safety. MediStay exceeded my expectations with their attention to detail and respect for privacy.",
+        text: "The staff helped arrange hospital appointments and even Arabic food. A true gem in Delhi for medical guests.",
       },
       testimonial3: {
         name: "Mohammed Ibrahim",
@@ -365,33 +368,34 @@ const translations: Translations = {
     },
     facilities: {
       title: "Our Facilities & Services",
-      subtitle: "Everything you need for a comfortable medical stay",
+      subtitle: "We Think Ahead, So You Don’t Have To",
       specialNoticeTitle: "Special Assistance for Medical Travelers",
       specialNoticeText1: "We offer dedicated services for those undergoing medical treatment, including special meal preparation according to dietary restrictions, medication reminders, and assistance with hospital appointments.",
       specialNoticeText2: "Our staff can coordinate with your medical team and help with translation during doctor consultations if needed.",
       feature1: {
-        name: "Specialized Meal Service",
-        description: "Custom meals according to dietary restrictions and Middle Eastern cuisine on request",
+        name: "Arabic Home-Cooked Meals (on demand)",
+        description: "",
       },
       feature2: {
-        name: "Free High-Speed Wi-Fi",
-        description: "Stay connected with family and doctors throughout your stay",
+        name: "Free Wifi",
+
+        description: "",
       },
       feature3: {
-        name: "Wheelchair Accessibility",
-        description: "Fully accessible accommodations with ramps and elevator access",
+        name: "Wheelchair Friendly",
+        description: "",
       },
       feature4: {
-        name: "Airport Pickup",
-        description: "Convenient transportation from the airport directly to our accommodation",
+        name: "Airport Pick-Up & Drop (extra)",
+        description: "",
       },
       feature5: {
-        name: "24/7 Reception",
-        description: "Round-the-clock assistance for any needs or emergencies",
+        name: " Concierge Support – Hospital Appointments, FRRO, Forex",
+        description: "",
       },
       feature6: {
-        name: "Medical Coordination",
-        description: "Assistance with hospital appointments and medical documentation",
+        name: " Flexible Check-ins for Medical Guests",
+        description: "",
       },
     },
     earlyBooking: {
@@ -552,10 +556,10 @@ const translations: Translations = {
         name: "غرفة المريض القياسية",
         description: "مساحة مريحة مصممة للمرضى، مع ميزات صديقة للمرضى وجميع وسائل الراحة الأساسية.",
         features: [
-          "أسرّة قابلة للتعديل لراحة المريض", 
-          "حمام داخلي مع ميزات سهولة الوصول", 
-          "واي فاي عالي السرعة", 
-          "تكييف هواء", 
+          "أسرّة قابلة للتعديل لراحة المريض",
+          "حمام داخلي مع ميزات سهولة الوصول",
+          "واي فاي عالي السرعة",
+          "تكييف هواء",
           "ثلاجة صغيرة للأدوية"
         ],
       },
@@ -563,10 +567,10 @@ const translations: Translations = {
         name: "جناح عائلي",
         description: "إقامة واسعة للمرضى المسافرين مع أفراد العائلة، توفر الراحة للجميع.",
         features: [
-          "غرفة نوم منفصلة ومنطقة معيشة", 
-          "مطبخ صغير مع مرافق طهي أساسية", 
-          "منطقة لتناول الطعام", 
-          "مكان للصلاة", 
+          "غرفة نوم منفصلة ومنطقة معيشة",
+          "مطبخ صغير مع مرافق طهي أساسية",
+          "منطقة لتناول الطعام",
+          "مكان للصلاة",
           "تخزين إضافي للإقامات الطويلة"
         ],
       },
@@ -574,10 +578,10 @@ const translations: Translations = {
         name: "جناح التعافي الفاخر",
         description: "خيارنا الأكثر راحة، مثالي للتعافي بعد العلاج في بيئة هادئة.",
         features: [
-          "مساحة كبيرة وفاخرة مع أثاث متميز", 
-          "نظام تنقية هواء بجودة طبية", 
-          "سرير قابل للتعديل على طراز المستشفى", 
-          "منطقة جلوس منفصلة للزوار", 
+          "مساحة كبيرة وفاخرة مع أثاث متميز",
+          "نظام تنقية هواء بجودة طبية",
+          "سرير قابل للتعديل على طراز المستشفى",
+          "منطقة جلوس منفصلة للزوار",
           "مساعدة الموظفين على مدار الساعة"
         ],
       },

@@ -9,28 +9,28 @@ interface RoomGalleryProps {
 const RoomGallery: React.FC<RoomGalleryProps> = ({ language }) => {
   const t = translations[language];
   const dir = language === 'ar' ? 'rtl' : 'ltr';
-  
+
   // Room gallery data
   const rooms = [
     {
       id: 1,
       name: t.rooms.room1.name,
       description: t.rooms.room1.description,
-      image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+      image: "../../assests/banner1.jpg",
       features: t.rooms.room1.features,
     },
     {
       id: 2,
       name: t.rooms.room2.name,
       description: t.rooms.room2.description,
-      image: "https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+      image: "../../assests/roombanner2.jpg",
       features: t.rooms.room2.features,
     },
     {
       id: 3,
       name: t.rooms.room3.name,
       description: t.rooms.room3.description,
-      image: "https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+      image: "../../assests/roombanner3.jpg",
       features: t.rooms.room3.features,
     },
   ];
@@ -48,8 +48,11 @@ const RoomGallery: React.FC<RoomGalleryProps> = ({ language }) => {
   return (
     <section id="rooms" className={`section-padding bg-beige ${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto">
-        <h2 className="section-title text-center">{t.rooms.title}</h2>
-        <p className="section-subtitle text-center mb-12">{t.rooms.subtitle}</p>
+        <h2 className="section-title text-center">Our Rooms</h2>
+        <p className="section-subtitle text-center ">Comfort Meets Convenience
+
+        </p>
+        <p className='section-subtitle text-center mb-12 text-sm' > From elegant villas to modern studio apartments, our stays are thoughtfully designed with patients in mind.</p>
 
         <div className="relative">
           <div className="overflow-hidden rounded-lg">
@@ -57,9 +60,8 @@ const RoomGallery: React.FC<RoomGalleryProps> = ({ language }) => {
               {rooms.map((room, index) => (
                 <div
                   key={room.id}
-                  className={`absolute inset-0 transition-opacity duration-500 ${
-                    index === activeRoom ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                  }`}
+                  className={`absolute inset-0 transition-opacity duration-500 ${index === activeRoom ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                    }`}
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 h-full">
                     <div className="h-full">
@@ -69,7 +71,7 @@ const RoomGallery: React.FC<RoomGalleryProps> = ({ language }) => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="bg-white p-8 flex flex-col justify-center">
+                    <div className="bg-white p-8 flex flex-col justify-center mb-12">
                       <h3 className="text-3xl font-bold mb-4 text-olive">{room.name}</h3>
                       <p className="mb-6 text-text-light">{room.description}</p>
                       <div className="space-y-4">
@@ -80,18 +82,14 @@ const RoomGallery: React.FC<RoomGalleryProps> = ({ language }) => {
                           </div>
                         ))}
                       </div>
-                      <a
-                        href="#booking"
-                        className="btn-primary self-start mt-8"
-                      >
-                        {t.rooms.bookButton}
-                      </a>
+
                     </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+
 
           {/* Navigation buttons */}
           <button
@@ -115,16 +113,22 @@ const RoomGallery: React.FC<RoomGalleryProps> = ({ language }) => {
               <button
                 key={index}
                 onClick={() => setActiveRoom(index)}
-                className={`w-3 h-3 rounded-full transition-all ${
-                  index === activeRoom ? 'bg-olive w-6' : 'bg-gold opacity-50'
-                }`}
+                className={`w-3 h-3 rounded-full transition-all ${index === activeRoom ? 'bg-olive w-6' : 'bg-gold opacity-50'
+                  }`}
                 aria-label={`Go to room ${index + 1}`}
               ></button>
             ))}
           </div>
+          <a
+            href="#booking"
+            className="btn-primary inline-block  relative  text-center align-center mt-8"
+            style={{ left: "50%" }}
+          >
+            BOOk
+          </a>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

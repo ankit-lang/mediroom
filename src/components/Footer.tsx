@@ -9,15 +9,15 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ language }) => {
   const t = translations[language];
   const dir = language === 'ar' ? 'rtl' : 'ltr';
-  
+
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className={`bg-olive text-white ${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto px-4 md:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* About */}
-          <div>
+          {/* <div>
             <h3 className="text-xl font-semibold mb-4">{t.footer.about.title}</h3>
             <p className="mb-4">{t.footer.about.description}</p>
             <div className="flex space-x-4">
@@ -31,7 +31,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
                 <MessageCircle size={20} />
               </a>
             </div>
-          </div>
+          </div> */}
 
           {/* Quick Links */}
           <div>
@@ -64,7 +64,14 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
               <li className="flex items-center">
                 <Mail size={20} className="mr-2" />
                 <a href="mailto:info@medistay.com" className="hover:text-gold transition-custom">
-                  {t.footer.contact.email}
+                  info@moydom.in
+
+                </a>
+              </li>
+              <li className="flex items-center">
+
+                <a href="mailto:info@medistay.com" className="hover:text-gold transition-custom">
+                  {/* info@moydom.in */}
                 </a>
               </li>
             </ul>
@@ -72,9 +79,12 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">{t.footer.newsletter.title}</h3>
-            <p className="mb-4">{t.footer.newsletter.description}</p>
-            <form className="flex">
+            {/* <h3 className="text-xl font-semibold mb-4">{t.footer.newsletter.title}</h3> */}
+            {/* <p className="mb-4">{t.footer.newsletter.description}</p> */}
+            <div className="mb-2"><a href="">Instagram</a></div>
+            <div className="mb-2"><a href="">Whatsapp</a></div>
+            <div className="mb-2"><a href="">FaceBook</a></div>
+            {/* <form className="flex">
               <input
                 type="email"
                 placeholder={t.footer.newsletter.placeholder}
@@ -86,25 +96,25 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
               >
                 {t.footer.newsletter.button}
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-white border-opacity-20 text-center">
           <p>
-            © {currentYear} {t.footer.copyright}
+            © {currentYear} Moydom
           </p>
-          <div className="mt-4 flex justify-center space-x-6">
+          {/* <div className="mt-4 flex justify-center space-x-6">
             {t.footer.bottomLinks.map((link, index) => (
-              <a 
-                key={index} 
-                href={link.url} 
+              <a
+                key={index}
+                href={link.url}
                 className="text-white hover:text-gold transition-custom"
               >
                 {link.text}
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

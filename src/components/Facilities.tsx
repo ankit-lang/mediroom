@@ -57,8 +57,8 @@ const Facilities: React.FC<FacilitiesProps> = ({ language }) => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {facilitiesList.map((facility) => (
-            <div 
-              key={facility.id} 
+            <div
+              key={facility.id}
               className="bg-beige rounded-lg p-6 text-center hover:shadow-lg transition-custom group"
             >
               <div className="flex items-center justify-center w-20 h-20 bg-white rounded-full mx-auto mb-4 group-hover:bg-olive transition-custom">
@@ -72,7 +72,7 @@ const Facilities: React.FC<FacilitiesProps> = ({ language }) => {
           ))}
         </div>
 
-        <div className="mt-16 bg-olive text-white p-8 rounded-lg">
+        {/* <div className="mt-16 bg-olive text-white p-8 rounded-lg">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-semibold mb-4">{t.facilities.specialNoticeTitle}</h3>
@@ -87,7 +87,7 @@ const Facilities: React.FC<FacilitiesProps> = ({ language }) => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

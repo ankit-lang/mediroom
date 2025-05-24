@@ -28,7 +28,7 @@ function App() {
       <NearbyHospitals language={language} />
       <Testimonials language={language} />
       <Facilities language={language} />
-      <EarlyBookingDiscount language={language} />
+      {/* <EarlyBookingDiscount language={language} /> */}
       <BookingForm language={language} />
       <MapLocation language={language} />
       <Footer language={language} />
