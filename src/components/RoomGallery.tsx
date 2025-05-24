@@ -46,7 +46,7 @@ const RoomGallery: React.FC<RoomGalleryProps> = ({ language }) => {
   };
 
   return (
-    <section id="rooms" className={`section-padding bg-beige ${dir === 'rtl' ? 'rtl' : ''}`}>
+    <section id="rooms" className={`section-padding   mb-[4rem] bg-beige ${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto">
         <h2 className="section-title text-center">Our Rooms</h2>
         <p className="section-subtitle text-center ">Comfort Meets Convenience
@@ -56,7 +56,7 @@ const RoomGallery: React.FC<RoomGalleryProps> = ({ language }) => {
 
         <div className="relative">
           <div className=" rounded-lg">
-            <div className="relative h-[100vh] md:h-[100vh]">
+            <div className="relative  h-[100vh] md:h-[100vh]">
               {rooms.map((room, index) => (
                 <div
                   key={room.id}
@@ -121,7 +121,7 @@ const RoomGallery: React.FC<RoomGalleryProps> = ({ language }) => {
           </div>
           <a
             href="#booking"
-            className="btn-primary inline-block  md:inline-block   relative  text-center align-center mt-8 left-[42%] md:left-[48%]"
+            className="btn-primary hidden  md:inline-block   relative  text-center align-center mt-8 left-[37%] md:left-[48%]"
 
           >
             BOOk
