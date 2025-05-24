@@ -15,7 +15,7 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
       {/* Background image with overlay */}
       <div
         className="absolute inset-0 bg-hero-pattern bg-cover bg-center"
-        style={{ backgroundImage: "url('/assests/39.jpg')" }}
+        style={{ backgroundImage: "url('/assests/hero.jpg')" }}
       >
         <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>

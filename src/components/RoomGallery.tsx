@@ -121,8 +121,8 @@ const RoomGallery: React.FC<RoomGalleryProps> = ({ language }) => {
           </div>
           <a
             href="#booking"
-            className="btn-primary inline-block  relative  text-center align-center mt-8"
-            style={{ left: "50%" }}
+            className="btn-primary inline-block  relative  text-center align-center mt-8 left-[42%] md:left-[48%]"
+
           >
             BOOk
           </a>
