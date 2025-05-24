@@ -55,8 +55,8 @@ const RoomGallery: React.FC<RoomGalleryProps> = ({ language }) => {
         <p className='section-subtitle text-center mb-12 text-sm' > From elegant villas to modern studio apartments, our stays are thoughtfully designed with patients in mind.</p>
 
         <div className="relative">
-          <div className="overflow-hidden rounded-lg">
-            <div className="relative h-[70vh] md:h-[80vh]">
+          <div className=" rounded-lg">
+            <div className="relative h-[100vh] md:h-[100vh]">
               {rooms.map((room, index) => (
                 <div
                   key={room.id}
@@ -94,17 +94,17 @@ const RoomGallery: React.FC<RoomGalleryProps> = ({ language }) => {
           {/* Navigation buttons */}
           <button
             onClick={prevRoom}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-beige transition-custom"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-0 md:p-2 rounded-full shadow-md hover:bg-beige transition-custom"
             aria-label="Previous room"
           >
-            <ChevronLeft size={24} className="text-olive" />
+            <ChevronLeft size={20} className="text-olive" />
           </button>
           <button
             onClick={nextRoom}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-beige transition-custom"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-0 md:p-2 rounded-full shadow-md hover:bg-beige transition-custom"
             aria-label="Next room"
           >
-            <ChevronRight size={24} className="text-olive" />
+            <ChevronRight size={20} className="text-olive" />
           </button>
 
           {/* Room indicators */}
@@ -121,7 +121,7 @@ const RoomGallery: React.FC<RoomGalleryProps> = ({ language }) => {
           </div>
           <a
             href="#booking"
-            className="btn-primary inline-block  relative  text-center align-center mt-8 left-[42%] md:left-[48%]"
+            className="btn-primary inline-block  md:inline-block   relative  text-center align-center mt-8 left-[42%] md:left-[48%]"
 
           >
             BOOk
