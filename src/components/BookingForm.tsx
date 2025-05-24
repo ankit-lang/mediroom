@@ -31,7 +31,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
     // Here you would typically send the data to a server
     console.log('Form submitted:', formData);
     setIsSubmitted(true);
-    
+
     // Reset form after successful submission
     setTimeout(() => {
       setIsSubmitted(false);
@@ -80,7 +80,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                       className="input-field"
                     />
                   </div>
-                  
+
                   <div className="mb-4">
                     <label htmlFor="country" className="block text-text-dark mb-2">
                       {t.booking.countryLabel}
@@ -95,7 +95,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                       className="input-field"
                     />
                   </div>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                     <div>
                       <label htmlFor="guests" className="block text-text-dark mb-2">
@@ -127,7 +127,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="mb-4">
                     <label htmlFor="whatsapp" className="block text-text-dark mb-2">
                       {t.booking.whatsappLabel}
@@ -142,7 +142,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                       className="input-field"
                     />
                   </div>
-                  
+
                   <div className="mb-4">
                     <label htmlFor="purpose" className="block text-text-dark mb-2">
                       {t.booking.purposeLabel}
@@ -161,7 +161,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                       <option value="other">{t.booking.purposeOptions.other}</option>
                     </select>
                   </div>
-                  
+
                   <div className="mb-4">
                     <label htmlFor="message" className="block text-text-dark mb-2">
                       {t.booking.messageLabel}
@@ -175,15 +175,15 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                       className="input-field"
                     ></textarea>
                   </div>
-                  
+
                   <button type="submit" className="btn-primary w-full">
                     {t.booking.submitButton}
                   </button>
                 </form>
               )}
             </div>
-            
-            <div 
+
+            <div
               className="bg-cover bg-center"
               style={{ backgroundImage: "url('https://images.pexels.com/photos/4046187/pexels-photo-4046187.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')" }}
             >
@@ -202,7 +202,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                   </div>
                   <div>
                     <p className="font-semibold">{t.booking.contactInfo.email.label}</p>
-                    <p>{t.booking.contactInfo.email.value}</p>
+                    <p>info@moydom.in</p>
                   </div>
                   <div>
                     <p className="font-semibold">{t.booking.contactInfo.hours.label}</p>
