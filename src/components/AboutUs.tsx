@@ -37,8 +37,8 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
 
           <div className="rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105">
             <img
-              src="https://images.pexels.com/photos/1458457/pexels-photo-1458457.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
-              alt="Comfortable accommodation for medical travelers"
+              src="/assests/about.jpg"
+              alt="Comfortable accommodation "
               className="w-full h-auto"
             />
           </div>
