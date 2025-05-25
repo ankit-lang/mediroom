@@ -55,7 +55,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ language }) => {
 
         <div className="relative max-w-4xl mx-auto">
           <div className="overflow-hidden">
-            <div className="relative min-h-[300px]">
+            <div className="relative min-h-[450px]">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={testimonial.id}
