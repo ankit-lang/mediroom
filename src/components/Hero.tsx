@@ -58,7 +58,7 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
         {/* Content */}
         <div className="relative h-full flex items-center justify-center container mx-auto px-4 md:px-8">
           <div className={`text-center max-w-3xl ${dir === 'rtl' ? 'rtl' : ''}`}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-opacity-100 font-extrabold shadow-black font-serif bg-transparent   text-white mb-6 animate-fadeIn">
+            <h1 className="text-4xl md:text-5xl [text-shadow:6px_1px_2px_rgba(0,0,0,1)]  lg:text-6xl text-opacity-100 font-extrabold shadow-black font-serif bg-transparent   text-white mb-6 animate-fadeIn">
               Welcome to Moydom Bed & Breakfast
 
             </h1>
