@@ -7,40 +7,61 @@
 
 :root {
   --color-beige: #F5F0E5;
-  --color-olive: #7D8C6D;
+  --color-olive: #0753c5;
   --color-white: #FFFFFF;
   --color-gold: #D4B98C;
-  --color-text-dark: #333333;
+  --color-text-dark: #111010;
   --color-text-light: #666666;
 }
+
+
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-family: 'Amiri';
+
+    /* font-style: italic; */
+    /* font-weight: 700; */
   }
-  
+
   body {
     @apply bg-beige text-text-dark;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-semibold;
+    color: #193053;
+    font-style: italic;
+
+  }
+
+  h2,
+  h3 {
+    color: #073882 !important;
   }
 
   .section-padding {
     @apply py-16 px-4 md:px-8 lg:px-16;
   }
-  
+
   .transition-custom {
     @apply transition-all duration-300 ease-in-out;
   }
 
   .btn-primary {
     @apply bg-olive text-white py-3 px-6 rounded-md hover:bg-opacity-90 transition-custom;
+    background: #0753c5;
   }
-  
+
   .btn-secondary {
     @apply bg-gold text-white py-3 px-6 rounded-md hover:bg-opacity-90 transition-custom;
+    background-color: #0753c5;
   }
 
   .input-field {
@@ -50,7 +71,7 @@
   .section-title {
     @apply text-3xl md:text-4xl font-bold mb-8 text-olive;
   }
-  
+
   .section-subtitle {
     @apply text-xl mb-4 text-text-light;
   }
@@ -58,4 +79,24 @@
 
 .rtl {
   direction: rtl;
+}
+
+.bg-olive {
+  background-color: #193053 !important;
+}
+
+.text-olive {
+  color: rgb(29 2 9);
+}
+
+.section-subtitle {
+  color: black;
+}
+
+.text-text-dark {
+  color: rgb(0, 0, 0);
+}
+
+.text-olive {
+  color: #193053 !important;
 }

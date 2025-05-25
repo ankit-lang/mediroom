@@ -37,13 +37,15 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+      className={`fixed w-full z-50 transition-all duration-300 ${true ? 'bg-white shadow-md py-6' : 'bg-transparent py-4'
         }`}
     >
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex justify-between items-center">
           <a href="#" className="text-2xl font-bold text-olive">
-            MoyDom
+            {/* MoyDom */}
+            <div className=" w-[60px]"><img src="/assests/logo.jpg" alt="" /></div>
+
           </a>
 
           {/* Desktop Navigation */}
@@ -52,7 +54,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-text-dark hover:text-olive transition-custom"
+                className="text-text-dark  hover:text-[#0753c5] hover:underline  hover:decoration-2  transition-custom"
               >
                 {link.name}
               </a>

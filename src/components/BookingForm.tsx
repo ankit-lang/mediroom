@@ -48,10 +48,10 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
   };
 
   return (
-    <section id="booking" className={`section-padding bg-beige ${dir === 'rtl' ? 'rtl' : ''}`}>
+    <section id="booking" className={` font-poppins section-padding bg-beige ${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto">
-        <h2 className="section-title text-center">{t.booking.title}</h2>
-        <p className="section-subtitle text-center mb-12">{t.booking.subtitle}</p>
+        <h2 className="section-title text-center font-serif">{t.booking.title}</h2>
+        <p className="section-subtitle text-center mb-12 font-serif">{t.booking.subtitle}</p>
 
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
@@ -176,7 +176,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                     ></textarea>
                   </div>
 
-                  <button type="submit" className="btn-primary w-full">
+                  <button type="submit" className="btn-primary bg-[#193053] w-full">
                     {t.booking.submitButton}
                   </button>
                 </form>
@@ -187,10 +187,10 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
               className="bg-cover bg-center"
               style={{ backgroundImage: "url('https://images.pexels.com/photos/4046187/pexels-photo-4046187.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')" }}
             >
-              <div className="h-full bg-olive bg-opacity-80 p-8 flex flex-col justify-center">
-                <h3 className="text-2xl font-semibold text-white mb-6">
+              <div className="h-full bg-[#193053] font-serif text-white p-8 bg-opacity-80 p-8 flex flex-col justify-center">
+                <div className="text-2xl font-semibold text-white mb-6" style={{ color: 'white  ' }} >
                   {t.booking.contactInfo.title}
-                </h3>
+                </div>
                 <div className="space-y-4 text-white">
                   <div>
                     <p className="font-semibold">{t.booking.contactInfo.address.label}</p>

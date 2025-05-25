@@ -46,17 +46,17 @@ const RoomGallery: React.FC<RoomGalleryProps> = ({ language }) => {
   };
 
   return (
-    <section id="rooms" className={`section-padding   mb-[4rem] bg-beige ${dir === 'rtl' ? 'rtl' : ''}`}>
+    <section id="rooms" className={` font-serif section-padding   mb-[4rem] bg-beige ${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto">
         <h2 className="section-title text-center">Our Rooms</h2>
         <p className="section-subtitle text-center ">Comfort Meets Convenience
 
         </p>
-        <p className='section-subtitle text-center mb-12 text-sm' > From elegant villas to modern studio apartments, our stays are thoughtfully designed with patients in mind.</p>
+        <p className='section-subtitle text-center mb-12 text-sm md:text-md' > From elegant villas to modern studio apartments, our stays are thoughtfully designed with patients in mind.</p>
 
         <div className="relative">
           <div className=" rounded-lg">
-            <div className="relative  h-[100vh] md:h-[100vh]">
+            <div className="relative  h-[90vh] md:h-[70vh]">
               {rooms.map((room, index) => (
                 <div
                   key={room.id}
@@ -73,7 +73,7 @@ const RoomGallery: React.FC<RoomGalleryProps> = ({ language }) => {
                     </div>
                     <div className="bg-white p-8 flex flex-col justify-center mb-12">
                       <h3 className="text-3xl font-bold mb-4 text-olive">{room.name}</h3>
-                      <p className="mb-6 text-text-light">{room.description}</p>
+                      <p className="mb-6 text-black">{room.description}</p>
                       <div className="space-y-4">
                         {room.features.map((feature, idx) => (
                           <div key={idx} className="flex items-center">

@@ -50,7 +50,7 @@ const Facilities: React.FC<FacilitiesProps> = ({ language }) => {
   ];
 
   return (
-    <section id="facilities" className={`section-padding bg-white ${dir === 'rtl' ? 'rtl' : ''}`}>
+    <section id="facilities" className={` font-serif section-padding bg-white ${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto">
         <h2 className="section-title text-center">{t.facilities.title}</h2>
         <p className="section-subtitle text-center mb-12">{t.facilities.subtitle}</p>
@@ -61,12 +61,12 @@ const Facilities: React.FC<FacilitiesProps> = ({ language }) => {
               key={facility.id}
               className="bg-beige rounded-lg p-6 text-center hover:shadow-lg transition-custom group"
             >
-              <div className="flex items-center justify-center w-20 h-20 bg-white rounded-full mx-auto mb-4 group-hover:bg-olive transition-custom">
+              <div className="flex items-center justify-center w-20 h-20 bg-white rounded-full mx-auto mb-4 group-hover:bg-[#455f87]">
                 <div className="group-hover:text-white transition-custom">
                   {facility.icon}
                 </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2">{facility.name}</h3>
+              <div className="text-lg font-medium  mb-2">{facility.name}</div>
               <p className="text-text-light">{facility.description}</p>
             </div>
           ))}

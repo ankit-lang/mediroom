@@ -57,7 +57,7 @@ const EarlyBookingDiscount: React.FC<EarlyBookingDiscountProps> = ({ language })
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-40 h-40 bg-white opacity-10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-white opacity-10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
-          
+
           <div className="relative z-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
               {t.earlyBooking.title}
@@ -65,19 +65,19 @@ const EarlyBookingDiscount: React.FC<EarlyBookingDiscountProps> = ({ language })
             <p className="text-xl md:text-2xl text-center mb-8">
               {t.earlyBooking.subtitle}
             </p>
-            
+
             <div className="flex justify-center space-x-4 md:space-x-8 mb-8">
               <CountdownUnit value={timeLeft.days} label={t.earlyBooking.days} />
               <CountdownUnit value={timeLeft.hours} label={t.earlyBooking.hours} />
               <CountdownUnit value={timeLeft.minutes} label={t.earlyBooking.minutes} />
               <CountdownUnit value={timeLeft.seconds} label={t.earlyBooking.seconds} />
             </div>
-            
+
             <div className="text-center">
               <p className="text-lg mb-6">{t.earlyBooking.description}</p>
-              <a 
-                href="#booking" 
-                className="inline-block bg-white text-olive font-bold py-3 px-8 rounded-lg hover:bg-beige transition-custom"
+              <a
+                href="#booking"
+                className="inline-block bg-[#193053]  font-bold py-3 px-8 rounded-lg hover:bg-beige transition-custom"
               >
                 {t.earlyBooking.button}
               </a>

@@ -13,7 +13,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={`bg-olive text-white ${dir === 'rtl' ? 'rtl' : ''}`}>
+    <footer className={`bg-[#193053] text-white ${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto px-4 md:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* About */}
@@ -35,7 +35,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">{t.footer.quickLinks.title}</h3>
+            <div className="text-xl font-semibold mb-4">{t.footer.quickLinks.title}</div>
             <ul className="space-y-2">
               {t.footer.quickLinks.links.map((link, index) => (
                 <li key={index}>
@@ -49,7 +49,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">{t.footer.contact.title}</h3>
+            <div className="text-xl font-semibold mb-4">{t.footer.contact.title}</div>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin size={20} className="mr-2 mt-1" />

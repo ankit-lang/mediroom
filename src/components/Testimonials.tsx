@@ -48,7 +48,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ language }) => {
   };
 
   return (
-    <section id="testimonials" className={`section-padding bg-beige ${dir === 'rtl' ? 'rtl' : ''}`}>
+    <section id="testimonials" className={` font-serif section-padding bg-beige ${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto">
         <h2 className="section-title text-center">{t.testimonials.title}</h2>
         <p className="section-subtitle text-center mb-12">{t.testimonials.subtitle}</p>
@@ -59,9 +59,8 @@ const Testimonials: React.FC<TestimonialsProps> = ({ language }) => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={testimonial.id}
-                  className={`absolute inset-0 transition-opacity duration-500 ${
-                    index === activeIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                  }`}
+                  className={`absolute inset-0 transition-opacity duration-500 ${index === activeIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                    }`}
                 >
                   <div className="bg-white p-8 rounded-lg shadow-md">
                     <div className="flex flex-col md:flex-row items-center">
@@ -80,9 +79,8 @@ const Testimonials: React.FC<TestimonialsProps> = ({ language }) => {
                             <Star
                               key={i}
                               size={18}
-                              className={`${
-                                i < testimonial.rating ? 'text-gold fill-gold' : 'text-gray-300'
-                              }`}
+                              className={`${i < testimonial.rating ? 'text-gold fill-gold' : 'text-gray-300'
+                                }`}
                             />
                           ))}
                         </div>
@@ -119,9 +117,8 @@ const Testimonials: React.FC<TestimonialsProps> = ({ language }) => {
               <button
                 key={index}
                 onClick={() => setActiveIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all ${
-                  index === activeIndex ? 'bg-olive w-6' : 'bg-gold opacity-50'
-                }`}
+                className={`w-3 h-3 rounded-full transition-all ${index === activeIndex ? 'bg-olive w-6' : 'bg-gold opacity-50'
+                  }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               ></button>
             ))}
