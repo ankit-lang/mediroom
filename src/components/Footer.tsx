@@ -1,6 +1,8 @@
 import React from 'react';
-import { Facebook, Instagram, MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Instagram, MessageCircle, Mail, Phone, MapPin, FacebookIcon } from 'lucide-react';
 import translations from '../translations';
+import { FaFacebook } from 'react-icons/fa';
+import { BsInstagram, BsWhatsapp } from 'react-icons/bs';
 
 interface FooterProps {
   language: 'en' | 'ar';
@@ -78,12 +80,13 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
           </div>
 
           {/* Newsletter */}
-          <div>
+          <div >
             {/* <h3 className="text-xl font-semibold mb-4">{t.footer.newsletter.title}</h3> */}
             {/* <p className="mb-4">{t.footer.newsletter.description}</p> */}
-            <div className="mb-2"><a href="">Instagram</a></div>
-            <div className="mb-2"><a href="">Whatsapp</a></div>
-            <div className="mb-2"><a href="">FaceBook</a></div>
+
+            <div className="mb-2"><a href="" className='flex items-center gap-3' >   <FaFacebook size={32} color="#1877F2" /> <span>Facebook</span>  </a></div>
+            <div className="mb-2"><a href="" className='flex items-center gap-3'><BsWhatsapp color="#1877F2" size={30} />  Whatsapp</a></div>
+            <div className="mb-2"><a href="" className='flex items-center gap-3'  > <BsInstagram color="#1877F2" size={30} />  Instagram</a></div>
             {/* <form className="flex">
               <input
                 type="email"

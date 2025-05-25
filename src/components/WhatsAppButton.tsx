@@ -1,6 +1,7 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import translations from '../translations';
+import { BsWhatsapp } from 'react-icons/bs';
 
 interface WhatsAppButtonProps {
   language: 'en' | 'ar';
@@ -20,7 +21,8 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ language }) => {
         className="fixed bottom-8 right-8 bg-green-700 text-white p-4 rounded-full shadow-lg hover:bg-green-600  z-50 flex items-center justify-center"
         aria-label={t.whatsapp.ariaLabel}
       >
-        <MessageCircle size={36} />
+        <BsWhatsapp size={36} />
+
       </a>
     </div>
   );
