@@ -53,7 +53,7 @@ const Facilities: React.FC<FacilitiesProps> = ({ language }) => {
     <section id="facilities" className={` font-serif section-padding bg-white ${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto">
         <h2 className="section-title text-center">{t.facilities.title}</h2>
-        <p className="section-subtitle text-center mb-12">{t.facilities.subtitle}</p>
+        <p className="section-subtitle text-sm md:text-lg text-center mb-12">{t.facilities.subtitle}</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {facilitiesList.map((facility) => (
