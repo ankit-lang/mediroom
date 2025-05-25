@@ -49,13 +49,13 @@ const Testimonials: React.FC<TestimonialsProps> = ({ language }) => {
 
   return (
     <section id="testimonials" className={` font-serif section-padding bg-beige ${dir === 'rtl' ? 'rtl' : ''}`}>
-      <div className="container mx-auto">
-        <h2 className="section-title text-center">{t.testimonials.title}</h2>
-        <p className="section-subtitle text-center mb-12">{t.testimonials.subtitle}</p>
+      <div className="container mx-auto ">
+        <h2 className="section-title text-center  ">{t.testimonials.title}</h2>
+        <p className="section-subtitle text-center mb-6">{t.testimonials.subtitle}</p>
 
         <div className="relative max-w-4xl mx-auto">
           <div className="overflow-hidden">
-            <div className="relative min-h-[450px]">
+            <div className="relative min-h-[450px]   ">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={testimonial.id}

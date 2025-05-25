@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { MessageCircle } from 'lucide-react';
 import translations from '../translations';
 import { motion, AnimatePresence } from "framer-motion";
+import { PiWhatsappLogoDuotone } from 'react-icons/pi';
+import { BsWhatsapp } from 'react-icons/bs';
 interface HeroProps {
   language: 'en' | 'ar';
 }
@@ -66,14 +68,14 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
             Your Healing Home in Delhi – Trusted by Guests from the Middle East.
             A quiet corner of comfort in the heart of Delhi – just minutes away from Max, Fortis, Apollo, and AIIMS.
           </p> */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col mt-20 sm:flex-row justify-center gap-4">
               <a
                 href="https://wa.me/1234567890"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary flex items-center justify-center gap-2"
+                className="btn-primary flex items-center justify-center md:gap-2 gap-1 "
               >
-                <MessageCircle size={20} />
+                <BsWhatsapp />
                 {t.hero.whatsappButton}
               </a>
               <a
