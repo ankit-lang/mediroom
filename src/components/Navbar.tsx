@@ -26,13 +26,13 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
   }, []);
 
   const navLinks = [
-    { name: t.nav.home, href: '#home' },
-    { name: t.nav.about, href: '#about' },
-    { name: t.nav.rooms, href: '#rooms' },
-    { name: t.nav.hospitals, href: '#hospitals' },
-    { name: t.nav.testimonials, href: '#testimonials' },
-    { name: t.nav.facilities, href: '#facilities' },
-    { name: t.nav.contact, href: '#contact' },
+    { name: t.nav.home, href: '/' },
+    { name: t.nav.about, href: '/' },
+    { name: t.nav.rooms, href: '/rooms' },
+    { name: t.nav.hospitals, href: '/' },
+    { name: t.nav.testimonials, href: '/' },
+    { name: t.nav.facilities, href: '/' },
+    { name: t.nav.contact, href: '/' },
   ];
 
   return (
@@ -42,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
     >
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex justify-between items-center">
-          <a href="#" className="text-2xl font-bold text-olive">
+          <a href="/" className="text-2xl font-bold text-olive">
             {/* MoyDom */}
             <div className=" w-[60px]"><img src="/assests/logo.jpg" alt="" /></div>
 

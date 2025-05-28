@@ -4,6 +4,7 @@ import translations from '../translations';
 import { motion, AnimatePresence } from "framer-motion";
 import { PiWhatsappLogoDuotone } from 'react-icons/pi';
 import { BsWhatsapp } from 'react-icons/bs';
+import BookingFormnew from './bookform.jsx';
 interface HeroProps {
   language: 'en' | 'ar';
 }
@@ -85,17 +86,21 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
                 {t.hero.bookButton}
               </a>
             </div>
+            <div className="mt-5 hidden md:block">
+              <BookingFormnew />
+            </div>
+
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center">
-            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"> */}
+        {/* <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center"> */}
+        {/* <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-          </div>
-        </div>
+            </svg> */}
+        {/* </div> */}
+        {/* </div> */}
       </div>
     </>
   );
