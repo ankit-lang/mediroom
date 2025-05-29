@@ -14,7 +14,7 @@ import EarlyBookingDiscount from './EarlyBookingDiscount';
 import { Routes } from 'react-router-dom';
 
 const Home = () => {
-      const [language, setLanguage] = useState < 'en' | 'ar' > ('en');
+      const [language, setLanguage] = useState<'en' | 'ar'>('en');
 
       const toggleLanguage = () => {
             setLanguage(language === 'en' ? 'ar' : 'en');
@@ -26,10 +26,10 @@ const Home = () => {
                   <Navbar language={language} toggleLanguage={toggleLanguage} />
                   <Hero language={language} />
                   <AboutUs language={language} />
-                  <RoomGallery language={language} />
-                  <NearbyHospitals language={language} />
-                  <Testimonials language={language} />
-                  <Facilities language={language} />
+                  {/* <RoomGallery language={language} /> */}
+                  {/* <NearbyHospitals language={language} /> */}
+                  {/* <Testimonials language={language} /> */}
+                  {/* <Facilities language={language} /> */}
                   {/* <EarlyBookingDiscount language={language} /> */}
                   <BookingForm language={language} />
                   <MapLocation language={language} />

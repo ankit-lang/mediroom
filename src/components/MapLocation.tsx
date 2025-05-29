@@ -12,8 +12,8 @@ const MapLocation: React.FC<MapLocationProps> = ({ language }) => {
   return (
     <section id="location" className={`${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto px-4 md:px-8 py-16">
-        <h2 className="section-title text-center font-serif ">{t.location.title}</h2>
-        <p className="section-subtitle text-center font-serif mb-12">{t.location.subtitle}</p>
+        <h2 className="section-title text-center font-serif  ">{t.location.title}</h2>
+        <p className="section-subtitle text-center font-serif mb-6">{t.location.subtitle}</p>
 
         <div className="bg-white p-4 rounded-lg shadow-md">
           <div className="aspect-w-16 aspect-h-9">
@@ -31,7 +31,7 @@ const MapLocation: React.FC<MapLocationProps> = ({ language }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           <div className="bg-beige p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-4 text-olive font-serif">{t.location.fromAirport.title}</h3>
             <p className="mb-2 text-sm">{t.location.fromAirport.description}</p>
@@ -58,7 +58,7 @@ const MapLocation: React.FC<MapLocationProps> = ({ language }) => {
               <li>{t.location.parking.option2}</li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

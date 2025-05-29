@@ -62,14 +62,14 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
         <div className="relative h-full flex items-center justify-center container mx-auto px-4 md:px-8">
           <div className={`text-center max-w-3xl ${dir === 'rtl' ? 'rtl' : ''}`}>
             <h1 className="text-4xl md:text-5xl [text-shadow:6px_1px_2px_rgba(0,0,0,1)]  lg:text-6xl text-opacity-100 font-extrabold shadow-black font-serif bg-transparent   text-white mb-6 animate-fadeIn">
-              Welcome to Moydom Bed & Breakfast
+
 
             </h1>
             {/* <p className="text-lg md:text-1xl font-semibold font-serif   text-white mb-8">
             Your Healing Home in Delhi – Trusted by Guests from the Middle East.
             A quiet corner of comfort in the heart of Delhi – just minutes away from Max, Fortis, Apollo, and AIIMS.
           </p> */}
-            <div className="flex flex-col mt-20 sm:flex-row justify-center gap-4">
+            <div className="flex flex-col mt-96 sm:flex-row justify-center gap-4">
               <a
                 href="https://wa.me/1234567890"
                 target="_blank"
@@ -86,7 +86,7 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
                 {t.hero.bookButton}
               </a>
             </div>
-            <div className="mt-5 hidden md:block">
+            <div className="mt-20 hidden md:block">
               <BookingFormnew />
             </div>
 

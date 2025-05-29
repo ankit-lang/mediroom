@@ -48,7 +48,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ language }) => {
   };
 
   return (
-    <section id="testimonials" className={` font-serif section-padding bg-beige ${dir === 'rtl' ? 'rtl' : ''}`}>
+    <section id="testimonials" className={` font-serif h-[50vh] section-padding bg-[#f4f9ff] ${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto ">
         <h2 className="section-title text-center  ">{t.testimonials.title}</h2>
         <p className="section-subtitle text-center mb-6">{t.testimonials.subtitle}</p>

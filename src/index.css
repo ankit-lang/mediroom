@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
-
+@import "swiper/css";
+@import "swiper/css/navigation";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --color-beige: #F5F0E5;
+  --color-beige: #f4f9ff;
   --color-olive: #0753c5;
   --color-white: #FFFFFF;
-  --color-gold: #D4B98C;
+  --color-gold: #f4f9ff;
   --color-text-dark: #111010;
   --color-text-light: #666666;
 }
@@ -20,13 +21,14 @@
   html {
     scroll-behavior: smooth;
     font-family: 'Amiri';
+    background: #f4f9ff;
 
     /* font-style: italic; */
     /* font-weight: 700; */
   }
 
   body {
-    @apply bg-beige text-text-dark;
+    background: #f4f9ff;
   }
 
   h1,

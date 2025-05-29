@@ -48,10 +48,10 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
   };
 
   return (
-    <section id="booking" className={` font-poppins section-padding bg-beige ${dir === 'rtl' ? 'rtl' : ''}`}>
+    <section id="booking" className={` font-poppins section-padding  bg-[#f4f9ff] ${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto">
         <h2 className="section-title text-center font-serif">{t.booking.title}</h2>
-        <p className="section-subtitle text-center mb-12 font-serif">{t.booking.subtitle}</p>
+        <p className="section-subtitle text-center md:mb-12 text-[15px] md:text-lg font-serif">{t.booking.subtitle}</p>
 
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
 import translations from '../translations';
+import { Link } from 'react-router-dom';
 
 interface NavbarProps {
   language: 'en' | 'ar';
@@ -27,17 +28,19 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
 
   const navLinks = [
     { name: t.nav.home, href: '/' },
-    { name: t.nav.about, href: '/' },
+
     { name: t.nav.rooms, href: '/rooms' },
-    { name: t.nav.hospitals, href: '/' },
-    { name: t.nav.testimonials, href: '/' },
-    { name: t.nav.facilities, href: '/' },
-    { name: t.nav.contact, href: '/' },
+    { name: "Offers", href: '/offers' },
+
+    { name: t.nav.facilities, href: '/facilities' },
+    { name: "Gallery", href: '/gallery' },
+
+    { name: t.nav.contact, href: '/contact' },
   ];
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${true ? 'bg-white shadow-md py-4' : 'bg-transparent py-4'
+      className={`fixed w-full z-50 transition-all duration-300 ${true ? '  bg-[#f4f9ff] shadow-md py-4' : 'bg-transparent py-4'
         }`}
     >
       <div className="container mx-auto px-4 md:px-8">
@@ -51,13 +54,13 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
+              <Link
+
+                to={link.href}
                 className="text-text-dark  hover:text-[#0753c5] hover:underline  hover:decoration-2  transition-custom"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             {/* <button 
               onClick={toggleLanguage}
@@ -67,6 +70,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
               <span>{language === 'en' ? 'العربية' : 'English'}</span>
             </button> */}
           </div>
+
 
           {/* Mobile Navigation Toggle */}
           <div className="md:hidden flex items-center">
@@ -83,6 +87,11 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
+          <div className="bg-blue-800 hover:bg-blue-900 text-white py-2 px-4 rounded md:mr-14">
+            <a href="#booking">
+              <button>Book Now</button>
+            </a>
+          </div>
         </div>
 
         {/* Mobile Navigation Menu */}
@@ -90,14 +99,14 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
           <div className="md:hidden py-4">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
+                <Link
+                  // key={link.name}
+                  to={link.href}
                   className="text-text-dark hover:text-olive transition-custom"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
