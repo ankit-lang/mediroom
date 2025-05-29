@@ -37,7 +37,7 @@ export default function BookingForm() {
                         <div className="col-span-1">
                               <label className="text-sm mb-1 block">Adults</label>
                               <select
-                                    className="w-full p-2 rounded bg-white/10 border border-white text-white"
+                                    className="w-full p-2 rounded bg-white/10 border border-white text-black"
                                     value={adults}
                                     onChange={(e) => setAdults(Number(e.target.value))}
                               >
@@ -51,7 +51,7 @@ export default function BookingForm() {
                         <div className="col-span-1">
                               <label className="text-sm mb-1 block">Children</label>
                               <select
-                                    className="w-full p-2 rounded bg-white/10 border border-white text-white"
+                                    className="w-full p-2 rounded bg-white/10 border border-white text-black"
                                     value={children}
                                     onChange={(e) => setChildren(Number(e.target.value))}
                               >

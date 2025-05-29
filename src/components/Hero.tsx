@@ -93,6 +93,7 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
           </div>
         </div>
 
+
         {/* Scroll indicator */}
         {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"> */}
         {/* <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center"> */}

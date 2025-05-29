@@ -6,6 +6,7 @@ import RoomsSection from './RoomSectionAbout';
 import RoomsSection2 from './Roomsection2';
 import Facilities from './Facilities';
 import Highlight from './Highlight';
+import BookingFormnew from './bookform.jsx';
 
 interface AboutUsProps {
   language: 'en' | 'ar';
@@ -51,6 +52,10 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
 
   return (
     <>
+      {/* <div className=" block md:hidden mb-72"> */}
+
+      {/* <BookingFormnew /> */}
+      {/* </div> */}
       <footer className="bg-[#1c3255] text-white py-8 text-center">
 
 
