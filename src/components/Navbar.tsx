@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
 import translations from '../translations';
 import { Link } from 'react-router-dom';
-
+import { useBookingModal } from './useBookingModal';
 interface NavbarProps {
   language: 'en' | 'ar';
   toggleLanguage: () => void;
@@ -37,6 +37,8 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
 
     { name: t.nav.contact, href: '/contact' },
   ];
+
+  const { openModal } = useBookingModal();
 
   return (
     <nav
@@ -88,8 +90,8 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
             </button>
           </div>
           <div className="bg-blue-800 hover:bg-blue-900 text-white py-2 px-4 rounded md:mr-14">
-            <a href="#booking">
-              <button>Book Now</button>
+            <a href="/#booking">
+              <button onClick={openModal} >Book Now</button>
             </a>
           </div>
         </div>

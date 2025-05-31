@@ -13,6 +13,7 @@ import WhatsAppButton from './WhatsAppButton';
 import EarlyBookingDiscount from './EarlyBookingDiscount';
 import { Routes } from 'react-router-dom';
 
+
 const Home = () => {
       const [language, setLanguage] = useState<'en' | 'ar'>('en');
 
@@ -23,6 +24,7 @@ const Home = () => {
       return (
 
             <div className={`min-h-screen ${language === 'ar' ? 'font-amiri text-right' : 'font-poppins text-left'}`}>
+
                   <Navbar language={language} toggleLanguage={toggleLanguage} />
                   <Hero language={language} />
                   <AboutUs language={language} />

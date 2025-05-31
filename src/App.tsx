@@ -11,6 +11,7 @@ import Presidential from './components/Presidential';
 import Premium from './components/premiumsuite';
 import Jacuzzi from './components/Jacuzi';
 import Executive from './components/Executive';
+import BookingModal from './components/Overlay';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
       <Route path="rooms/sierra-jacuzzi-room" element={<Jacuzzi />} />
       <Route path="/" element={<TwoRoom />} />
       <Route path="/rooms/two-bedroom-villa-with-private-pool" element={<TwoRoom />} />
+      {/* <Route path='*' element={<BookingModal />} /> */}
     </Routes>
   );
 }
