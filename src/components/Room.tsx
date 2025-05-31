@@ -37,11 +37,11 @@ export default function RoomShowcase() {
 
       };
       const links = [
-            { name: "Executive Rooms in Udaipur", url: "/rooms/two-bedroom-villa-with-private-pool" },
-            { name: "Elite Room With Private Balcony", url: "/rooms/elite-room-with-private-balcony" },
+            { name: "Executive Rooms in MoyDom", url: "/rooms/executive-rooms-in-moydom" },
+            // { name: "Elite Room With Private Balcony", url: "/rooms/elite-room-with-private-balcony" },
             { name: "Sierra Jacuzzi Room", url: "/rooms/sierra-jacuzzi-room" },
-            { name: "Premium Suite With Balcony", url: "/rooms/premium-suite-with-balcony" },
-            { name: "Premium Suite With Bathtub", url: "/rooms/premium-suite-with-bathtub" },
+            // { name: "Premium Suite With Balcony", url: "/rooms/premium-suite-with-balcony" },
+            // { name: "Premium Suite With Bathtub", url: "/rooms/premium-suite-with-bathtub" },
             { name: "Presidential Family Suite", url: "/rooms/presidential-family-suite" },
             { name: "Two Bedroom Villa With Private Pool", url: "/rooms/two-bedroom-villa-with-private-pool" },
       ];
