@@ -36,12 +36,36 @@ export default function RoomShowcase() {
       const toggleLanguage = () => {
 
       };
+      const links = [
+            { name: "Executive Rooms in Udaipur", url: "/rooms/two-bedroom-villa-with-private-pool" },
+            { name: "Elite Room With Private Balcony", url: "/rooms/elite-room-with-private-balcony" },
+            { name: "Sierra Jacuzzi Room", url: "/rooms/sierra-jacuzzi-room" },
+            { name: "Premium Suite With Balcony", url: "/rooms/premium-suite-with-balcony" },
+            { name: "Premium Suite With Bathtub", url: "/rooms/premium-suite-with-bathtub" },
+            { name: "Presidential Family Suite", url: "/rooms/presidential-family-suite" },
+            { name: "Two Bedroom Villa With Private Pool", url: "/rooms/two-bedroom-villa-with-private-pool" },
+      ];
       return (
             <>
                   <div className="">
                         <Navbar language={language} toggleLanguage={toggleLanguage} />
                   </div>
+
                   <div className="py-12 px-4 bg-blue-50 pt-32">
+                        <div className="bg-gray-300  mb-5 py-6 mt-[-48px]">
+                              <div className="flex flex-wrap  justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
+                                    {links.map((text, index) => (
+                                          <a
+                                                key={index}
+                                                href={text.url}
+                                                style={{}}
+                                                className=" !text-[20px] md:text-base text-blue-900 relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full hover:after:bg-blue-900 transition-all duration-300"
+                                          >
+                                                {text.name}
+                                          </a>
+                                    ))}
+                              </div>
+                        </div>
                         <h2 className="text-2xl md:text-3xl text-center font-semibold italic text-blue-900 mb-10">
                               Rooms In MoyDom
                         </h2>

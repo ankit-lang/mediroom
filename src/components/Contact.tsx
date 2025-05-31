@@ -98,6 +98,21 @@ export default function ContactForm() {
                               </div>
                         </form>
                   </div>
+                  <div className="bg-white p-4 rounded-lg shadow-md m-5 ">
+                        <div className="aspect-w-16 aspect-h-9">
+                              <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9489390980607!2d77.2062605!3d28.635454699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xcdee88e47393c3f1!2sMax%20Super%20Speciality%20Hospital%2C%20Saket!5e0!3m2!1sen!2sin!4v1654567890123!5m2!1sen!2sin"
+                                    width="100%"
+                                    height="450"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    title="Location Map"
+                                    className="rounded-lg"
+                              ></iframe>
+                        </div>
+                  </div>
                   <WhatsAppButton language={language} />
                   <Footer language={language} />
             </>

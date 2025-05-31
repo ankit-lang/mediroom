@@ -63,9 +63,9 @@ export default function Offer() {
                                                       {deal.title}
                                                 </h3>
                                                 <p className="text-black text-sm  md:text-[16px] mb-4">{deal.description}</p>
-                                                <button className="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
-                                                      MORE INFO
-                                                </button>
+                                                {/* <button className="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 transition"> */}
+                                                {/* MORE INFO */}
+                                                {/* </button> */}
                                           </div>
                                     </div>
                               ))}

@@ -6,6 +6,11 @@ import Offer from './components/Offer';
 import Gallery from './components/Gallery';
 import ContactForm from './components/Contact';
 import FacilitiesSection from './components/FacilityPage';
+import TwoRoom from './components/TwoBedroom';
+import Presidential from './components/Presidential';
+import Premium from './components/premiumsuite';
+import Jacuzzi from './components/Jacuzi';
+import Executive from './components/Executive';
 
 function App() {
 
@@ -18,6 +23,13 @@ function App() {
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/contact" element={<ContactForm />} />
       <Route path="/facilities" element={<FacilitiesSection />} />
+      <Route path="/rooms/executive-rooms-in-moydom" element={<Executive />} />
+      <Route path="/rooms/presidential-family-suite" element={<Presidential />} />
+      <Route path="/rooms/premium-suite-with-bathtub." element={<Premium />} />
+      {/* <Route path="/rooms/premium-suite-with-balcony." element={<TwoRoom />} /> */}
+      <Route path="rooms/sierra-jacuzzi-room" element={<Jacuzzi />} />
+      <Route path="/" element={<TwoRoom />} />
+      <Route path="/rooms/two-bedroom-villa-with-private-pool" element={<TwoRoom />} />
     </Routes>
   );
 }

@@ -42,7 +42,7 @@ export default function BookingForm() {
                                     onChange={(e) => setAdults(Number(e.target.value))}
                               >
                                     {[1, 2, 3, 4, 5].map((num) => (
-                                          <option key={num} value={num}>{num}</option>
+                                          <option key={num} value={num}  >{num}</option>
                                     ))}
                               </select>
                         </div>
