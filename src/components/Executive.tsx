@@ -63,7 +63,7 @@ export default function Executive() {
             setIndex((index + 1) % images.length);
       };
       const links = [
-            { name: "Executive Rooms in MoyDom", url: "/rooms/executive-rooms-in-moydoom" },
+            { name: "Executive Rooms in MoyDom", url: "/rooms/executive-rooms-in-moydom" },
             // { name: "Elite Room With Private Balcony", url: "/rooms/elite-room-with-private-balcony" },
             { name: "Sierra Jacuzzi Room", url: "/rooms/sierra-jacuzzi-room" },
             // { name: "Premium Suite With Balcony", url: "/rooms/premium-suite-with-balcony" },
