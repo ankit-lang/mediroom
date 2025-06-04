@@ -13,6 +13,48 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const t = translations[language];
+  const [checkIn, setCheckIn] = React.useState(new Date());
+  const [checkOut, setCheckOut] = React.useState(new Date(Date.now() + 86400000));
+  const [adults, setAdults] = React.useState(1);
+  const [children, setChildren] = React.useState(0);
+
+  const [promoCode, setPromoCode] = React.useState("");
+
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    // setIsSubmitting(true);
+
+    const formData = new URLSearchParams();
+    formData.append("checkIn", checkIn);
+    formData.append("checkOut", checkOut);
+    formData.append("adults", adults);
+    formData.append("children", children);
+    formData.append("promoCode", promoCode);
+
+    try {
+
+      // https://script.google.com/macros/s/AKfycbyLU5PYiBmiP2hnWv-Eoj4lQMu1eDq9g6vKVrkAEp5yB8_e00DQuvyOXYBR8dS5w4o/exec
+      const response = await fetch(
+        'https://script.google.com/macros/s/AKfycbx4AqZj-upxMSp9umUjhf3l9YBe_bg2j4SyiSoeNdSnp7mikKd5QUzRPj91-mUvJBw/exec',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: formData
+
+        }
+      );
+
+      const result = await response.json();
+      alert("form Submitted Successfully")
+      // setMessage(result);
+    } catch (error) {
+      // setMessage('Error submitting form');
+      alert("Error submitting form", error)
+    }
+  };
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -139,6 +181,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
                   type="date"
                   className="w-full border rounded p-2"
                   required
+                  onChange={(e) => setCheckIn(new Date(e.target.value))}
                 />
               </div>
 
@@ -148,12 +191,14 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
                   type="date"
                   className="w-full border rounded p-2"
                   required
+                  onChange={(e) => setCheckOut(new Date(e.target.value))}
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium mb-1">Adults</label>
-                <select className="w-full border rounded p-2">
+                <select className="w-full border rounded p-2"
+                  onChange={(e) => setAdults(Number(e.target.value))}>
                   {[1, 2, 3, 4].map((n) => (
                     <option key={n}>{n}</option>
                   ))}
@@ -162,7 +207,9 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
 
               <div>
                 <label className="block text-sm font-medium mb-1">Children</label>
-                <select className="w-full border rounded p-2">
+                <select className="w-full border rounded p-2"
+                  onChange={(e) => setChildren(Number(e.target.value))}
+                >
                   {[0, 1, 2, 3].map((n) => (
                     <option key={n}>{n}</option>
                   ))}
@@ -174,12 +221,14 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
                 <input
                   type="text"
                   className="w-full border rounded p-2"
+                  onChange={(e) => setPromoCode(e.target.value)}
                 />
               </div>
 
               <div className="md:col-span-2 text-right">
                 <button
                   type="submit"
+                  onClick={submitHandler}
                   className="bg-[#ff8706] text-white px-4 py-2 rounded hover:bg-oragane-600"
                 >
                   Book Now

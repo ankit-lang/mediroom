@@ -56,7 +56,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
 
       {/* <BookingFormnew /> */}
       {/* </div> */}
-      <footer className="bg-[#ff8706] text-white py-8 text-center">
+      <footer className="bg-amber-800 text-white py-8 text-center">
 
 
         <div className="max-w-4xl mx-auto px-4">
