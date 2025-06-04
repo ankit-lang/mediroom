@@ -39,7 +39,7 @@ export default function FacilitiesSection() {
             <>
                   <Navbar language={language} toggleLanguage={toggleLanguage} />
 
-                  <section className="bg-blue-50 py-12 px-4 text-center pt-32">
+                  <section className="py-12 px-4 text-center pt-32">
                         <h2 className="text-3xl font-semibold italic text-[#13274F] mb-10">
                               Facilities at The Moydom
                         </h2>

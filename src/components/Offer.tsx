@@ -43,7 +43,7 @@ export default function Offer() {
       return (
             <>
                   <Navbar language={language} toggleLanguage={toggleLanguage} />
-                  <div className="bg-blue-50 py-12 px-4 sm:px-8 lg:px-16 pt-32">
+                  <div className=" py-12 px-4 sm:px-8 lg:px-16 pt-32">
                         <h2 className="text-3xl font-semibold text-center text-blue-900 italic mb-10">
                               MoyDom Hotel Deals
                         </h2>

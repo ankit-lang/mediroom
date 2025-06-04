@@ -75,7 +75,7 @@ export default function BookingForm() {
                         {/* Book Now */}
                         <div className="col-span-1 flex flex-col justify-end h-full">
 
-                              <button className="bg-white hover:bg-yellow-50 text-black py-2 px-2 rounded">
+                              <button className="bg-orange-200 hover:bg-orange-400 text-black py-5 px-2 rounded">
                                     Book Now
                               </button>
                         </div>

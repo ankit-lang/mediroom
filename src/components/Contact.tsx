@@ -29,7 +29,7 @@ export default function ContactForm() {
       return (
             <>
                   <Navbar language={language} toggleLanguage={toggleLanguage} />
-                  <div className="flex flex-col items-center py-10 bg-blue-50 pt-32">
+                  <div className="flex flex-col items-center py-10  pt-32">
                         {/* <button className="bg-[#13274F] text-white py-2 px-6 rounded mb-6">Book Now</button> */}
                         <h2 className="text-3xl font-semibold italic font-serif text-[#13274F] mb-8">Reach Out to Us</h2>
 

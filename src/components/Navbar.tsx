@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
                 <Link
 
                   to={link.href}
-                  className="text-text-dark   hover:underline  hover:decoration-2  transition-custom"
+                  className="text-amber-900 font-semibold   hover:underline  hover:decoration-2  transition-custom"
                 >
                   {link.name}
                 </Link>
@@ -108,7 +108,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
                   <Link
                     // key={link.name}
                     to={link.href}
-                    className="text-text-dark hover:text-olive transition-custom"
+                    className="text-amber-800  transition-custom"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.name}
