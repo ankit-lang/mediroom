@@ -48,7 +48,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
   };
 
   return (
-    <section id="booking" className={` font-poppins section-padding  bg-[#f4f9ff] ${dir === 'rtl' ? 'rtl' : ''}`}>
+    <section id="booking" className={` font-poppins section-padding  bg-[white] ${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto">
         <h2 className="section-title text-center font-serif">{t.booking.title}</h2>
         <p className="section-subtitle text-center md:mb-12 text-[15px] md:text-lg font-serif">{t.booking.subtitle}</p>
@@ -176,7 +176,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                     ></textarea>
                   </div>
 
-                  <button type="submit" className="btn-primary bg-[#193053] w-full">
+                  <button type="submit" className="btn-primary bg-[#ff8706] w-full">
                     {t.booking.submitButton}
                   </button>
                 </form>
@@ -187,7 +187,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
               className="bg-cover bg-center"
               style={{ backgroundImage: "url('https://images.pexels.com/photos/4046187/pexels-photo-4046187.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')" }}
             >
-              <div className="h-full bg-[#193053] font-serif text-white p-8 bg-opacity-80 p-8 flex flex-col justify-center">
+              <div className="h-full bg-[#ff8706] font-serif text-white p-8 bg-opacity-80 p-8 flex flex-col justify-center">
                 <div className="text-2xl font-semibold text-white mb-6" style={{ color: 'white  ' }} >
                   {t.booking.contactInfo.title}
                 </div>

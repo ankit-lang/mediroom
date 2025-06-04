@@ -56,7 +56,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
 
       {/* <BookingFormnew /> */}
       {/* </div> */}
-      <footer className="bg-[#1c3255] text-white py-8 text-center">
+      <footer className="bg-[#ff8706] text-white py-8 text-center">
 
 
         <div className="max-w-4xl mx-auto px-4">
@@ -83,7 +83,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
         </div>
       </footer>
 
-      <section className="bg-gradient-to-b from-[#f5fafd] to-white py-12 text-center px-4">
+      <section className="bg-gradient-to-b from-[#white] to-white py-12 text-center px-4">
         {/* Logo */}
         <div className="flex justify-center ">
           <img

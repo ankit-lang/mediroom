@@ -56,15 +56,15 @@ export default function RoomShowcase() {
                         <Navbar language={language} toggleLanguage={toggleLanguage} />
                   </div>
 
-                  <div className="py-12 px-4 bg-blue-50 pt-32">
-                        <div className="bg-gray-300  mb-5 py-6 mt-[-48px]">
+                  <div className="py-12 px-4 bg-white pt-32">
+                        <div className="bg-orange-100  mb-5 py-6 mt-[-48px]">
                               <div className="flex flex-wrap  justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
                                     {links.map((text, index) => (
                                           <Link
                                                 key={index}
                                                 to={text.url}
                                                 style={{}}
-                                                className=" !text-[20px] md:text-base text-blue-900 relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full hover:after:bg-blue-900 transition-all duration-300"
+                                                className=" !text-[20px] md:text-base text-orange-500 font-bold relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full hover:after:bg-orange-900 transition-all duration-300"
                                           >
                                                 {text.name}
                                           </Link>
@@ -95,7 +95,7 @@ export default function RoomShowcase() {
                                                 </div>
                                                 <div className="mt-4">
                                                       <Link to={room.url}>
-                                                            <button className="bg-blue-900 rounded-sm text-white  text-sm px-4 py-2 hover:bg-blue-800">
+                                                            <button className="bg-[#ff8706] rounded-sm text-white  text-sm px-4 py-2 hover:bg-orange-600">
                                                                   MORE INFO
                                                             </button>
                                                       </Link>

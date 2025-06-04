@@ -9,7 +9,7 @@ export default function BookingForm() {
       const [promoCode, setPromoCode] = React.useState("");
 
       return (
-            <div className="bg-black/70 text-white p-4 rounded-2xl shadow-xl w-full max-w-6xl mx-auto">
+            <div className="bg-[#ff8706] text-white p-4 rounded-2xl shadow-xl w-full max-w-6xl mx-auto">
                   <div className="grid grid-cols-6 gap-4 items-center">
                         {/* Check In */}
                         <div className="col-span-1">
@@ -37,12 +37,12 @@ export default function BookingForm() {
                         <div className="col-span-1">
                               <label className="text-sm mb-1 block">Adults</label>
                               <select
-                                    className="w-full p-2 rounded bg-white/10 border border-white text-black"
+                                    className="w-full p-2 rounded bg-white/10 border border-white text-white"
                                     value={adults}
                                     onChange={(e) => setAdults(Number(e.target.value))}
                               >
                                     {[1, 2, 3, 4, 5].map((num) => (
-                                          <option key={num} value={num}  >{num}</option>
+                                          <option key={num} className="bg-orange-400" value={num}  >{num}</option>
                                     ))}
                               </select>
                         </div>
@@ -51,12 +51,12 @@ export default function BookingForm() {
                         <div className="col-span-1">
                               <label className="text-sm mb-1 block">Children</label>
                               <select
-                                    className="w-full p-2 rounded bg-white/10 border border-white text-black"
+                                    className="w-full p-2 rounded bg-white/10 border border-white text-white"
                                     value={children}
                                     onChange={(e) => setChildren(Number(e.target.value))}
                               >
                                     {[0, 1, 2, 3, 4, 5].map((num) => (
-                                          <option key={num} value={num}>{num}</option>
+                                          <option className="bg-orange-400" key={num} value={num}>{num}</option>
                                     ))}
                               </select>
                         </div>
@@ -75,7 +75,7 @@ export default function BookingForm() {
                         {/* Book Now */}
                         <div className="col-span-1 flex flex-col justify-end h-full">
 
-                              <button className="bg-blue-800 hover:bg-blue-900 text-white py-2 px-2 rounded">
+                              <button className="bg-white hover:bg-yellow-50 text-black py-2 px-2 rounded">
                                     Book Now
                               </button>
                         </div>

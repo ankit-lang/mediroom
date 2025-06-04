@@ -8,7 +8,7 @@
 
 :root {
   --color-beige: #f4f9ff;
-  --color-olive: #0753c5;
+  --color-olive: #ff8706;
   --color-white: #FFFFFF;
   --color-gold: #f4f9ff;
   --color-text-dark: #111010;
@@ -21,14 +21,14 @@
   html {
     scroll-behavior: smooth;
     font-family: 'Amiri';
-    background: #f4f9ff;
+    background: white;
 
     /* font-style: italic; */
     /* font-weight: 700; */
   }
 
   body {
-    background: #f4f9ff;
+    background: white;
   }
 
   h1,
@@ -38,14 +38,14 @@
   h5,
   h6 {
     @apply font-semibold;
-    color: #193053;
+    color: #ff8706;
     font-style: italic;
 
   }
 
   h2,
   h3 {
-    color: #073882 !important;
+    color: #ff8706 !important;
   }
 
   .section-padding {
@@ -58,16 +58,18 @@
 
   .btn-primary {
     @apply bg-olive text-white py-3 px-6 rounded-md hover:bg-opacity-90 transition-custom;
-    background: #0753c5;
+    /* background: #0753c5; */
+    background: #ff8706;
   }
 
   .btn-secondary {
     @apply bg-gold text-white py-3 px-6 rounded-md hover:bg-opacity-90 transition-custom;
-    background-color: #0753c5;
+    /* background-color: #0753c5; */
+    background: #ff8706;
   }
 
   .input-field {
-    @apply w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-olive;
+    @apply w-full p-3 border border-orange-500 rounded-md focus:outline-none focus:ring-2 focus:ring-olive;
   }
 
   .section-title {
@@ -84,11 +86,11 @@
 }
 
 .bg-olive {
-  background-color: #193053 !important;
+  background-color: #ff8706 !important;
 }
 
 .text-olive {
-  color: rgb(29 2 9);
+  color: #ff8706;
 }
 
 .section-subtitle {
@@ -100,5 +102,5 @@
 }
 
 .text-olive {
-  color: #193053 !important;
+  color: #ff8706 !important;
 }

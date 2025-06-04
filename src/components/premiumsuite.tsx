@@ -80,7 +80,7 @@ export default function Premium() {
                         <Navbar language={language} toggleLanguage={toggleLanguage} />
                   </div>
 
-                  <div className="py-12 px-4 bg-blue-50 pt-32">
+                  <div className="py-12 px-4  pt-32">
                         <div className="bg-gray-300  mb-5 py-6 mt-[-48px]">
                               <div className="flex flex-wrap  justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
                                     {links.map((text, index) => (

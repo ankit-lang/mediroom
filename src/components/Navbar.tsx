@@ -44,7 +44,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
   return (
     <>
       <nav
-        className={`fixed w-full z-50 transition-all duration-300 ${true ? '  bg-[#f4f9ff] shadow-md py-4' : 'bg-transparent py-4'
+        className={`fixed w-full z-50 transition-all duration-300 ${true ? '  bg-white shadow-md py-4' : 'bg-transparent py-4'
           }`}
       >
 
@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
                 <Link
 
                   to={link.href}
-                  className="text-text-dark  hover:text-[#0753c5] hover:underline  hover:decoration-2  transition-custom"
+                  className="text-text-dark   hover:underline  hover:decoration-2  transition-custom"
                 >
                   {link.name}
                 </Link>
@@ -92,7 +92,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
-            <div className="bg-blue-800 hover:bg-blue-900 text-white py-2 px-4 rounded md:mr-14">
+            <div className="bg-[#ff8706] hover:bg-orange-600 text-white py-2 px-4 rounded md:mr-14">
 
               <button onClick={() => setIsOpen(true)} >Book Now</button>
 
@@ -180,7 +180,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
               <div className="md:col-span-2 text-right">
                 <button
                   type="submit"
-                  className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                  className="bg-[#ff8706] text-white px-4 py-2 rounded hover:bg-oragane-600"
                 >
                   Book Now
                 </button>

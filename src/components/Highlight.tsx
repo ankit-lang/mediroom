@@ -22,7 +22,7 @@ const highlights = [
 
 export default function Highlight() {
       return (
-            <section id="highlight" className="bg-[#f4f9ff] py-12 text-center">
+            <section id="highlight" className="bg-[white] py-12 text-center">
                   <h2 className="text-3xl font-semibold font-serif italic text-[#1e3a8a] mb-10">Highlights</h2>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-6 max-w-6xl mx-auto">
                         {highlights.map((item, i) => (

@@ -19,7 +19,7 @@ const RoomsSection2 = () => {
       };
 
       return (
-            <div className=" flex-col lg:flex-row items-center justify-center p-8 hidden md:flex bg-[#f4f9ff]">
+            <div className=" flex-col lg:flex-row items-center justify-center p-8 hidden md:flex bg-white">
                   {/* Carousel */}
                   <div className="lg:w-1/2 mt-8 lg:mt-0 lg:ml-12 text-center ">
                         <h2 className="text-3xl  text-center font-serif font-semibold text-[#1e3a8a] italic mb-4">
@@ -32,7 +32,7 @@ const RoomsSection2 = () => {
                               private balcony, minibar and jacuzzi, providing an unparalleled level
                               of comfort and luxury.
                         </p>
-                        <button className="px-6 py-2 text-center bg-[#1e3a8a] text-white rounded hover:bg-[#153075]">
+                        <button className="px-6 py-2 text-center bg-[#ff8706] text-white rounded hover:bg-orange-600">
                               View Rooms
                         </button>
                   </div>

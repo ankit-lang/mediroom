@@ -68,7 +68,7 @@ const Facilities: React.FC<FacilitiesProps> = ({ language }) => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center p-8 bg-[#f4f9ff]">
+    <div className="flex flex-col lg:flex-row items-center justify-center p-8 bg-white">
       {/* Carousel */}
       <div className="relative w-full lg:w-1/2 h-[400px] overflow-hidden">
         <img
@@ -100,7 +100,7 @@ const Facilities: React.FC<FacilitiesProps> = ({ language }) => {
         <p className="text-gray-700 font-serif text-center md:text-lg leading-relaxed mb-6">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos tenetur voluptate obcaecati quaerat, ad vel praesentium aspernatur magni fugiat quam minima reprehenderit expedita, incidunt, optio quisquam voluptates? Cum, dolores consectetur?
         </p>
-        <button className="px-6 py-2 text-center bg-[#1e3a8a] text-white rounded hover:bg-[#153075]">
+        <button className="px-6 py-2 text-center bg-[#ff8706] text-white rounded hover:bg-orange-600">
           Learn More
         </button>
       </div>

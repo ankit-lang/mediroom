@@ -91,7 +91,7 @@ export default function ContactForm() {
                               <div className="flex justify-center">
                                     <button
                                           type="submit"
-                                          className="bg-[#13274F] text-white py-2 px-12 rounded hover:bg-[#1e3a8a] transition"
+                                          className="bg-[#ff8706] font-bold text-white py-2 px-12 rounded hover:bg-orange-600 transition"
                                     >
                                           Submit
                                     </button>

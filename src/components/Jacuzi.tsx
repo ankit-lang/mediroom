@@ -80,15 +80,15 @@ export default function Jacuzzi() {
                         <Navbar language={language} toggleLanguage={toggleLanguage} />
                   </div>
 
-                  <div className="py-12 px-4 bg-blue-50 pt-32">
-                        <div className="bg-gray-300  mb-5 py-6 mt-[-48px]">
+                  <div className="py-12 px-4  pt-32">
+                        <div className="bg-orange-100  mb-5 py-6 mt-[-48px]">
                               <div className="flex flex-wrap  justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
                                     {links.map((text, index) => (
                                           <Link
                                                 key={index}
                                                 to={text.url}
                                                 style={{}}
-                                                className=" !text-[20px] md:text-base text-blue-900 relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full hover:after:bg-blue-900 transition-all duration-300"
+                                                className=" !text-[20px] md:text-base text-[#ff8706]  font-bold relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full hover:after:bg-orange-600 transition-all duration-300"
                                           >
                                                 {text.name}
                                           </Link>
@@ -120,14 +120,14 @@ export default function Jacuzzi() {
                               </button>
                         </div>
                         <div className="m-auto text-center ">
-                              <button className="bg-blue-800 hover:bg-blue-900 text-white !py-3 !px-10 rounded">
+                              <button className="bg-[#ff8706] hover:bg-orange-600 text-lg text-white !py-2 !px-10 rounded">
                                     Book Now
                               </button>
                         </div>
                         <div className="text-[14px] md:text-lg mt-5 text-center   md:px-20 ">
                               Step into the epitome of luxury with our Two Bedroom Villa With Private Pool, spanning an impressive 1560 sq. ft. Designed to comfortably accommodate 8 guests, this exclusive private pool villa in Udaipur, features a plush king size bed, state-of-the-art amenities including a tea & coffee maker, minibar, and round-the-clock room service. Experience ultimate convenience with our on-site laundry service. The villa's elegant interior design complements the serene private pool, making it an ideal choice for families or groups seeking both luxury and relaxation.
                         </div>
-                        <div className="bg-gray-200 py-8 mt-5 mx-10">
+                        <div className="bg-orange-100 py-8 mt-5 mx-10">
                               <h2 className="text-center md:!text-5xl text-xl font-semibold italic mb-6">Amenities</h2>
                               <div className="flex flex-col md:flex-row md:justify-center gap-12">
                                     <ul className="list-disc list-inside px-5 space-y-2 md:w-1/2">
