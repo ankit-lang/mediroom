@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
 @import "swiper/css";
 @import "swiper/css/navigation";
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,6 +15,7 @@
   --color-gold: #f4f9ff;
   --color-text-dark: #111010;
   --color-text-light: #666666;
+
 }
 
 
@@ -29,6 +32,11 @@
 
   body {
     background: white;
+
+  }
+
+  body * {
+    font-family: "Winky Rough" !important;
   }
 
   h1,
