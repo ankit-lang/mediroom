@@ -136,7 +136,12 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
             </div>
             <div className="bg-[#ff8706] hover:bg-orange-600 text-white py-2 px-4 rounded md:mr-14">
 
-              <button onClick={() => setIsOpen(true)} >Book Now</button>
+              {/* <button onClick={() => setIsOpen(true)} >Book Now</button> */}
+
+              <button onClick={() => setIsOpen(true)} className="relative  bg-[#ff8706]  text-white text-lg font-medium rounded-lg animate-pulse-grow focus:outline-none">
+                Book Now
+              </button>
+
 
             </div>
           </div>
@@ -226,6 +231,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
               </div>
 
               <div className="md:col-span-2 text-right">
+
                 <button
                   type="submit"
                   onClick={submitHandler}

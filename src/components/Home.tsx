@@ -23,7 +23,7 @@ const Home = () => {
 
       return (
 
-            <div className={`min-h-screen ${language === 'ar' ? 'font-amiri text-right' : 'font-poppins text-left'}`}>
+            <div className={`min-h-screen  ${language === 'ar' ? 'font-amiri text-right' : 'font-poppins text-left'}`}>
 
                   <Navbar language={language} toggleLanguage={toggleLanguage} />
                   <Hero language={language} />

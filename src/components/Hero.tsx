@@ -74,19 +74,36 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
                 href="https://wa.me/1234567890"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary flex items-center justify-center md:gap-2 gap-1 "
+                className=" "
               >
-                <BsWhatsapp />
-                {t.hero.whatsappButton}
+                <button className="relative px-3 py-3 btn-primary   text-white font-semibold  bg-orange-600 overflow-hidden">
+                  <span className="relative md:gap-2 gap-1 z-10 flex items-center justify-center">    <BsWhatsapp />
+                    {t.hero.whatsappButton}</span>
+                  <span
+                    className="absolute inset-0 z-0  bg-gradient-to-r from-transparent via-orange-400 to-transparent 
+          animate-shimmer bg-[length:200%_100%]"
+                  ></span>
+                </button>
+
               </a>
+              {/* <div className="h-screen flex items-center justify-center bg-white"> */}
+
+              {/* </div> */}
               <a
                 href="#booking"
-                className="btn-secondary"
+                className=""
               >
-                {t.hero.bookButton}
+
+                <button className="relative px-3 py-3  btn-primary  text-white font-semibold  bg-orange-600 overflow-hidden">
+                  <span className="relative z-10"> {t.hero.bookButton}</span>
+                  <span
+                    className="absolute inset-0 z-0  bg-gradient-to-r from-transparent via-orange-400 to-transparent 
+          animate-shimmer bg-[length:200%_100%]"
+                  ></span>
+                </button>
               </a>
             </div>
-            <div className="mt-20 hidden md:block">
+            <div className="mt-20 animate-beam bg-gradient-to-r rounded-xl  from-transparent via-white bg-[length:200%_200%] p-[2px] hidden md:block">
               <BookingFormnew />
             </div>
 

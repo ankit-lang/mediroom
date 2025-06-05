@@ -18,7 +18,15 @@
 
 }
 
-
+.shimmer-border::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  background: conic-gradient(from 0deg, transparent, white, transparent);
+  animation: shimmer 2s linear infinite;
+  z-index: 0;
+}
 
 @layer base {
   html {

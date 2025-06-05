@@ -18,6 +18,7 @@ function App() {
 
   return (
     <Routes>
+
       <Route path="/" element={<Home />} />
       <Route path="/rooms" element={<RoomShowcase />} />
       <Route path="/offers" element={<Offer />} />

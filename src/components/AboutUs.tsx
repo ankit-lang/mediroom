@@ -7,6 +7,8 @@ import RoomsSection2 from './Roomsection2';
 import Facilities from './Facilities';
 import Highlight from './Highlight';
 import BookingFormnew from './bookform.jsx';
+import ScatterText from './Scatter.js';
+
 
 interface AboutUsProps {
   language: 'en' | 'ar';
@@ -95,23 +97,60 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
 
         {/* Heading */}
         <h2 className="text-2xl md:text-3xl font-semibold italic text-[#1a2b5c] mb-8">
-          <span className="font-bold font-serif ">Moydom </span>
+          <span className="font-bold font-serif flex items-center justify-center ">
+            <ScatterText />
+          </span>
         </h2>
 
         {/* Paragraphs */}
         <div className="max-w-6xl font-serif mx-auto text-gray-800 space-y-6 text- text-center leading-relaxed">
           <p className='text-sm md:text-[16px]' >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, atque excepturi! Placeat velit quam eveniet neque ratione expedita nostrum ad qui, numquam inventore! Neque minima harum natus ullam rem quia odit magni dolorum quisquam veritatis doloribus unde cumque repellat similique, autem asperiores sit perspiciatis cupiditate. Aspernatur rem officiis vel quod.
+            <motion.p
+
+              className=" text-black"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, fuga.
+            </motion.p>
           </p>
           <p className='text-sm md:text-[16px]' >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, exercitationem officia iusto laudantium enim consectetur asperiores corrupti ea eligendi deleniti quod quis fuga ipsum quibusdam ex magnam mollitia debitis sequi. Deleniti repellendus reiciendis, repellat nisi iste tempore magni ducimus dolorum.
+            <motion.p
+
+              className=" text-black"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sapiente culpa incidunt cum natus nostrum inventore tempora, enim deleniti perspiciatis dolores. Officia vitae, alias non odio harum laudantium ea. Fuga eveniet, excepturi consectetur dolores facere perferendis rem consequatur quo saepe?
+            </motion.p>
           </p>
           <p className='text-center text-sm md:text-[16px] hidden md:block' >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur neque quisquam sint recusandae inventore necessitatibus placeat voluptatum ab laudantium quaerat sapiente, voluptates nobis sit harum ipsa iste! Sequi, quas ad?
+            <motion.p
+
+              className=" text-black"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.38 }}
+              viewport={{ once: true }}
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sapiente culpa incidunt cum natus nostrum inventore tempora, enim deleniti perspiciatis dolores. Officia vitae, alias non odio harum laudantium ea. Fuga eveniet, excepturi consectetur dolores facere perferendis rem consequatur quo saepe?
+            </motion.p>
           </p>
           <p className="text-center font-medium text-sm md:text-[16px]">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi doloremque voluptas doloribus velit deserunt.
-          </p>
+            <motion.p
+
+              className=" text-black"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sapiente culpa incidunt cum natus nostrum inventore tempora, enim deleniti perspiciatis dolores. Officia vitae, alias non odio harum laudantium ea. Fuga eveniet, excepturi consectetur dolores facere perferendis rem consequatur quo saepe?
+            </motion.p>  </p>
         </div>
       </section>
 
