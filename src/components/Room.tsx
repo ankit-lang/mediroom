@@ -57,14 +57,14 @@ export default function RoomShowcase() {
                   </div>
 
                   <div className="py-12 px-4 bg-white pt-32">
-                        <div className="bg-orange-100  mb-5 py-6 mt-[-48px]">
+                        <div className="bg-orange-500  mb-5 py-6 mt-[-48px]">
                               <div className="flex flex-wrap  justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
                                     {links.map((text, index) => (
                                           <Link
                                                 key={index}
                                                 to={text.url}
                                                 style={{}}
-                                                className=" !text-[20px] md:text-base text-orange-500 font-bold relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full hover:after:bg-orange-900 transition-all duration-300"
+                                                className=" !text-[20px] md:text-base text-white font-bold relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full hover:after:bg-orange-900 transition-all duration-300"
                                           >
                                                 {text.name}
                                           </Link>

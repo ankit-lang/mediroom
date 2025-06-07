@@ -8,6 +8,7 @@ import Facilities from './Facilities';
 import Highlight from './Highlight';
 import BookingFormnew from './bookform.jsx';
 import ScatterText from './Scatter.js';
+import FadeInFromBottom from './FadeFromBottom.js';
 
 
 interface AboutUsProps {
@@ -58,49 +59,71 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
 
       {/* <BookingFormnew /> */}
       {/* </div> */}
-      <footer className="bg-amber-800 text-white py-8 text-center">
+      <FadeInFromBottom>
+        <footer className="bg-amber-800 text-white py-8 text-center">
+          <motion.div
 
 
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="text-2xl text-white md:text-3xl font-semibold italic mb-2">
-            MoyDom Rooms
-          </div>
-          <p className="mb-6 text-sm md:text-base">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, mollitia.
-          </p>
-          <div className="flex justify-center gap-6 flex-wrap">
-            <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5" />
-              <span>+91 91 1668 1508</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5" />
-              <span>+91 91 1668 1506</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Mail className="w-5 h-5" />
-              <span>Moydom@gmail.com</span>
-            </div>
-          </div>
-        </div>
-      </footer>
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
 
-      <section className="bg-gradient-to-b from-[#white] to-white py-12 text-center px-4">
+            <div className="max-w-4xl mx-auto px-4">
+              <div className="text-2xl text-white md:text-3xl font-semibold italic mb-2">
+                MoyDom Rooms
+              </div>
+              <p className="mb-6 text-sm md:text-base">
+
+              </p>
+              <div className="flex justify-center gap-6 flex-wrap">
+                <div className="flex items-center gap-2">
+                  <Phone className="w-5 h-5" />
+                  <span>+91 9810000051 </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-5 h-5" />
+                  <span>+91 9333333767</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail className="w-5 h-5" />
+                  <span>info@moydom.in</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+        </footer>
+      </FadeInFromBottom>
+
+      <section className="bg-gradient-to-b  tracking-wide from-[#white] to-white py-12 text-center px-4">
         {/* Logo */}
-        <div className="flex justify-center ">
-          <img
-            src="/assests/logo.jpg"
-            alt="Sierra Udaipur Logo"
-            className="w-32 h-32 object-contain"
-          />
-        </div>
+        <FadeInFromBottom>
+          <div className="flex justify-center ">
+            <img
+              src="/assests/logo.jpg"
+              alt="Sierra Udaipur Logo"
+              className="w-32 h-32 object-contain"
+            />
+          </div>
+        </FadeInFromBottom>
 
         {/* Heading */}
-        <h2 className="text-2xl md:text-3xl font-semibold italic text-[#1a2b5c] mb-8">
-          <span className="font-bold font-serif flex items-center justify-center ">
-            <ScatterText />
-          </span>
-        </h2>
+        <motion.div
+
+
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-2xl md:text-3xl font-semibold italic text-[#1a2b5c] mb-8">
+            <span className="font-bold font-serif flex items-center justify-center ">
+              Moy Dom
+            </span>
+          </h2>
+        </motion.div>
 
         {/* Paragraphs */}
         <div className="max-w-6xl font-serif mx-auto text-gray-800 space-y-6 text- text-center leading-relaxed">
@@ -113,7 +136,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, fuga.
+              Where Healing Begins with Hospitality
             </motion.p>
           </p>
           <p className='text-sm md:text-[16px]' >
@@ -125,7 +148,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sapiente culpa incidunt cum natus nostrum inventore tempora, enim deleniti perspiciatis dolores. Officia vitae, alias non odio harum laudantium ea. Fuga eveniet, excepturi consectetur dolores facere perferendis rem consequatur quo saepe?
+              At Moydom Bed & Breakfast, we understand that medical travel can be a journey filled with both hope and uncertainty. That’s why we’ve built more than just a place to stay — we’ve created a home of care in the heart of Delhi.
             </motion.p>
           </p>
           <p className='text-center text-sm md:text-[16px] hidden md:block' >
@@ -137,10 +160,10 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
               transition={{ duration: 0.6, delay: 0.38 }}
               viewport={{ once: true }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sapiente culpa incidunt cum natus nostrum inventore tempora, enim deleniti perspiciatis dolores. Officia vitae, alias non odio harum laudantium ea. Fuga eveniet, excepturi consectetur dolores facere perferendis rem consequatur quo saepe?
+              Strategically located in Central South Delhi, Moydom is just minutes away from Delhi’s top hospitals like Max, Apollo, Fortis, and AIIMS — ensuring you’re never far from the treatment and support you need. But what truly sets us apart is our focus on emotional comfort, cultural sensitivity, and personalized service — especially for guests traveling from the Middle East and Gulf countries.
             </motion.p>
           </p>
-          <p className="text-center font-medium text-sm md:text-[16px]">
+          <p className="text-center  font-medium text-sm md:text-[16px]">
             <motion.p
 
               className=" text-black"
@@ -149,26 +172,36 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sapiente culpa incidunt cum natus nostrum inventore tempora, enim deleniti perspiciatis dolores. Officia vitae, alias non odio harum laudantium ea. Fuga eveniet, excepturi consectetur dolores facere perferendis rem consequatur quo saepe?
+              Whether you’re here for advanced treatment, post-surgery rest, or supporting a loved one through recovery, Moydom welcomes you with open arms, warm smiles, and a peaceful stay that feels just like home.
             </motion.p>  </p>
         </div>
       </section>
+      <motion.div
 
-      <div className="relative w-screen h-screen overflow-hidden">
-        <AnimatePresence>
-          <motion.img
-            key={images[index]}
-            src={images[index]}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-            className="absolute top-0 left-0 w-full h-full object-cover"
-          />
-        </AnimatePresence>
-      </div>
+
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
+        <div className="relative w-screen h-screen overflow-hidden">
+          <AnimatePresence>
+            <motion.img
+              key={images[index]}
+              src={images[index]}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+              className="absolute top-0 left-0 w-full h-full object-cover"
+            />
+          </AnimatePresence>
+        </div>
+      </motion.div>
       <div className="mt-5"></div>
+
       <RoomsSection />
+
       <RoomsSection2 />
       <Facilities language={language} />
       <Highlight />

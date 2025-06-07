@@ -12,14 +12,25 @@ import Premium from './components/premiumsuite';
 import Jacuzzi from './components/Jacuzi';
 import Executive from './components/Executive';
 import BookingModal from './components/Overlay';
+import { useEffect, useState } from 'react';
+import Loader from './Loader';
 
 function App() {
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    // Simulate loading delay (e.g., fetch or image load)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // 2 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <Routes>
 
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={loading ? <Loader /> : <Home />} />
       <Route path="/rooms" element={<RoomShowcase />} />
       <Route path="/offers" element={<Offer />} />
       <Route path="/gallery" element={<Gallery />} />

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // Optional icon library
+import FadeInFromBottom from "./FadeFromBottom";
+import { AnimatePresence, motion } from 'framer-motion';
 
 const images = [
       "/assests/28.jpg",
@@ -45,19 +47,28 @@ const RoomsSection = () => {
 
                   {/* Text Content */}
                   <div className="lg:w-1/2 mt-8 lg:mt-0 lg:ml-12 text-center ">
-                        <h2 className="text-3xl  text-center font-serif font-semibold text-[#1e3a8a] italic mb-4">
-                              Rooms & Suites
-                        </h2>
-                        <p className="text-gray-700 font-serif text-center md:text-lg leading-relaxed mb-6">
-                              With five categories of rooms, ranging from budget-friendly Executive
-                              rooms to the lavish Presidential Suite, our luxury boutique hotel in
-                              Udaipur caters to every traveller’s preferences. Each room boasts a
-                              private balcony, minibar and jacuzzi, providing an unparalleled level
-                              of comfort and luxury.
-                        </p>
-                        <button className="px-6 py-2 text-center bg-[#ff8706] text-white rounded hover:bg-orange-600">
-                              View Rooms
-                        </button>
+                        <motion.div
+
+
+                              initial={{ opacity: 0, y: 50 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.6, delay: 0.4 }}
+                              viewport={{ once: true }}
+                        >
+                              <h2 className="text-3xl  text-center font-serif font-semibold text-[#1e3a8a] italic mb-4">
+                                    Rooms & Suites
+                              </h2>
+                              <p className="text-gray-700 font-serif text-center md:text-lg leading-relaxed mb-6">
+                                    With five categories of rooms, ranging from budget-friendly Executive
+                                    rooms to the lavish Presidential Suite, our luxury boutique hotel in
+                                    Udaipur caters to every traveller’s preferences. Each room boasts a
+                                    private balcony, minibar and jacuzzi, providing an unparalleled level
+                                    of comfort and luxury.
+                              </p>
+                              <button className="px-6 py-2 text-center bg-[#ff8706] text-white rounded hover:bg-orange-600">
+                                    View Rooms
+                              </button>
+                        </motion.div>
                   </div>
             </div>
       );

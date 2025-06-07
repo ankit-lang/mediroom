@@ -12,6 +12,7 @@ import Footer from './Footer';
 import WhatsAppButton from './WhatsAppButton';
 import EarlyBookingDiscount from './EarlyBookingDiscount';
 import { Routes } from 'react-router-dom';
+import FadeInFromBottom from './FadeFromBottom';
 
 
 const Home = () => {
@@ -23,10 +24,12 @@ const Home = () => {
 
       return (
 
-            <div className={`min-h-screen  ${language === 'ar' ? 'font-amiri text-right' : 'font-poppins text-left'}`}>
+            <div className={`min-h-screen   tracking-wide ${language === 'ar' ? 'font-amiri text-right' : 'font-poppins text-left'}`}>
 
                   <Navbar language={language} toggleLanguage={toggleLanguage} />
-                  <Hero language={language} />
+                  <FadeInFromBottom>
+                        <Hero language={language} />
+                  </FadeInFromBottom>
                   <AboutUs language={language} />
                   {/* <RoomGallery language={language} /> */}
                   {/* <NearbyHospitals language={language} /> */}
