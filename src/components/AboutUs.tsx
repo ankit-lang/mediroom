@@ -9,6 +9,7 @@ import Highlight from './Highlight';
 import BookingFormnew from './bookform.jsx';
 import ScatterText from './Scatter.js';
 import FadeInFromBottom from './FadeFromBottom.js';
+import { ContainerScroll } from './ui/container-scroll-animation.js';
 
 
 interface AboutUsProps {
@@ -184,18 +185,29 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
         transition={{ duration: 0.6, delay: 0.4 }}
         viewport={{ once: true }}
       >
-        <div className="relative w-screen h-screen overflow-hidden">
-          <AnimatePresence>
-            <motion.img
-              key={images[index]}
-              src={images[index]}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1 }}
-              className="absolute top-0 left-0 w-full h-full object-cover"
-            />
-          </AnimatePresence>
+        <div className="flex flex-col mt-[-70vw] mb-[-70vw] md:mt-[-15vw] md:mb-[-10vw] ">
+          <ContainerScroll
+            titleComponent={
+              <>
+
+              </>
+            }
+
+          >
+            <div className="relative w-screen h-screen overflow-hidden">
+              <AnimatePresence>
+                <motion.img
+                  key={images[index]}
+                  src={images[index]}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1 }}
+                  className="absolute top-0 left-0 w-full h-full object-fit  overflow-hidden"
+                />
+              </AnimatePresence>
+            </div>
+          </ContainerScroll>
         </div>
       </motion.div>
       <div className="mt-5"></div>
