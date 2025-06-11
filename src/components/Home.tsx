@@ -13,6 +13,8 @@ import WhatsAppButton from './WhatsAppButton';
 import EarlyBookingDiscount from './EarlyBookingDiscount';
 import { Routes } from 'react-router-dom';
 import FadeInFromBottom from './FadeFromBottom';
+import { BackgroundBeams } from './ui/background-beams';
+import { BackgroundBeamsWithCollision } from './ui/background-beams-with-collision';
 
 
 const Home = () => {
@@ -26,20 +28,40 @@ const Home = () => {
 
             <div className={`min-h-screen   tracking-wide ${language === 'ar' ? 'font-amiri text-right' : 'font-poppins text-left'}`}>
 
-                  <Navbar language={language} toggleLanguage={toggleLanguage} />
-                  <FadeInFromBottom>
-                        <Hero language={language} />
-                  </FadeInFromBottom>
-                  <AboutUs language={language} />
-                  {/* <RoomGallery language={language} /> */}
-                  {/* <NearbyHospitals language={language} /> */}
-                  {/* <Testimonials language={language} /> */}
-                  {/* <Facilities language={language} /> */}
-                  {/* <EarlyBookingDiscount language={language} /> */}
-                  <BookingForm language={language} />
-                  <MapLocation language={language} />
-                  <Footer language={language} />
-                  <WhatsAppButton language={language} />
+                  <div className=''>
+                        <Navbar language={language} toggleLanguage={toggleLanguage} />
+                        <FadeInFromBottom>
+                              <Hero language={language} />
+                        </FadeInFromBottom>
+                        <AboutUs language={language} />
+                        {/* <RoomGallery language={language} /> */}
+                        {/* <NearbyHospitals language={language} /> */}
+                        {/* <Testimonials language={language} /> */}
+                        {/* <Facilities language={language} /> */}
+                        {/* <EarlyBookingDiscount language={language} /> */}
+                        <BookingForm language={language} />
+                        <MapLocation language={language} />
+                        <Footer language={language} />
+                        <WhatsAppButton language={language} />
+                        <div className=" w-full h-[100vh] rounded-md bg-white relative flex flex-col items-center justify-center antialiased">
+                              <div className="max-w-2xl mx-auto ">
+
+                              </div>
+                              <div className='fixed inset-0 z-[0] pointer-events-none ' >
+
+                                    <BackgroundBeamsWithCollision className='inline ' >
+
+                                    </BackgroundBeamsWithCollision>
+                              </div>
+                        </div>
+
+
+                        <div className="fixed inset-0  z-0 pointer-events-none ">
+
+
+                        </div>
+
+                  </div>
             </div>
 
 
