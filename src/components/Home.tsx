@@ -43,17 +43,7 @@ const Home = () => {
                         <MapLocation language={language} />
                         <Footer language={language} />
                         <WhatsAppButton language={language} />
-                        <div className=" w-full rounded-md bg-white relative flex flex-col items-center justify-center antialiased">
-                              <div className="max-w-2xl mx-auto ">
-
-                              </div>
-                              <div className='fixed inset-0 z-[0] pointer-events-none ' >
-
-                                    <BackgroundBeamsWithCollision className='inline ' >
-
-                                    </BackgroundBeamsWithCollision>
-                              </div>
-                        </div>
+                        
 
 
 
