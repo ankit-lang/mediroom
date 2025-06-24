@@ -3,6 +3,7 @@ import { Menu, X, Globe } from 'lucide-react';
 import translations from '../translations';
 import { Link } from 'react-router-dom';
 import { useBookingModal } from './useBookingModal';
+import Button from './shared/Button';
 interface NavbarProps {
   language: 'en' | 'ar';
   toggleLanguage: () => void;
@@ -134,13 +135,18 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
-            <div className="bg-[#ff8706] hover:bg-orange-600 text-white py-2 px-4 rounded md:mr-14">
+            <div className="  text-white  rounded md:mr-14">
 
               {/* <button onClick={() => setIsOpen(true)} >Book Now</button> */}
 
-              <button onClick={() => setIsOpen(true)} className="relative  bg-[#ff8706]  text-white text-lg font-medium rounded-lg animate-pulse-grow focus:outline-none">
-                Book Now
-              </button>
+
+              <div onClick={() => setIsOpen(true)} className="">
+                <Button />
+              </div>
+
+
+
+
 
 
             </div>

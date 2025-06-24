@@ -15,6 +15,7 @@ import BookingModal from './components/Overlay';
 import { useEffect, useState } from 'react';
 import Loader from './Loader';
 
+
 function App() {
   const [loading, setLoading] = useState(true);
 

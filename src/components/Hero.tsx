@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { PiWhatsappLogoDuotone } from 'react-icons/pi';
 import { BsWhatsapp } from 'react-icons/bs';
 import BookingFormnew from './bookform.jsx';
+import HeroButton from './shared/HeroButton.js';
+import HeroButton2 from './shared/HeroButton2.js';
 interface HeroProps {
   language: 'en' | 'ar';
 }
@@ -37,6 +39,7 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
       <div className="relative w-full max-w-xl  mx-auto overflow-hidden rounded-xl shadow-lg">
 
       </div>
+
       <div id="home" className="absoulte h-screen">
 
         {/* Background image with overlay */}
@@ -69,6 +72,7 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
             Your Healing Home in Delhi – Trusted by Guests from the Middle East.
             A quiet corner of comfort in the heart of Delhi – just minutes away from Max, Fortis, Apollo, and AIIMS.
           </p> */}
+
             <div className="flex flex-col mt-96 sm:flex-row justify-center gap-4">
               <a
                 href="https://wa.me/1234567890"
@@ -76,13 +80,11 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
                 rel="noopener noreferrer"
                 className=" "
               >
-                <button className="relative px-3 py-3 btn-primary   text-white font-semibold  bg-orange-600 overflow-hidden">
-                  <span className="relative md:gap-2 gap-1 z-10 flex items-center justify-center">    <BsWhatsapp />
-                    {t.hero.whatsappButton}</span>
-                  <span
-                    className="absolute inset-0 z-0  bg-gradient-to-r from-transparent via-orange-400 to-transparent 
-          animate-shimmer bg-[length:200%_100%]"
-                  ></span>
+                <HeroButton   >
+                  Whatsapp
+                </HeroButton>
+                <button className="">
+
                 </button>
 
               </a>
@@ -94,16 +96,10 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
                 className=""
               >
 
-                <button className="relative px-3 py-3  btn-primary  text-white font-semibold  bg-orange-600 overflow-hidden">
-                  <span className="relative z-10"> {t.hero.bookButton}</span>
-                  <span
-                    className="absolute inset-0 z-0  bg-gradient-to-r from-transparent via-orange-400 to-transparent 
-          animate-shimmer bg-[length:200%_100%]"
-                  ></span>
-                </button>
+                <HeroButton2 />
               </a>
             </div>
-            <div className="mt-20 animate-beam bg-gradient-to-r rounded-xl  from-transparent via-white bg-[length:200%_200%] p-[2px] hidden md:block">
+            <div className="mt-12 animate-beam bg-gradient-to-r rounded-xl  from-transparent via-white bg-[length:200%_200%] p-[2px] hidden md:block">
               <BookingFormnew />
             </div>
 

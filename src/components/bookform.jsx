@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { format } from "date-fns";
-
+import Booknow from "./shared/BookNowbutton"
 export default function BookingForm() {
       const [checkIn, setCheckIn] = React.useState(new Date());
       const [checkOut, setCheckOut] = React.useState(new Date(Date.now() + 86400000));
@@ -115,11 +115,10 @@ export default function BookingForm() {
                               </div>
 
                               {/* Book Now */}
-                              <div className="col-span-1 flex flex-col justify-end h-full">
+                              <div type="submit" onClick={submitHandler} className="  col-span-1 flex flex-col justify-end h-full bg-orange-400">
 
-                                    <button type="submit" onClick={submitHandler} className="bg-orange-200 hover:bg-orange-400 text-black py-5 px-2 rounded">
-                                          Book Now
-                                    </button>
+
+                                    <Booknow />
                               </div>
                         </form>
                   </div>

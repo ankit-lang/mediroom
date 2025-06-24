@@ -15,6 +15,10 @@ import { Routes } from 'react-router-dom';
 import FadeInFromBottom from './FadeFromBottom';
 import { BackgroundBeams } from './ui/background-beams';
 import { BackgroundBeamsWithCollision } from './ui/background-beams-with-collision';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+
+
 
 
 const Home = () => {
@@ -26,28 +30,32 @@ const Home = () => {
 
       return (
 
-            <div className={`min-h-screen   tracking-wide ${language === 'ar' ? 'font-amiri text-right' : 'font-poppins text-left'}`}>
+            <div className="">
 
-                  <div className=''>
-                        <Navbar language={language} toggleLanguage={toggleLanguage} />
-                        <FadeInFromBottom>
-                              <Hero language={language} />
-                        </FadeInFromBottom>
-                        <AboutUs language={language} />
-                        {/* <RoomGallery language={language} /> */}
-                        {/* <NearbyHospitals language={language} /> */}
-                        {/* <Testimonials language={language} /> */}
-                        {/* <Facilities language={language} /> */}
-                        {/* <EarlyBookingDiscount language={language} /> */}
-                        <BookingForm language={language} />
-                        <MapLocation language={language} />
-                        <Footer language={language} />
-                        <WhatsAppButton language={language} />
-                        
+                  <div className={`min-h-screen  tracking-wide ${language === 'ar' ? 'font-amiri text-right' : 'font-poppins text-left'}`}>
+
+                        <div className='z-10'>
+                              <Navbar language={language} toggleLanguage={toggleLanguage} />
+                              <FadeInFromBottom>
+                                    <Hero language={language} />
+                              </FadeInFromBottom>
+
+                              <AboutUs language={language} />
+                              {/* <RoomGallery language={language} /> */}
+                              {/* <NearbyHospitals language={language} /> */}
+                              {/* <Testimonials language={language} /> */}
+                              {/* <Facilities language={language} /> */}
+                              {/* <EarlyBookingDiscount language={language} /> */}
+                              <BookingForm language={language} />
+                              <MapLocation language={language} />
+                              <Footer language={language} />
+                              <WhatsAppButton language={language} />
 
 
 
 
+
+                        </div>
                   </div>
             </div>
 
