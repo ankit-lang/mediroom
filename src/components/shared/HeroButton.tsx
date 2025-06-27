@@ -16,7 +16,7 @@ const StyledWrapper = styled.div`
 //     text-transform: uppercase;
  font-weight:bold;
     text-decoration: none;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: transparent;
     border: 2px solid orange;
 //     border-radius:5px;

@@ -8,6 +8,7 @@ import {
       Map,
       Droplets
 } from "lucide-react"; // Optional icon set
+import React from "react";
 import FadeInFromBottom from "./FadeFromBottom";
 import { AnimatePresence, motion } from 'framer-motion';
 const highlights = [
@@ -36,7 +37,9 @@ export default function Highlight() {
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-6 max-w-6xl mx-auto">
                               {highlights.map((item, i) => (
                                     <div key={i} className="flex flex-col items-center gap-3 text-gray-800">
-                                          <div className="text-black">{item.icon}</div>
+                                          <div className="bg-white rounded-full border-2 border-[#ff8706] shadow-lg shadow-orange-300/60 p-4 flex items-center justify-center transition-transform duration-300 hover:scale-105" style={{ boxShadow: '0 6px 24px 0 #ff8706a0, 0 1.5px 6px 0 #ff8706a0' }}>
+                                                {React.cloneElement(item.icon, { className: 'w-10 h-10 text-[#ff8706] drop-shadow-[0_2px_6px_rgba(255,135,6,0.5)]' })}
+                                          </div>
                                           <p className="text-sm font-serif md:text-base">{item.label}</p>
                                     </div>
                               ))}

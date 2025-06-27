@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 interface PulsatingButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -25,7 +25,7 @@ export const PulsatingButton = React.forwardRef<
       <button
         ref={ref}
         className={cn(
-          "relative flex cursor-pointer items-center justify-center rounded-lg bg-primary px-4 py-2 text-center text-primary-foreground",
+          "relative flex cursor-pointer items-center justify-center rounded-lg bg-primary px-4 py-[10px] hover:scale-110 text-xl text-center bg-orange-400 text-primary-foreground text-white",
           className,
         )}
         style={
@@ -36,8 +36,37 @@ export const PulsatingButton = React.forwardRef<
         }
         {...props}
       >
+        <style>{`
+          .pulsating-effect {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            border-radius: 0.5rem;
+            background: var(--pulse-color, #808080);
+            opacity: 0.6;
+            z-index: 0;
+            animation: pulse-custom var(--duration, 1.5s) infinite cubic-bezier(0.4,0,0.6,1);
+          }
+          @keyframes pulse-custom {
+            0% {
+              transform: translate(-50%, -50%) scale(1);
+              opacity: 0.6;
+            }
+            70% {
+              transform: translate(-50%, -50%) scale(1.5);
+              opacity: 0;
+            }
+            100% {
+              transform: translate(-50%, -50%) scale(1);
+              opacity: 0;
+            }
+          }
+        `}</style>
         <div className="relative z-10">{children}</div>
-        <div className="absolute left-1/2 top-1/2 size-full -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-lg bg-inherit" />
+        <div className="pulsating-effect" />
       </button>
     );
   },

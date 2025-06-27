@@ -54,7 +54,7 @@ export default function BookingForm() {
                                     <input
                                           type="date"
                                           required
-                                          className="w-full p-2 rounded bg-white/10 border border-white text-white"
+                                          className="w-full min-w-0 p-2 text-base rounded bg-white/10 border border-white text-white tracking-wide focus:outline-none focus:ring-2 focus:ring-gold placeholder:text-white/70"
                                           value={format(checkIn, "yyyy-MM-dd")}
                                           onChange={(e) => setCheckIn(new Date(e.target.value))}
                                     />
@@ -66,7 +66,7 @@ export default function BookingForm() {
                                     <input
                                           type="date"
                                           required
-                                          className="w-full p-2 rounded bg-white/10 border border-white text-white"
+                                          className="w-full min-w-0 p-2 text-base rounded bg-white/10 border border-white text-white tracking-wide focus:outline-none focus:ring-2 focus:ring-gold placeholder:text-white/70"
                                           value={format(checkOut, "yyyy-MM-dd")}
                                           onChange={(e) => setCheckOut(new Date(e.target.value))}
                                     />

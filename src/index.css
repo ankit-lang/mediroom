@@ -80,8 +80,9 @@
     font-style: italic;
 
   }
-
-  h2,
+*{
+  letter-spacing: -1px;
+}
   h3 {
     color: #ff8706 !important;
   }
