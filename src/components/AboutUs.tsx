@@ -183,11 +183,11 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
   transition={{ duration: 0.6, delay: 0.4 }}
   viewport={{ once: true }}
 >
-  <div className="flex  flex-col mt-[-70vw] mb-[-70vw] md:mt-[-15vw] md:mb-[-10vw]">
+  <div className="flex  flex-col   md:mt-[-15vw] md:mb-[-10vw]">
     <ContainerScroll
       titleComponent={<></>}
     >
-      <div className="relative  w-full aspect-[16/9] overflow-hidden border-2 border-gray-500 rounded-lg shadow-lg">
+      <div className="relative  w-full aspect-[3/4] md:aspect-[1.7/1] overflow-hidden border-2 border-gray-500 rounded-lg shadow-lg">
         <AnimatePresence>
           <motion.img
             key={images[index]}
