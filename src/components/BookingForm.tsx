@@ -50,7 +50,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
   return (
     <section id="booking" className={` font-poppins section-padding  bg-[white] ${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto">
-        <h2 className="section-title text-center font-serif">{t.booking.title}</h2>
+        <h2 className="section-title text-[#073937] text-center font-serif">{t.booking.title}</h2>
         <p className="section-subtitle text-center md:mb-12 text-[15px] md:text-lg font-serif">{t.booking.subtitle}</p>
 
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
@@ -93,7 +93,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                           required
                           value={formData.name}
                           onChange={handleChange}
-                          className="input-field"
+                          className="input-field border-[#073937] focus:border-[#073937]"
                         />
                       </div>
 
@@ -108,7 +108,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                           required
                           value={formData.country}
                           onChange={handleChange}
-                          className="input-field"
+                          className="input-field border-[#073937] focus:border-[#073937]"
                         />
                       </div>
 
@@ -125,7 +125,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                             required
                             value={formData.guests}
                             onChange={handleChange}
-                            className="input-field"
+                            className="input-field border-[#073937] focus:border-[#073937]"
                           />
                         </div>
                         <div>
@@ -139,7 +139,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                             required
                             value={formData.arrivalDate}
                             onChange={handleChange}
-                            className="input-field"
+                            className="input-field border-[#073937] focus:border-[#073937]"
                           />
                         </div>
                       </div>
@@ -155,7 +155,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                           required
                           value={formData.whatsapp}
                           onChange={handleChange}
-                          className="input-field"
+                          className="input-field border-[#073937] focus:border-[#073937]"
                         />
                       </div>
 
@@ -169,7 +169,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                           required
                           value={formData.purpose}
                           onChange={handleChange}
-                          className="input-field"
+                          className="input-field border-[#073937] focus:border-[#073937]"
                         >
                           <option value="medical">{t.booking.purposeOptions.medical}</option>
                           <option value="tourism">{t.booking.purposeOptions.tourism}</option>
@@ -188,11 +188,11 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                           rows={3}
                           value={formData.message}
                           onChange={handleChange}
-                          className="input-field"
+                          className="input-field border-[#073937] focus:border-[#073937]"
                         ></textarea>
                       </div>
 
-                      <button type="submit" className="btn-primary bg-[#ff8706] w-full">
+                      <button type="submit" className="btn-primary bg-[#073937] w-full">
                         {t.booking.submitButton}
                       </button>
                     </form>
@@ -205,7 +205,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
               className="bg-cover bg-center"
               style={{ backgroundImage: "url('https://images.pexels.com/photos/4046187/pexels-photo-4046187.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')" }}
             >
-              <div className="h-full bg-[#ff8706] font-serif text-white p-8 bg-opacity-80 p-8 flex flex-col justify-center">
+              <div className="h-full bg-[#073937] font-serif text-white p-8 bg-opacity-80 p-8 flex flex-col justify-center">
                 <motion.div
 
 

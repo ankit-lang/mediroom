@@ -42,26 +42,19 @@ const StyledWrapper = styled.div`
   button {
     position: relative;
     padding: 8px 45px;
-    background: #fec195;
+    background: #073937;
     font-size: 17px;
     font-weight: 500;
-    color: #181818;
+    color: white;
+    rounded: 8px;  !important
     cursor: pointer;
-    border: 1px solid #fec195;
-    border-radius: 8px;
+   
     filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
   }
 
   button:hover {
-    border: 1px solid #f3b182;
-    background: linear-gradient(
-      85deg,
-      #fec195,
-      #fcc196,
-      #fabd92,
-      #fac097,
-      #fac39c
-    );
+   background: green-600 !important;
+  
     animation: wind 2s ease-in-out infinite;
   }
 

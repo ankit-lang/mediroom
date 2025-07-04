@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={`bg-[#ff8706] text-white ${dir === 'rtl' ? 'rtl' : ''}`}>
+    <footer className={`bg-[#073937] text-white ${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto text-justify  px-4 md:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* About */}

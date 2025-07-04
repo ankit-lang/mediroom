@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
 import { Link } from "react-router-dom";
+import { TabsDemo } from "./Animatedtab";
 
 const rooms = [
       {
@@ -52,26 +53,30 @@ export default function RoomShowcase() {
       ];
       return (
             <>
-                  <div className="">
+                  <div className="relative">
                         <Navbar language={language} toggleLanguage={toggleLanguage} />
                   </div>
+                  {/* <div className="absoulte  top-20 ">
+                  <TabsDemo />
+                  </div> */}
+                  
 
                   <div className="py-12 px-4 bg-white pt-32">
-                        <div className="bg-orange-500  mb-5 py-6 mt-[-48px]">
+                        <div className="  mb-5 py-6 mt-[-48px]">
                               <div className="flex flex-wrap  justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
                                     {links.map((text, index) => (
                                           <Link
                                                 key={index}
                                                 to={text.url}
                                                 style={{}}
-                                                className=" !text-[20px] md:text-base text-white font-bold relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full hover:after:bg-orange-900 transition-all duration-300"
+                                                className=" md:!text-[20px]  text-[15px] md:text-base text-[#073937] tracking-normal font-bold relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full hover:after:bg-orange-900 transition-all duration-300"
                                           >
                                                 {text.name}
                                           </Link>
                                     ))}
                               </div>
                         </div>
-                        <h2 className="text-2xl md:text-3xl text-center font-semibold italic text-blue-900 mb-10">
+                        <h2 className="text-2xl md:text-3xl text-center font-semibold italic text-[#073937] underline mb-10">
                               Rooms In MoyDom
                         </h2>
 
@@ -88,14 +93,14 @@ export default function RoomShowcase() {
                                           />
                                           <div className="p-4 flex-1 flex flex-col items-center justify-between">
                                                 <div>
-                                                      <h3 className="text-lg font-semibold text-blue-800 mb-2">
+                                                      <h3 className="text-lg font-semibold !text-[#073937] mb-2">
                                                             {room.title}
                                                       </h3>
                                                       <p className="text-gray-700 text-sm">{room.description}</p>
                                                 </div>
                                                 <div className="mt-4">
                                                       <Link to={room.url}>
-                                                            <button className="bg-[#ff8706] rounded-sm text-white  text-sm px-4 py-2 hover:bg-orange-600">
+                                                            <button className="bg-[#073937] rounded-sm text-white  text-sm px-4 py-2 hover:bg-green-600">
                                                                   MORE INFO
                                                             </button>
                                                       </Link>

@@ -84,14 +84,14 @@ export default function Elite() {
                         <div className="bg-gray-300  mb-5 py-6 mt-[-48px]">
                               <div className="flex flex-wrap  justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
                                     {links.map((text, index) => (
-                                          <Link
-                                                key={index}
-                                                to={text.url}
-                                                style={{}}
-                                                className=" !text-[20px] md:text-base text-blue-900 relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full hover:after:bg-blue-900 transition-all duration-300"
-                                          >
-                                                {text.name}
-                                          </Link>
+                                         <Link
+                                                                                         key={index}
+                                                                                         to={text.url}
+                                                                                         style={{}}
+                                                                                         className=" !text-[20px] md:text-base text-[#073937] tracking-normal font-bold relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full hover:after:bg-orange-900 transition-all duration-300"
+                                                                                   >
+                                                                                         {text.name}
+                                                                                   </Link>
                                     ))}
                               </div>
                         </div>

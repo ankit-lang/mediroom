@@ -12,13 +12,6 @@ interface HeroProps {
   language: 'en' | 'ar';
 }
 
-const images = [
-  "/assests/1.jpg",
-  "/assests/2.jpg",
-  "/assests/hero.jpg",
-
-
-];
 const Hero: React.FC<HeroProps> = ({ language }) => {
   const t = translations[language];
   const dir = language === 'ar' ? 'rtl' : 'ltr';

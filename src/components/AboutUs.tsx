@@ -10,6 +10,8 @@ import BookingFormnew from './bookform.jsx';
 import ScatterText from './Scatter.js';
 import FadeInFromBottom from './FadeFromBottom.js';
 import { ContainerScroll } from './ui/container-scroll-animation.js';
+import Masonry from './shared/Mansory.js';
+import CircularGallery from './shared/Circulargallery.js';
 
 
 interface AboutUsProps {
@@ -53,6 +55,87 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
 
     return () => clearInterval(interval);
   }, []);
+  const items = [
+    {
+      id: "1",
+      img: "https://picsum.photos/id/1015/600/900?grayscale",
+      url: "https://example.com/one",
+      height: 400,
+    },
+    {
+      id: "2",
+      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      url: "https://example.com/two",
+      height: 250,
+    },
+    {
+      id: "3",
+      img: "https://picsum.photos/id/1020/600/800?grayscale",
+      url: "https://example.com/three",
+      height: 600,
+    },
+    {
+      id: "4",
+      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      url: "https://example.com/two",
+      height: 250,
+    },
+    {
+      id: "5",
+      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      url: "https://example.com/two",
+      height: 250,
+    },
+    {
+      id: "6",
+      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      url: "https://example.com/two",
+      height: 250,
+    },
+
+    {
+      id: "7",
+      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      url: "https://example.com/two",
+      height: 250,
+    },
+    {
+      id: "8",
+      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      url: "https://example.com/two",
+      height: 250,
+    },
+    {
+      id: "9",
+      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      url: "https://example.com/two",
+      height: 250,
+    },
+    {
+      id: "10",
+      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      url: "https://example.com/two",
+      height: 250,
+    },
+    {
+      id: "11",
+      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      url: "https://example.com/two",
+      height: 250,
+    },
+
+    {
+      id: "12",
+      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      url: "https://example.com/two",
+      height: 250,
+    },
+   
+    
+
+  
+    // ... more items
+];
 
   return (
     <>
@@ -61,7 +144,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
       {/* <BookingFormnew /> */}
       {/* </div> */}
       <FadeInFromBottom>
-        <footer className="bg-amber-800 text-white py-8 text-center">
+        <footer className="bg-[#073937] mt-10 text-white py-8 text-center">
           <motion.div
 
 
@@ -97,7 +180,24 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
 
         </footer>
       </FadeInFromBottom>
+      <div className="h-[100vh] hidden md:block mt-10 p-20 w-full relative">
+                             <Masonry
+  items={items}
+  ease="power3.out"
+  duration={0.6}
+  stagger={0.05}
+  animateFrom="bottom"
+  scaleOnHover={true}
+  hoverScale={0.95}
+  blurToFocus={true}
+  colorShiftOnHover={false}
+/>
+      </div>
 
+      <div style={{ height: '600px', position: 'relative' }}>
+        <h2 className='text-center text-3xl text-black'>Rooms Avaiable</h2>
+  <CircularGallery scrollSpeed={0.8} md:bend={3} bend={1} textColor="green-900" borderRadius={0.05} scrollEase={0.4}/>
+</div>
       <section className="bg-gradient-to-b  tracking-wide from-[#white] to-white py-12 text-center px-4">
         {/* Logo */}
         <FadeInFromBottom>

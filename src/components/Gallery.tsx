@@ -40,7 +40,7 @@ export default function Gallery() {
             <>
                   <Navbar language={language} toggleLanguage={toggleLanguage} />
                   <div className="p-6  pt-32 ">
-                        <h2 className="text-3xl font-bold text-center mb-6 italic text-blue-900 font-serif ">All Photos</h2>
+                        <h2 className="text-3xl font-bold text-center mb-6 italic text-[#073937] font-serif ">All Photos</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
                               {images.map((src, i) => (
                                     <img

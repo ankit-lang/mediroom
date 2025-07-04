@@ -81,21 +81,21 @@ export default function Presidential() {
                   </div>
 
                   <div className="py-12 px-4 bg-white pt-32">
-                        <div className="bg-orange-500  mb-5 py-6 mt-[-48px]">
+                        <div className="  mb-5 py-6 mt-[-48px]">
                               <div className="flex flex-wrap  justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
                                     {links.map((text, index) => (
-                                          <Link
-                                                key={index}
-                                                to={text.url}
-                                                style={{}}
-                                                className=" !text-[20px] md:text-base text-white font-bold relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full hover:after:bg-orange-900 transition-all duration-300"
-                                          >
-                                                {text.name}
-                                          </Link>
+                                         <Link
+                                                                                         key={index}
+                                                                                         to={text.url}
+                                                                                         style={{}}
+                                                                                         className=" !text-[20px] md:text-base text-[#073937] tracking-normal font-bold relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full hover:after:bg-orange-900 transition-all duration-300"
+                                                                                   >
+                                                                                         {text.name}
+                                                                                   </Link>
                                     ))}
                               </div>
                         </div>
-                        <h2 className="text-2xl md:text-3xl text-center font-semibold italic text-blue-900 mb-10">
+                        <h2 className="text-2xl md:text-3xl text-center font-semibold italic underline  text-[#073937] mb-10">
                               Presidential
                         </h2>
                         <div className="relative w-full m-auto mb-12 lg:w-[60vw] h-[400px] overflow-hidden">
@@ -120,15 +120,15 @@ export default function Presidential() {
                               </button>
                         </div>
                         <div className="m-auto text-center ">
-                              <button className="bg-[#ff8706] hover:bg-orange-600 text-white !py-3 !px-10 rounded">
+                              <button className="bg-[#073937] hover:bg-green-600 text-white !py-3 !px-10 rounded">
                                     Book Now
                               </button>
                         </div>
                         <div className="text-[14px] md:text-lg mt-5 text-center   md:px-20 ">
                               Step into the epitome of luxury with our Two Bedroom Villa With Private Pool, spanning an impressive 1560 sq. ft. Designed to comfortably accommodate 8 guests, this exclusive private pool villa in Udaipur, features a plush king size bed, state-of-the-art amenities including a tea & coffee maker, minibar, and round-the-clock room service. Experience ultimate convenience with our on-site laundry service. The villa's elegant interior design complements the serene private pool, making it an ideal choice for families or groups seeking both luxury and relaxation.
                         </div>
-                        <div className="bg-orange-100 py-8 mt-5 mx-10">
-                              <h2 className="text-center md:!text-5xl text-xl font-semibold italic mb-6">Amenities</h2>
+                        <div className="bg-green-100 py-8 mt-5 mx-10">
+                              <h2 className="text-center md:!text-5xl text-xl font-semibold italic text-[#073937] mb-6">Amenities</h2>
                               <div className="flex flex-col md:flex-row md:justify-center gap-12">
                                     <ul className="list-disc list-inside px-5 space-y-2 md:w-1/2">
                                           {left.map((item, idx) => (

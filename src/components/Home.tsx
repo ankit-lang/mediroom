@@ -17,11 +17,14 @@ import { BackgroundBeams } from './ui/background-beams';
 import { BackgroundBeamsWithCollision } from './ui/background-beams-with-collision';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
+import Heronew from './Heronew';
 
+import Masonry from './shared/Mansory';
 
 
 
 const Home = () => {
+    
       const [language, setLanguage] = useState<'en' | 'ar'>('en');
 
       const toggleLanguage = () => {
@@ -37,9 +40,10 @@ const Home = () => {
                         <div className='z-10'>
                               <Navbar language={language} toggleLanguage={toggleLanguage} />
                               <FadeInFromBottom>
-                                    <Hero language={language} />
+                                    {/* <Hero language={language} /> */}
+                                    <Heronew/>
                               </FadeInFromBottom>
-
+                          
                               <AboutUs language={language} />
                               {/* <RoomGallery language={language} /> */}
                               {/* <NearbyHospitals language={language} /> */}

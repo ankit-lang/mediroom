@@ -20,7 +20,7 @@ const MapLocation: React.FC<MapLocationProps> = ({ language }) => {
         viewport={{ once: true }}
       >
         <div className="container mx-auto px-4 md:px-8 py-16">
-          <h2 className="section-title text-center font-serif  ">{t.location.title}</h2>
+          <h2 className="section-title text-[#073937] text-center font-serif  ">{t.location.title}</h2>
           <p className="section-subtitle text-center font-serif mb-6">{t.location.subtitle}</p>
 
           <div className="bg-white p-4 rounded-lg shadow-md">

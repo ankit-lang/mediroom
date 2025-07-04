@@ -23,7 +23,7 @@ function App() {
     // Simulate loading delay (e.g., fetch or image load)
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // 2 seconds
+    }, 500); // 2 seconds
 
     return () => clearTimeout(timer);
   }, []);

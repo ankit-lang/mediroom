@@ -44,7 +44,7 @@ export default function Offer() {
             <>
                   <Navbar language={language} toggleLanguage={toggleLanguage} />
                   <div className=" py-12 px-4 sm:px-8 lg:px-16 pt-32">
-                        <h2 className="text-3xl font-semibold text-center text-blue-900 italic mb-10">
+                        <h2 className="text-3xl font-semibold text-center text-[#073937] italic mb-10">
                               MoyDom Hotel Deals
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -59,7 +59,7 @@ export default function Offer() {
                                                 className="w-full h-56 object-cover"
                                           />
                                           <div className="p-6">
-                                                <h3 className="text-xl font-serif font-semibold text-black mb-2">
+                                                <h3 className="text-xl font-serif font-semibold !text-[#073937] mb-2">
                                                       {deal.title}
                                                 </h3>
                                                 <p className="text-black text-sm  md:text-[16px] mb-4">{deal.description}</p>

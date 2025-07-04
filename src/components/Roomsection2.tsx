@@ -44,7 +44,7 @@ const RoomsSection2 = () => {
                               transition={{ duration: 0.6, delay: 0.4 }}
                               viewport={{ once: true }}
                         >
-                              <h2 className="text-3xl  text-center font-serif font-semibold text-[#1e3a8a] italic mb-4">
+                              <h2 className="text-3xl  text-center font-serif font-semibold text-[#073937] italic mb-4">
                                     Rooms & Suites
                               </h2>
                               <p className="text-gray-700 font-serif text-center md:text-lg leading-relaxed mr-5   mb-6">
@@ -54,7 +54,7 @@ const RoomsSection2 = () => {
                                     private balcony, minibar and jacuzzi, providing an unparalleled level
                                     of comfort and luxury.
                               </p>
-                              <button className="px-6 py-2 text-center bg-[#ff8706] text-white rounded hover:bg-orange-600">
+                              <button className="px-6 py-2 text-center bg-[#073937] text-white rounded hover:bg-[#4e7977]">
                                     View Rooms
                               </button>
                         </motion.div>

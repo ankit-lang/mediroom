@@ -132,13 +132,13 @@ const Facilities: React.FC<FacilitiesProps> = ({ language }) => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl  text-center font-serif font-semibold text-[#1e3a8a] italic mb-4">
+          <h2 className="text-3xl  text-center font-serif font-semibold text-[#073937] italic mb-4">
             Facilites
           </h2>
           <p className="text-gray-700 font-serif text-center md:text-lg leading-relaxed mb-6">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos tenetur voluptate obcaecati quaerat, ad vel praesentium aspernatur magni fugiat quam minima reprehenderit expedita, incidunt, optio quisquam voluptates? Cum, dolores consectetur?
           </p>
-          <button className="px-6 py-2 text-center bg-[#ff8706] text-white rounded hover:bg-orange-600">
+          <button className="px-6 py-2 text-center bg-[#073937] text-white rounded hover:bg-[#4e7977]">
             Learn More
           </button>
         </motion.div>
