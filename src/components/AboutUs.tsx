@@ -196,7 +196,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
 
       <div style={{ height: '600px', position: 'relative' }}>
         <h2 className='text-center text-3xl text-black'>Rooms Avaiable</h2>
-  <CircularGallery scrollSpeed={0.8} md:bend={3} bend={1} textColor="green-900" borderRadius={0.05} scrollEase={0.4}/>
+  <CircularGallery scrollSpeed={0.5} md:bend={3} bend={1} textColor="green-900" borderRadius={0.05} scrollEase={1}/>
 </div>
       <section className="bg-gradient-to-b  tracking-wide from-[#white] to-white py-12 text-center px-4">
         {/* Logo */}
