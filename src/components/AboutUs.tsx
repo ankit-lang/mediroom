@@ -283,7 +283,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
   transition={{ duration: 0.6, delay: 0.4 }}
   viewport={{ once: true }}
 >
-  <div className="flex  flex-col   md:mt-[-15vw] md:mb-[-10vw]">
+  <div className="md:flex hidden  flex-col   md:mt-[-15vw] md:mb-[-10vw]">
     <ContainerScroll
       titleComponent={<></>}
     >
