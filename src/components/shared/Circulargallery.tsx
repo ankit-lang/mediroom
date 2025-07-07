@@ -471,33 +471,46 @@ class App {
   ) {
     const defaultItems = [
       {
-        image: `https://picsum.photos/seed/1/800/600?grayscale`,
+        image: `/rooms/room101.jpg`,
         text: "Room1",
       },
       {
-        image: `https://picsum.photos/seed/2/800/600?grayscale`,
+        image: `/rooms/maharaja1floor1097.jpg`,
         text: "Room2",
       },
       {
-        image: `https://picsum.photos/seed/3/800/600?grayscale`,
+        image: "/rooms/diptee.JPG",
         text: "Room3",
       },
       {
-        image: `https://picsum.photos/seed/4/800/600?grayscale`,
+        image: `/rooms/d826.jpg`,
         text: "Room4",
       },
       {
-        image: `https://picsum.photos/seed/5/800/600?grayscale`,
+        image: `/rooms/202.JPG`,
         text: "Room 5",
       },
       {
-        image: `https://picsum.photos/seed/16/800/600?grayscale`,
+        image: `/rooms/201.JPG`,
         text: "Room 6",
       },
       {
-        image: `https://picsum.photos/seed/17/800/600?grayscale`,
+        image: `/rooms/5bhkduplex.jpg`,
         text: "Room 7",
       },
+      {
+        image: `/rooms/4bhknewfriendd851.jpg`,
+        text: "Room 8",
+      },
+      {
+        image: `/rooms/3bhkd851newfriend.jpg`,
+        text: "Room 9",
+      },
+      {
+        image: `/rooms/3bhkd851leftside.jpg`,
+        text: "Room 10"}
+        ,
+      
    
     ];
     const galleryItems = items && items.length ? items : defaultItems;

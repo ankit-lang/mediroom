@@ -2,11 +2,19 @@ import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // Optional icon library
 import FadeInFromBottom from "./FadeFromBottom";
 import { AnimatePresence, motion } from 'framer-motion';
+import { Link } from "react-router-dom";
 
 const images = [
-      "/assests/28.jpg",
-      "/assests/82.jpg",
-      "/assests/27.jpeg",
+      "/rooms/3bhkd851leftside.jpg",
+      "/rooms/3bhkd851newfriend.jpg",
+      "/rooms/4bhknewfriendd851.jpg",
+      "/rooms/5bhkduplex.jpg",
+      "/rooms/maharaja1floor1097.jpg",
+      "/rooms/201.JPG",
+      "/rooms/202.JPG",
+      "rooms/d826.jpg",
+      "/rooms/diptee.JPG",
+      "rooms/room101.jpg"
 ];
 
 const RoomsSection = () => {
@@ -88,15 +96,13 @@ const RoomsSection = () => {
                                     Rooms & Suites
                               </h2>
                               <p className="text-gray-700 font-serif text-center md:text-lg leading-relaxed mb-6">
-                                    With five categories of rooms, ranging from budget-friendly Executive
-                                    rooms to the lavish Presidential Suite, our luxury boutique hotel in
-                                    Udaipur caters to every traveller’s preferences. Each room boasts a
-                                    private balcony, minibar and jacuzzi, providing an unparalleled level
-                                    of comfort and luxury.
+                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ad, doloribus, deserunt commodi nam eligendi consectetur est, quo corrupti qui reprehenderit soluta temporibus odio dicta aut iure nemo voluptas ipsa.
                               </p>
+                              <Link to="/rooms" className="inline-block">
                               <button className="px-6 py-2 text-center bg-[#073937] text-white rounded hover:bg-[#4e7977]">
                                     View Rooms
                               </button>
+                              </Link>
                         </motion.div>
                   </div>
             </div>

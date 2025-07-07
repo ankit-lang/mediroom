@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { CalendarIcon, SearchIcon, UsersIcon } from "@heroicons/react/outline";
 
+import img1 from "/banner/49.jpg";
+import img2 from "/banner/54.jpg";
+import img3 from "/banner/5.jpg";
+import BlurText from './Blurredtext';
+import SplitText from './SplitText';
 const images = [
-   'https://imgs.search.brave.com/mXlG21SIO7A_8Ny8J6-feOxcxa0aGRqN79wDHlnwlXE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waF5Y2Ru/LmNvbS9waG90b3Mv/aG91c2UtaW4tdHJl/ZXMuanBnP3dpZHRo/PTEwMDAmZm9ybWF0/PXBqcGcmZXhpZj0w/JmlwdGM9MA',
-   'https://imgs.search.brave.com/VUVjz4O9huadOGlYhAUIximfpgFaA5cEWShETMBEeJk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waF5Y2Ru/LmNvbS9waG90b3Mv/bW9kZXJuLWhvdXNl/LmpwZz93aWR0aD0x/MDAwJmZvcm1hdD1w/anBnJmV4aWY9MCZp/cHRjPTA',
+   img1,
+   img2,
+    img3
 
-   'https://imgs.search.brave.com/mXlG21SIO7A_8Ny8J6-feOxcxa0aGRqN79wDHlnwlXE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waF5Y2Ru/LmNvbS9waG90b3Mv/aG91c2UtaW4tdHJl/ZXMuanBnP3dpZHRo/PTEwMDAmZm9ybWF0/PXBqcGcmZXhpZj0w/JmlwdGM9MA',
-
-   'https://imgs.search.brave.com/mXlG21SIO7A_8Ny8J6-feOxcxa0aGRqN79wDHlnwlXE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waF5Y2Ru/LmNvbS9waG90b3Mv/aG91c2UtaW4tdHJl/ZXMuanBnP3dpZHRo/PTEwMDAmZm9ybWF0/PXBqcGcmZXhpZj0w/JmlwdGM9MA',
 
 ];
 
@@ -46,10 +49,38 @@ export default function Heronew() {
         {/* Text Section */}
         <div className="max-w-xl">
           <h1 className="text-5xl hidden md:block font-serif text-green-900 mb-6">
-            A Better Way<br />To Stay
+          
+
+
+<BlurText
+  text="A Better Way To Stay"
+  delay={150}
+  animateBy="letters"
+  direction="top"
+
+  className="  mb-8"
+/>
+ 
+            
           </h1>
-          <p className="text-lg hidden md:block text-green-800">
-            A choice of stays in the cities you love, powered by an app that puts you in control. Now part of Moydom.
+          <p className="text-lg hidden text-left md:block text-green-800">
+            
+<SplitText
+  text=" A choice of stays in the cities you love, powered by an app that puts you in control. Now part of Moydom."
+  className="text-left "
+  delay={100}
+  duration={0.6}
+  ease="power3.out"
+  splitType="words"
+  from={{ opacity: 0, y: 40 }}
+  to={{ opacity: 1, y: 0 }}
+  threshold={0.1}
+  rootMargin=""
+  textAlign='left'
+  
+ 
+/>
+           
           </p>
         </div>
 

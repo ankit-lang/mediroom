@@ -42,6 +42,7 @@ const images3 = [
 
 
 ];
+import img1 from "/masonary/1.jpg"; 
 const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
   const t = translations[language];
   const dir = language === 'ar' ? 'rtl' : 'ltr';
@@ -58,75 +59,75 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
   const items = [
     {
       id: "1",
-      img: "https://picsum.photos/id/1015/600/900?grayscale",
-      url: "https://example.com/one",
+      img: img1,
+   
       height: 400,
     },
     {
       id: "2",
-      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      img: '/masonary/2.jpg',
       url: "https://example.com/two",
       height: 250,
     },
     {
       id: "3",
-      img: "https://picsum.photos/id/1020/600/800?grayscale",
+      img: "/masonary/3.JPEG",
       url: "https://example.com/three",
       height: 600,
     },
     {
       id: "4",
-      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      img: "/masonary/4.JPEG",
       url: "https://example.com/two",
       height: 250,
     },
     {
       id: "5",
-      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      img: "/masonary/5.JPEG",
       url: "https://example.com/two",
       height: 250,
     },
     {
       id: "6",
-      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      img: "/masonary/6.JPG",
       url: "https://example.com/two",
       height: 250,
     },
 
     {
       id: "7",
-      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      img: "/masonary/7.JPG",
       url: "https://example.com/two",
       height: 250,
     },
     {
       id: "8",
-      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      img: "/masonary/8.jpg",
       url: "https://example.com/two",
       height: 250,
     },
     {
       id: "9",
-      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      img: "/masonary/9.jpg",
       url: "https://example.com/two",
       height: 250,
     },
     {
       id: "10",
-      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      img: "/masonary/10.jpg",
       url: "https://example.com/two",
       height: 250,
     },
     {
       id: "11",
-      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      img: "/masonary/11.jpg",
       url: "https://example.com/two",
       height: 250,
     },
 
     {
       id: "12",
-      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      img: "/masonary/12.jpg",
       url: "https://example.com/two",
       height: 250,
     },
@@ -184,13 +185,13 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
                              <Masonry
   items={items}
   ease="power3.out"
-  duration={0.6}
+  duration={1}
   stagger={0.05}
-  animateFrom="bottom"
+  animateFrom="right"
   scaleOnHover={true}
   hoverScale={0.95}
   blurToFocus={true}
-  colorShiftOnHover={false}
+  colorShiftOnHover={true}
 />
       </div>
 
@@ -308,7 +309,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
       <RoomsSection />
 
       <RoomsSection2 />
-      <Facilities language={language} />
+      {/* <Facilities language={language} /> */}
       <Highlight />
 
     </>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import SplitText from "./SplitText";
 
 const facilities = [
       {
@@ -40,8 +41,24 @@ export default function FacilitiesSection() {
                   <Navbar language={language} toggleLanguage={toggleLanguage} />
 
                   <section className="py-12 px-4 text-center pt-32">
+                        
                         <h2 className="text-3xl font-semibold italic text-[#13274F] mb-10">
-                              Facilities at The Moydom
+                              
+                        <SplitText
+  text="Facilities at The Moydom"
+  className="text-2xl font-semibold text-center"
+  delay={100}
+  duration={0.6}
+  ease="power3.out"
+  splitType="chars"
+  from={{ opacity: 0, y: 40 }}
+  to={{ opacity: 1, y: 0 }}
+  threshold={0.1}
+  rootMargin="-100px"
+  textAlign="center"
+        
+/>
+                              
                         </h2>
 
                         <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8 max-w-6xl mx-auto">

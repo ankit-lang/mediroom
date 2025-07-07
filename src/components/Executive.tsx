@@ -5,6 +5,7 @@ import WhatsAppButton from "./WhatsAppButton";
 // import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // Optional icon library
 import { Link } from "react-router-dom";
+import FlowingMenu from "./Flowingmenu";
 const amenities = [
       "Air-conditioning", "Wi-Fi Internet Access", "Refrigerator", "Hot Water",
       "Television", "Telephone", "Tea & Coffee Maker", "Complimentary Breakfast",
@@ -62,6 +63,12 @@ export default function Executive() {
       const nextSlide = () => {
             setIndex((index + 1) % images.length);
       };
+      const demoItems = [
+            { link: '/rooms/executive-rooms-in-moydom', text: 'Room1', image: '/rooms/3bhkd851leftside.jpg' },
+            { link: '/rooms/presidential-family-suite', text: 'Room2', image: '/rooms/201.JPG' },
+            { link: '/rooms/sierra-jacuzzi-room', text: 'Room3', image: '/rooms/202.JPG' },
+            { link: '/rooms/two-bedroom-villa-with-private-pool', text: 'Room4', image: '/rooms/d826.jpg' }
+          ];
       const links = [
             { name: "Executive Rooms in MoyDom", url: "/rooms/executive-rooms-in-moydom" },
             // { name: "Elite Room With Private Balcony", url: "/rooms/elite-room-with-private-balcony" },
@@ -79,9 +86,12 @@ export default function Executive() {
                   <div className="">
                         <Navbar language={language} toggleLanguage={toggleLanguage} />
                   </div>
+                  <div style={{ height: '600px', position: 'relative' }}>
+  <FlowingMenu items={demoItems} />
+</div>
 
-                  <div className="py-12 px-4  pt-32">
-                        <div className="  mb-5 py-6 mt-[-48px]">
+                  <div className="py-12 px-4  pt-32 mt-[-56vh] bg-white">
+                        <div className="  mb-5 py-6 mt-[-48px] hidden">
                               <div className="flex flex-wrap  justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
                                     {links.map((text, index) => (
                                         <Link

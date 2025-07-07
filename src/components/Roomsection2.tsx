@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // Optional icon library
 import FadeInFromBottom from "./FadeFromBottom";
 import { AnimatePresence, motion } from 'framer-motion';
-
+import { Link } from "react-router-dom";
+//faciliteis
 const images = [
       "/assests/28.jpg",
       "/assests/82.jpg",
@@ -45,18 +46,16 @@ const RoomsSection2 = () => {
                               viewport={{ once: true }}
                         >
                               <h2 className="text-3xl  text-center font-serif font-semibold text-[#073937] italic mb-4">
-                                    Rooms & Suites
+                                    Facilities
                               </h2>
                               <p className="text-gray-700 font-serif text-center md:text-lg leading-relaxed mr-5   mb-6">
-                                    With five categories of rooms, ranging from budget-friendly Executive
-                                    rooms to the lavish Presidential Suite, our luxury boutique hotel in
-                                    Udaipur caters to every traveller’s preferences. Each room boasts a
-                                    private balcony, minibar and jacuzzi, providing an unparalleled level
-                                    of comfort and luxury.
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga libero iste perspiciatis magnam in nesciunt, rerum ratione minima eveniet similique sit consequatur eum minus beatae voluptatem iure optio sed ut!
                               </p>
+                              <Link to="/facilities" className="inline-block">
                               <button className="px-6 py-2 text-center bg-[#073937] text-white rounded hover:bg-[#4e7977]">
-                                    View Rooms
+                                    Learn More
                               </button>
+                              </Link>
                         </motion.div>
 
                   </div>

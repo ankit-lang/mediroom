@@ -4,6 +4,8 @@ import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
 import { Link } from "react-router-dom";
 import { TabsDemo } from "./Animatedtab";
+import FlowingMenu from './Flowingmenu'
+
 
 const rooms = [
       {
@@ -42,10 +44,16 @@ export default function RoomShowcase() {
       const toggleLanguage = () => {
 
       };
+      const demoItems = [
+            { link: '/rooms/executive-rooms-in-moydom', text: 'Room1', image: '/rooms/3bhkd851leftside.jpg' },
+            { link: '/rooms/presidential-family-suite', text: 'Room2', image: '/rooms/201.JPG' },
+            { link: '/rooms/sierra-jacuzzi-room', text: 'Room3', image: '/rooms/202.JPG' },
+            { link: '/rooms/two-bedroom-villa-with-private-pool', text: 'Room4', image: '/rooms/d826.jpg' }
+          ];
       const links = [
             { name: "Executive Rooms in MoyDom", url: "/rooms/executive-rooms-in-moydom" },
             // { name: "Elite Room With Private Balcony", url: "/rooms/elite-room-with-private-balcony" },
-            { name: "Sierra Jacuzzi Room", url: "/rooms/sierra-jacuzzi-room" },
+            { name: "Sierra Jacuzzi Room", url: "" },
             // { name: "Premium Suite With Balcony", url: "/rooms/premium-suite-with-balcony" },
             // { name: "Premium Suite With Bathtub", url: "/rooms/premium-suite-with-bathtub" },
             { name: "Presidential Family Suite", url: "/rooms/presidential-family-suite" },
@@ -60,9 +68,14 @@ export default function RoomShowcase() {
                   <TabsDemo />
                   </div> */}
                   
+                        
+                 
 
-                  <div className="py-12 px-4 bg-white pt-32">
-                        <div className="  mb-5 py-6 mt-[-48px]">
+<div style={{ height: '600px', position: 'relative' }}>
+  <FlowingMenu items={demoItems} />
+</div>
+                  <div className="py-12 px-4 bg-white pt-32 mt-[-56vh]">
+                        <div className="  mb-5 py-6 mt-[-48px] hidden ">
                               <div className="flex flex-wrap  justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
                                     {links.map((text, index) => (
                                           <Link
