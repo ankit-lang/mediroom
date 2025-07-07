@@ -76,14 +76,14 @@ const RoomsSection2 = () => {
                               {/* Left Arrow */}
                               <button
                                     onClick={prevSlide}
-                                    className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded shadow hover:bg-gray-100 z-10"
+                                    className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-green-900 text-white p-2 rounded shadow hover:bg-green-800 z-10"
                               >
                                     <ChevronLeft className="w-5 h-5" />
                               </button>
                               {/* Right Arrow */}
                               <button
                                     onClick={nextSlide}
-                                    className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded shadow hover:bg-gray-100 z-10"
+                                    className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-green-900 text-white p-2 rounded shadow hover:bg-green-800 z-10"
                               >
                                     <ChevronRight className="w-5 h-5" />
                               </button>
@@ -94,7 +94,7 @@ const RoomsSection2 = () => {
                                     <button
                                           key={i}
                                           onClick={() => { setDirection(i > index ? 1 : -1); setIndex(i); }}
-                                          className={`w-3 h-3 rounded-full border-2 border-[#ff8706] transition-all duration-300 ${index === i ? 'bg-[#ff8706]' : 'bg-white'}`}
+                                          className={`w-3 h-3 rounded-full border-2 border-green-900 transition-all duration-300 ${index === i ? 'bg-green-900' : 'bg-white'}`}
                                           aria-label={`Go to slide ${i + 1}`}
                                     />
                               ))}
