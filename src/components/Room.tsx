@@ -74,7 +74,7 @@ export default function RoomShowcase() {
 <div style={{ height: '600px', position: 'relative' }}>
   <FlowingMenu items={demoItems} />
 </div>
-                  <div className="py-12 px-4 bg-white pt-32 mt-[-56vh]">
+                  <div className="py-12 px-4 bg-white pt-32 md:mt-[-70vh] mt-[-70vh]">
                         <div className="  mb-5 py-6 mt-[-48px] hidden ">
                               <div className="flex flex-wrap  justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
                                     {links.map((text, index) => (
