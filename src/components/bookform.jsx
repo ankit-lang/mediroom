@@ -18,7 +18,7 @@ export default function BookingForm() {
             formData.append("checkOut", checkOut);
             formData.append("adults", adults);
             formData.append("children", children);
-            formData.append("promoCode", promoCode);
+            formData.append("promo Code", promoCode);
 
             try {
 
@@ -47,7 +47,7 @@ export default function BookingForm() {
             <div className="bg-[#ff8706] text-white p-4 rounded-2xl shadow-xl w-full max-w-6xl mx-auto">
                   <div >
                         {/* Check In */}
-                        <form action="" className="grid grid-cols-6 gap-4 items-center">
+                        <form action="" className="grid grid-cols-6 gap-4 items-center" onSubmit={submitHandler}>
 
                               <div className="col-span-1">
                                     <label className="text-sm mb-1 block">Check In</label>
@@ -57,6 +57,7 @@ export default function BookingForm() {
                                           className="w-full min-w-0 p-2 text-base rounded bg-white/10 border border-white text-white tracking-wide focus:outline-none focus:ring-2 focus:ring-gold placeholder:text-white/70"
                                           value={format(checkIn, "yyyy-MM-dd")}
                                           onChange={(e) => setCheckIn(new Date(e.target.value))}
+                                          name="checkIn"
                                     />
                               </div>
 
@@ -69,6 +70,7 @@ export default function BookingForm() {
                                           className="w-full min-w-0 p-2 text-base rounded bg-white/10 border border-white text-white tracking-wide focus:outline-none focus:ring-2 focus:ring-gold placeholder:text-white/70"
                                           value={format(checkOut, "yyyy-MM-dd")}
                                           onChange={(e) => setCheckOut(new Date(e.target.value))}
+                                          name="checkOut"
                                     />
                               </div>
 
@@ -80,6 +82,7 @@ export default function BookingForm() {
                                           value={adults}
                                           required
                                           onChange={(e) => setAdults(Number(e.target.value))}
+                                          name="adults"
                                     >
                                           {[1, 2, 3, 4, 5].map((num) => (
                                                 <option key={num} className="bg-orange-400" value={num}  >{num}</option>
@@ -95,6 +98,7 @@ export default function BookingForm() {
                                           className="w-full p-2 rounded bg-white/10 border border-white text-white"
                                           value={children}
                                           onChange={(e) => setChildren(Number(e.target.value))}
+                                          name="children"
                                     >
                                           {[0, 1, 2, 3, 4, 5].map((num) => (
                                                 <option className="bg-orange-400" key={num} value={num}>{num}</option>
@@ -104,21 +108,23 @@ export default function BookingForm() {
 
                               {/* Promo Code */}
                               <div className="col-span-1">
-                                    <label className="text-sm mb-1 block">Promo Code</label>
+                                    <label className="text-sm mb-1 block">City </label>
                                     <input
                                           type="text"
+                                          placeholder="Enter City"
                                           required
                                           className="w-full p-2 rounded bg-white/10 border border-white text-white"
                                           value={promoCode}
                                           onChange={(e) => setPromoCode(e.target.value)}
+                                          name="promoCode"
                                     />
                               </div>
 
                               {/* Book Now */}
-                              <div type="submit" onClick={submitHandler} className="  col-span-1 flex flex-col justify-end h-full bg-orange-400">
-
-
-                                    <Booknow />
+                              <div className="col-span-1 flex flex-col justify-end h-full bg-orange-400">
+                                    <button type="submit" className="w-full h-full">
+                                          <Booknow />
+                                    </button>
                               </div>
                         </form>
                   </div>

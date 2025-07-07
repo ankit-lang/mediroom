@@ -106,7 +106,7 @@ export default function Executive() {
                               </div>
                         </div>
                         <h2 className="text-2xl md:text-3xl text-center font-semibold italic underline text-[#073937] mb-10">
-                              Executive Rooms
+                              Room 1
                         </h2>
                         <div className="relative w-full m-auto mb-12 lg:w-[60vw] h-[400px] overflow-hidden">
                               <img

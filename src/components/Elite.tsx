@@ -120,9 +120,9 @@ export default function Elite() {
                               </button>
                         </div>
                         <div className="m-auto text-center ">
-                              <button className="bg-blue-800 hover:bg-blue-900 text-white !py-3 !px-10 rounded">
+                              {/* <button className="bg-blue-800 hover:bg-blue-900 text-white !py-3 !px-10 rounded">
                                     Book Now
-                              </button>
+                              </button> */}
                         </div>
                         <div className="text-[14px] md:text-lg mt-5 text-center   md:px-20 ">
                               Step into the epitome of luxury with our Two Bedroom Villa With Private Pool, spanning an impressive 1560 sq. ft. Designed to comfortably accommodate 8 guests, this exclusive private pool villa in Udaipur, features a plush king size bed, state-of-the-art amenities including a tea & coffee maker, minibar, and round-the-clock room service. Experience ultimate convenience with our on-site laundry service. The villa's elegant interior design complements the serene private pool, making it an ideal choice for families or groups seeking both luxury and relaxation.

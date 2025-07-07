@@ -9,31 +9,31 @@ import FlowingMenu from './Flowingmenu'
 
 const rooms = [
       {
-            title: "Executive Rooms in Moydom",
+            title: " Room 1",
             description:
                   "The Executive Rooms offer a generous space of 281 sq. ft., ensuring ample room to relax and unwind for up to 4 guests.",
-            image: "/assests/1.jpg",
+            image: "/rooms/201.JPG",
             url: "/rooms/executive-rooms-in-moydom"
       },
       {
-            title: "Two Bedroom  Room With Private pool",
+            title: " room 2 ",
             description:
                   "The Elite Room with Balcony offers an expansive space of 440 sq. ft. to unwind for up to 4 guests.",
-            image: "/assests/35.jpeg",
+            image: "/rooms/202.JPG",
             url: "/rooms/two-bedroom-villa-with-private-pool"
       },
       {
-            title: "Moydom Jacuzzi Room",
+            title: "Room 3",
             description:
                   "The Sierra Jacuzzi Room at The Sierra - By The Lake is a 365 sq. ft. space, perfect for a group of 4 people.",
-            image: "/assests/about.jpg",
+            image: "/rooms/d826.jpg",
             url: "/rooms/sierra-jacuzzi-room"
       },
       {
-            title: "Presidential Family Suite rooms",
+            title: "Room 4",
             description:
                   "The Sierra Jacuzzi Room at The Sierra - By The Lake is a 365 sq. ft. space, perfect for a group of 4 people.",
-            image: "/assests/about.jpg",
+            image: "/rooms/diptee.JPG",
             url: "/rooms/presidential-family-suite"
       },
 ];

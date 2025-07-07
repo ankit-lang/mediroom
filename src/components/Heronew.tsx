@@ -19,6 +19,10 @@ export default function Heronew() {
   const [guests, setGuests] = useState(1);
   const [checkIn, setCheckIn] = useState('');
   const [checkOut, setCheckOut] = useState('');
+  const [city, setCity] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,6 +30,49 @@ export default function Heronew() {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
+
+  // Form submission handler
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
+    setSuccess(false);
+    if (!city || !checkIn || !checkOut || !guests || isNaN(Number(guests)) || Number(guests) < 1) {
+      setError('All fields are required.');
+      return;
+    }
+    setLoading(true);
+    const formData = new URLSearchParams();
+    formData.append('checkIn', checkIn);
+    formData.append('checkOut', checkOut);
+    formData.append('adults', String(guests));
+    formData.append('promoCode', city);
+    
+    try {
+      const response = await fetch(
+        'https://script.google.com/macros/s/AKfycbx4AqZj-upxMSp9umUjhf3l9YBe_bg2j4SyiSoeNdSnp7mikKd5QUzRPj91-mUvJBw/exec',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: formData.toString(),
+        }
+      );
+      if (response.ok) {
+        setSuccess(true);
+        setCity('');
+        setCheckIn('');
+        setCheckOut('');
+        setGuests(1);
+      } else {
+        setError('Failed to submit. Please try again.');
+      }
+    } catch (err) {
+      setError('Failed to submit. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
@@ -109,7 +156,7 @@ export default function Heronew() {
         </div>
 
         {/* Search Bar */}
-        <div className="relative hidden md:block font-semibold mb-10 z-30" style={{ position: 'absolute', left: 0, right: 0, bottom: '-30px' }}>
+        <form onSubmit={handleSubmit} className="relative hidden md:block font-semibold mb-10 z-30" style={{ position: 'absolute', left: 0, right: 0, bottom: '-30px' }}>
           <div className="bg-white/30 backdrop-blur-xl border border-white/40 rounded-full shadow-lg p-4 flex flex-col md:flex-row items-center gap-4 max-w-3xl mx-auto" style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.15)' }}>
             <div className="flex-1 flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -119,6 +166,9 @@ export default function Heronew() {
                 type="text"
                 placeholder="Select a city"
                 className="w-full bg-transparent placeholder-green-800 focus:outline-none"
+                value={city}
+                onChange={e => setCity(e.target.value)}
+                required
               />
             </div>
             <div className="h-6 border-l border-green-200 hidden md:block" />
@@ -132,6 +182,7 @@ export default function Heronew() {
                   onChange={e => setCheckIn(e.target.value)}
                   className="bg-transparent focus:outline-none text-green-800"
                   style={{ width: '110px' }}
+                  required
                 />
               </div>
               <span>→</span>
@@ -144,6 +195,7 @@ export default function Heronew() {
                   onChange={e => setCheckOut(e.target.value)}
                   className="bg-transparent focus:outline-none text-green-800"
                   style={{ width: '110px' }}
+                  required
                 />
               </div>
             </div>
@@ -155,7 +207,7 @@ export default function Heronew() {
               {/* Guests input */}
               <div className="flex items-center gap-2">
                 <button
-                  onClick={() => setGuests(Math.max(1, guests - 1))}
+                  onClick={e => { e.preventDefault(); setGuests(Math.max(1, guests - 1)); }}
                   className="text-lg text-green-800 px-2"
                   type="button"
                 >
@@ -167,9 +219,10 @@ export default function Heronew() {
                   value={guests}
                   onChange={e => setGuests(Math.max(1, Number(e.target.value)))}
                   className="w-12 text-center bg-transparent focus:outline-none text-green-800 font-medium"
+                  required
                 />
                 <button
-                  onClick={() => setGuests(guests + 1)}
+                  onClick={e => { e.preventDefault(); setGuests(guests + 1); }}
                   className="text-lg text-green-800 px-2"
                   type="button"
                 >
@@ -177,16 +230,18 @@ export default function Heronew() {
                 </button>
               </div>
             </div>
-            <button className="bg-green-900 text-white px-6 py-3 rounded-full ml-auto whitespace-nowrap">
-              Search
+            <button type="submit" className="bg-green-900 text-white px-6 py-3 rounded-full ml-auto whitespace-nowrap" disabled={loading}>
+              {loading ? 'Booking...' : 'Book'}
             </button>
           </div>
-        </div>
+          {error && <div className="text-red-600 text-sm mt-2">{error}</div>}
+          {success && <div className="text-green-700 text-sm mt-2">Booking request sent!</div>}
+        </form>
        
       </div>
          </section>
         {/* //frt  */}
-         <div className="  block md:hidden realtive z-[1000] bg-green-50 mt-[-3rem] rounded-t-[5rem] p-6 !text-[#09342c] shadow-md space-y-6">
+         <form onSubmit={handleSubmit} className="block md:hidden realtive z-[1000] bg-green-50 mt-[-3rem] rounded-t-[5rem] p-6 !text-[#09342c] shadow-md space-y-6">
       <h1 className="text-4xl !font-poppins text-green-900  font-medium leading-tight">
         A better way <br /> to stay
       </h1>
@@ -201,6 +256,9 @@ export default function Heronew() {
           type="text"
           placeholder="Select a city"
           className="w-full bg-transparent focus:outline-none"
+          value={city}
+          onChange={e => setCity(e.target.value)}
+          required
         />
       </div>
 
@@ -214,6 +272,7 @@ export default function Heronew() {
             onChange={e => setCheckIn(e.target.value)}
             className="bg-transparent focus:outline-none text-gray-600"
             style={{ width: '110px' }}
+            required
           />
         </div>
         <span className="text-gray-400">→</span>
@@ -225,6 +284,7 @@ export default function Heronew() {
             onChange={e => setCheckOut(e.target.value)}
             className="bg-transparent focus:outline-none text-gray-600"
             style={{ width: '110px' }}
+            required
           />
         </div>
       </div>
@@ -236,8 +296,9 @@ export default function Heronew() {
         </div>
         <div className="flex items-center gap-4">
           <button
-            onClick={() => setGuests(Math.max(1, guests - 1))}
+            onClick={e => { e.preventDefault(); setGuests(Math.max(1, guests - 1)); }}
             className="text-xl text-gray-600"
+            type="button"
           >
             &minus;
           </button>
@@ -247,20 +308,24 @@ export default function Heronew() {
             value={guests}
             onChange={e => setGuests(Math.max(1, Number(e.target.value)))}
             className="w-12 text-center bg-transparent focus:outline-none text-gray-800 font-medium"
+            required
           />
           <button
-            onClick={() => setGuests(guests + 1)}
+            onClick={e => { e.preventDefault(); setGuests(guests + 1); }}
             className="text-xl text-gray-600"
+            type="button"
           >
             &#43;
           </button>
         </div>
       </div>
 
-      <button className="w-full bg-[#09342c] text-white py-3 rounded-full font-medium">
-        Search
+      <button type="submit" className="w-full bg-[#09342c] text-white py-3 rounded-full font-medium" disabled={loading}>
+        {loading ? 'Booking...' : 'Book'}
       </button>
-    </div>
+      {error && <div className="text-red-600 text-sm mt-2">{error}</div>}
+      {success && <div className="text-green-700 text-sm mt-2">Booking request sent!</div>}
+    </form>
 
       </>
   );

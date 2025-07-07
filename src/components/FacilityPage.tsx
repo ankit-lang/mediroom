@@ -5,29 +5,26 @@ import SplitText from "./SplitText";
 
 const facilities = [
       {
-            image: "/assests/1.jpg", // Replace with your image paths
-            title: "All-weather Swimming Pool",
+            image: "/rooms/maharaja1floor1097.jpg", // Replace with your image paths
+            title: "Comfortable",
       },
       {
-            image: "/assests/28.jpg",
-            title: "Bathtub",
+            image: "/rooms/202.JPG",
+            title: "4bhk",
       },
       {
-            image: "/assests/82.jpg",
-            title: "Rooftop Restaurant & Bar",
+            image: "/rooms/diptee.JPG",
+            title: "Premium",
       },
       {
-            image: "/assests/1.jpg", // Replace with your image paths
-            title: "All-weather Swimming Pool",
+            image: "/rooms/5bhkduplex.jpg", // Replace with your image paths
+            title: "Rooftop Lounge",
       },
       {
-            image: "/assests/28.jpg",
-            title: "Bathtub",
+            image: "/rooms/room101.jpg",
+            title: "Luxury Bedroom",
       },
-      {
-            image: "/assests/82.jpg",
-            title: "Rooftop Restaurant & Bar",
-      },
+  
 ];
 
 export default function FacilitiesSection() {

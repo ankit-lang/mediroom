@@ -9,28 +9,28 @@ const hotelDeals = [
             discount: "15%",
             description:
                   "Get 15% off when you book for at least 5 nights! Stay longer and enjoy exclusive savings on your booking.",
-            image: "/assests/1.jpg",
+            image: "/banner/5.jpg",
       },
       {
             title: "Stay Longer, Save More",
             discount: "10%",
             description:
                   "Get 10% off on your 4th night! Stay for 4 nights and enjoy extra savings for a more rewarding getaway.",
-            image: "/assests/82.jpg",
+            image: "/masonary/4.JPEG",
       },
       {
             title: "Early Bird Deal",
             discount: "40%",
             description:
                   "Enjoy up to 40% off by booking your stay at The Sierra - By The Lake 60 days in advance.",
-            image: "/assests/28.jpg",
+            image: "/banner/54.jpg",
       },
       {
             title: "Early Bird Deal",
             discount: "40%",
             description:
                   "Enjoy up to 40% off by booking your stay at The Sierra - By The Lake 60 days in advance.",
-            image: "/assests/28.jpg",
+            image: "/masonary/3.JPEG",
       },
 ];
 
