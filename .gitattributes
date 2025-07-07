@@ -1,0 +1,10 @@
+# Always use LF for all text files
+* text=auto
+
+# Force LF endings for JS, HTML, CSS, etc.
+*.js text eol=lf
+*.ts text eol=lf
+*.jsx text eol=lf
+*.tsx text eol=lf
+*.html text eol=lf
+*.css text eol=lf
