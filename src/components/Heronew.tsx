@@ -156,23 +156,30 @@ export default function Heronew() {
         </div>
 
         {/* Search Bar */}
-        <form onSubmit={handleSubmit} className="relative hidden md:block font-semibold mb-10 z-30" style={{ position: 'absolute', left: 0, right: 0, bottom: '-30px' }}>
-          <div className="bg-white/30 backdrop-blur-xl border border-white/40 rounded-full shadow-lg p-4 flex flex-col md:flex-row items-center gap-4 max-w-3xl mx-auto" style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.15)' }}>
-            <div className="flex-1 flex items-center gap-2">
+        <form
+          onSubmit={handleSubmit}
+          className="relative hidden md:block font-semibold mb-10 z-30"
+          style={{ position: 'absolute', left: 0, right: 0, bottom: '-30px' }}
+        >
+          <div
+            className="bg-white/95 backdrop-blur-2xl border border-green-100 rounded-full shadow-2xl p-6 flex flex-col md:flex-row items-center gap-6 max-w-4xl mx-auto transition-all duration-300 hover:shadow-green-200"
+            style={{ boxShadow: '0 12px 40px 0 rgba(31, 38, 135, 0.18)' }}
+          >
+            <div className="flex-1 flex items-center gap-3 px-4 py-2 rounded-full bg-green-50/60 border border-green-100 focus-within:ring-2 focus-within:ring-green-300 transition">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
               <input
                 type="text"
                 placeholder="Select a city"
-                className="w-full bg-transparent placeholder-green-800 focus:outline-none"
+                className="w-full bg-transparent placeholder-green-800 focus:outline-none text-green-900"
                 value={city}
                 onChange={e => setCity(e.target.value)}
                 required
               />
             </div>
-            <div className="h-6 border-l border-green-200 hidden md:block" />
-            <div className="flex-1 flex items-center gap-2">
+            <div className="h-8 border-l border-green-200 hidden md:block" />
+            <div className="flex-1 flex items-center gap-3 px-4 py-2 rounded-full bg-green-50/60 border border-green-100 focus-within:ring-2 focus-within:ring-green-300 transition">
               <div className="flex items-center gap-1">
                 {/* Check-in input */}
                 <input
@@ -185,7 +192,7 @@ export default function Heronew() {
                   required
                 />
               </div>
-              <span>→</span>
+              <span className="text-green-400 font-bold text-lg">→</span>
               <div className="flex items-center gap-1">
                 {/* Check-out input */}
                 <input
@@ -199,8 +206,8 @@ export default function Heronew() {
                 />
               </div>
             </div>
-            <div className="h-6 border-l border-green-200 hidden md:block" />
-            <div className="flex-1 flex items-center gap-2">
+            <div className="h-8 border-l border-green-200 hidden md:block" />
+            <div className="flex-1 flex items-center gap-3 px-4 py-2 rounded-full bg-green-50/60 border border-green-100 focus-within:ring-2 focus-within:ring-green-300 transition">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.121 17.804A13.937 13.937 0 0112 15c2.131 0 4.153.53 5.879 1.464M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
@@ -208,8 +215,9 @@ export default function Heronew() {
               <div className="flex items-center gap-2">
                 <button
                   onClick={e => { e.preventDefault(); setGuests(Math.max(1, guests - 1)); }}
-                  className="text-lg text-green-800 px-2"
+                  className="text-lg text-green-800 px-3 rounded-full bg-green-100 hover:bg-green-200 transition"
                   type="button"
+                  aria-label="Decrease guests"
                 >
                   &minus;
                 </button>
@@ -223,14 +231,19 @@ export default function Heronew() {
                 />
                 <button
                   onClick={e => { e.preventDefault(); setGuests(guests + 1); }}
-                  className="text-lg text-green-800 px-2"
+                  className="text-lg text-green-800 px-3 rounded-full bg-green-100 hover:bg-green-200 transition"
                   type="button"
+                  aria-label="Increase guests"
                 >
                   &#43;
                 </button>
               </div>
             </div>
-            <button type="submit" className="bg-green-900 text-white px-6 py-3 rounded-full ml-auto whitespace-nowrap" disabled={loading}>
+            <button
+              type="submit"
+              className="bg-gradient-to-r from-green-800 to-green-600 text-white px-8 py-3 rounded-full ml-auto whitespace-nowrap shadow-lg hover:from-green-900 hover:to-green-700 transition-all font-bold tracking-wide"
+              disabled={loading}
+            >
               {loading ? 'Booking...' : 'Book'}
             </button>
           </div>

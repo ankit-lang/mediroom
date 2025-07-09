@@ -220,15 +220,16 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                   <div className="space-y-4 text-white">
                     <div>
                       <p className="font-semibold">{t.booking.contactInfo.address.label}</p>
-                      <p>{t.booking.contactInfo.address.value}</p>
+                      <p>Sujan Mohinder Hospital Road, New Friends Colony, Delhi,
+                      India 110025</p>
                     </div>
                     <div>
                       <p className="font-semibold">{t.booking.contactInfo.phone.label}</p>
-                      <p>{t.booking.contactInfo.phone.value}</p>
+                      <p>+91 9810000051 | +91 9333333767</p>
                     </div>
                     <div>
                       <p className="font-semibold">{t.booking.contactInfo.email.label}</p>
-                      <p>info@moydom.in</p>
+                      <p>info@moydom.in | www.moydom.in</p>
                     </div>
                     <div>
                       <p className="font-semibold">{t.booking.contactInfo.hours.label}</p>

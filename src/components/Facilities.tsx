@@ -133,10 +133,10 @@ const Facilities: React.FC<FacilitiesProps> = ({ language }) => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl  text-center font-serif font-semibold text-[#073937] italic mb-4">
-            Facilites
+            Facilitess
           </h2>
           <p className="text-gray-700 font-serif text-center md:text-lg leading-relaxed mb-6">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos tenetur voluptate obcaecati quaerat, ad vel praesentium aspernatur magni fugiat quam minima reprehenderit expedita, incidunt, optio quisquam voluptates? Cum, dolores consectetur?
+          Spacious king-size beds, air conditioning, free Wi-Fi, Arabic food on request, elevator access, daily sanitization, and 24/7 helpdesk support.
           </p>
           <button className="px-6 py-2 text-center bg-[#073937] text-white rounded hover:bg-[#4e7977]">
             Learn More

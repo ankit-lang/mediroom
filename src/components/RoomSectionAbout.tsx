@@ -96,7 +96,8 @@ const RoomsSection = () => {
                                     Rooms & Suites
                               </h2>
                               <p className="text-gray-700 font-serif text-center md:text-lg leading-relaxed mb-6">
-                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ad, doloribus, deserunt commodi nam eligendi consectetur est, quo corrupti qui reprehenderit soluta temporibus odio dicta aut iure nemo voluptas ipsa.
+                              From elegant villas to modern studio apartments, our stays are thoughtfully designed with patients in mind.
+
                               </p>
                               <Link to="/rooms" className="inline-block">
                               <button className="px-6 py-2 text-center bg-[#073937] text-white rounded hover:bg-[#4e7977]">

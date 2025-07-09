@@ -56,18 +56,19 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin size={20} className="mr-2 mt-1" />
-                <span>{t.footer.contact.address}</span>
+                <span>Sujan Mohinder Hospital Road, New Friends Colony, Delhi,
+                India 110025</span>
               </li>
               <li className="flex items-center">
                 <Phone size={20} className="mr-2" />
                 <a href="tel:+911234567890" className="hover:text-gold transition-custom">
-                  {t.footer.contact.phone}
+                +91 9810000051 | +91 9333333767
                 </a>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="mr-2" />
                 <a href="mailto:info@medistay.com" className="hover:text-gold transition-custom">
-                  info@moydom.in
+                  info@moydom.in 
 
                 </a>
               </li>

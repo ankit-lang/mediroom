@@ -477,11 +477,10 @@ const translations: Translations = {
       quickLinks: {
         title: "Quick Links",
         links: [
-          { text: "Home", url: "#" },
-          { text: "About Us", url: "#about" },
-          { text: "Rooms", url: "#rooms" },
-          { text: "Nearby Hospitals", url: "#hospitals" },
-          { text: "Book Now", url: "#booking" },
+          { text: "Home", url: "/" },
+          { text: "About Us", url: "/about" },
+          { text: "Rooms", url: "/rooms" },
+         
           { text: "Contact", url: "#contact" },
         ],
       },

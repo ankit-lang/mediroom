@@ -49,7 +49,7 @@ const RoomsSection2 = () => {
                                     Facilities
                               </h2>
                               <p className="text-gray-700 font-serif text-center md:text-lg leading-relaxed mr-5   mb-6">
-                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga libero iste perspiciatis magnam in nesciunt, rerum ratione minima eveniet similique sit consequatur eum minus beatae voluptatem iure optio sed ut!
+                              Spacious king-size beds, air conditioning, free Wi-Fi, Arabic food on request, elevator access, daily sanitization, and 24/7 helpdesk support.
                               </p>
                               <Link to="/facilities" className="inline-block">
                               <button className="px-6 py-2 text-center bg-[#073937] text-white rounded hover:bg-[#4e7977]">
