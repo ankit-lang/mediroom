@@ -43,6 +43,8 @@ const images3 = [
 
 ];
 import img1 from "/masonary/1.jpg"; 
+import WhyMoydomSection from './new.js';
+import ExperienceHomeSection from './Exphomesection.js';
 const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
   const t = translations[language];
   const dir = language === 'ar' ? 'rtl' : 'ltr';
@@ -250,7 +252,8 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              At Moydom Bed & Breakfast, we understand that medical travel can be a journey filled with both hope and uncertainty. That’s why we’ve built more than just a place to stay — we’ve created a home of care in the heart of Delhi.
+             Welcome to Moydom Bed & Breakfast, your trusted hospitality partner in the heart of South Delhi, offering premium, fully-serviced apartments and villas designed to make your stay in India comfortable, convenient, and stress-free.
+
             </motion.p>
           </p>
           <p className='text-center text-sm md:text-[16px] hidden md:block' >
@@ -262,7 +265,8 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
               transition={{ duration: 0.6, delay: 0.38 }}
               viewport={{ once: true }}
             >
-              Strategically located in Central South Delhi, Moydom is just minutes away from Delhi’s top hospitals like Max, Apollo, Fortis, and AIIMS — ensuring you’re never far from the treatment and support you need. But what truly sets us apart is our focus on emotional comfort, cultural sensitivity, and personalized service — especially for guests traveling from the Middle East and Gulf countries.
+              Whether you're visiting Delhi for medical treatments, embassy-related assignments, or official business, Moydom offers a thoughtfully curated stay experience that blends the warmth of home with the luxury of hotel services — all at a location that's perfectly connected to the city’s top hospitals, metro stations, markets, and transport hubs.
+
             </motion.p>
           </p>
           <p className="text-center  font-medium text-sm md:text-[16px]">
@@ -274,7 +278,8 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              Whether you’re here for advanced treatment, post-surgery rest, or supporting a loved one through recovery, Moydom welcomes you with open arms, warm smiles, and a peaceful stay that feels just like home.
+             We understand the unique needs of medical tourists and embassy-referred guests and specialize in offering safe, hygienic, and fully-equipped accommodations where you can focus on what matters most — your health and peace of mind.
+
             </motion.p>  </p>
         </div>
       </section>
@@ -305,6 +310,8 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
   </div>
 </motion.div>
       <div className="mt-5"></div>
+      <WhyMoydomSection />
+      <ExperienceHomeSection />
 
       <RoomsSection />
 

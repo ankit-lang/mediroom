@@ -5,31 +5,31 @@ import WhatsAppButton from "./WhatsAppButton";
 
 const hotelDeals = [
       {
-            title: "Extended Stay Savings",
+            title: "Special discounted rates for long-term stays.",
             discount: "15%",
             description:
-                  "Get 15% off when you book for at least 5 nights! Stay longer and enjoy exclusive savings on your booking.",
+                  "",
             image: "/banner/5.jpg",
       },
       {
-            title: "Stay Longer, Save More",
+            title: "Flexible booking and extension options for ongoing medical treatments",
             discount: "10%",
             description:
                   "Get 10% off on your 4th night! Stay for 4 nights and enjoy extra savings for a more rewarding getaway.",
             image: "/masonary/4.JPEG",
       },
       {
-            title: "Early Bird Deal",
+                  
+            title:"Complimentary transport services to hospitals like AIIMS, Apollo, and Fortis",
             discount: "40%",
-            description:
-                  "Enjoy up to 40% off by booking your stay at The Sierra - By The Lake 60 days in advance.",
+            description:"",
             image: "/banner/54.jpg",
       },
       {
-            title: "Early Bird Deal",
+            title: "Assistance with appointments, medical consultations, and documentation",
             discount: "40%",
             description:
-                  "Enjoy up to 40% off by booking your stay at The Sierra - By The Lake 60 days in advance.",
+                  "",
             image: "/masonary/3.JPEG",
       },
 ];
@@ -44,9 +44,13 @@ export default function Offer() {
             <>
                   <Navbar language={language} toggleLanguage={toggleLanguage} />
                   <div className=" py-12 px-4 sm:px-8 lg:px-16 pt-32">
-                        <h2 className="text-3xl font-semibold text-center text-[#073937] italic mb-10">
-                              MoyDom Hotel Deals
+                        <h2 className="md:text-4xl text-3xl font-semibold text-center text-[#073937] italic mb-2">
+                             Special Offers for Embassy-Referred Guests
+
                         </h2>
+                        <p className="text-center mb-5 " >   
+                              We value our long-standing association with foreign embassies and international guests.
+                        </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                               {hotelDeals.map((deal, idx) => (
                                     <div
@@ -62,7 +66,7 @@ export default function Offer() {
                                                 <h3 className="text-xl font-serif font-semibold !text-[#073937] mb-2">
                                                       {deal.title}
                                                 </h3>
-                                                <p className="text-black text-sm  md:text-[16px] mb-4">{deal.description}</p>
+                                                <p className="text-black text-sm  md:text-[16px] mb-4"></p>
                                                 {/* <button className="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 transition"> */}
                                                 {/* MORE INFO */}
                                                 {/* </button> */}

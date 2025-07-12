@@ -8,34 +8,41 @@ import FlowingMenu from './Flowingmenu'
 
 
 const rooms = [
-      {
-            title: " Room 1",
-            description:
-                  "The Executive Rooms offer a generous space of 281 sq. ft., ensuring ample room to relax and unwind for up to 4 guests.",
-            image: "/rooms/201.JPG",
-            url: "/rooms/executive-rooms-in-moydom"
-      },
-      {
-            title: " room 2 ",
-            description:
-                  "The Elite Room with Balcony offers an expansive space of 440 sq. ft. to unwind for up to 4 guests.",
-            image: "/rooms/202.JPG",
-            url: "/rooms/two-bedroom-villa-with-private-pool"
-      },
-      {
-            title: "Room 3",
-            description:
-                  "The Sierra Jacuzzi Room at The Sierra - By The Lake is a 365 sq. ft. space, perfect for a group of 4 people.",
-            image: "/rooms/d826.jpg",
-            url: "/rooms/sierra-jacuzzi-room"
-      },
-      {
-            title: "Room 4",
-            description:
-                  "The Sierra Jacuzzi Room at The Sierra - By The Lake is a 365 sq. ft. space, perfect for a group of 4 people.",
-            image: "/rooms/diptee.JPG",
-            url: "/rooms/presidential-family-suite"
-      },
+  {
+    title: "Villa 4BHK",
+    description:
+      "Luxury villa offering four elegantly furnished bedrooms, modern bathrooms, a large living area, and a private terrace. Ideal for families and embassy delegations.",
+    image: "/rooms/201.JPG",
+    url: "/rooms/executive-rooms-in-moydom"
+  },
+  {
+    title: "Apartment 3BHK & 2BHK",
+    description:
+      "Spacious service apartments with modern amenities, kitchenettes, and balconies. Perfect for long medical stays or corporate visits.",
+    image: "/rooms/202.JPG",
+    url: "/rooms/two-bedroom-villa-with-private-pool"
+  },
+  {
+    title: "Studio & Terrace Apartments",
+    description:
+      "Cozy, fully-equipped studio units and terrace apartments for solo travelers, couples, or short-term official assignments.",
+    image: "/rooms/d826.jpg",
+    url: "/rooms/sierra-jacuzzi-room"
+  },
+  {
+    title: "Party Apartments",
+    description:
+      "Specially designed apartments to host small gatherings and celebrations, featuring open terraces and ample living space.",
+    image: "/rooms/diptee.JPG",
+    url: "/rooms/presidential-family-suite"
+  },
+  {
+    title: "Independent Rooms",
+    description:
+      "Budget-friendly options for single travelers, featuring all essential comforts and daily housekeeping services.",
+    image: "/rooms/independent.jpg",
+    url: "/rooms/independent-room"
+  },
 ];
 
 export default function RoomShowcase() {
@@ -44,12 +51,13 @@ export default function RoomShowcase() {
       const toggleLanguage = () => {
 
       };
-      const demoItems = [
-            { link: '/rooms/executive-rooms-in-moydom', text: 'Room1', image: '/rooms/3bhkd851leftside.jpg' },
-            { link: '/rooms/presidential-family-suite', text: 'Room2', image: '/rooms/201.JPG' },
-            { link: '/rooms/sierra-jacuzzi-room', text: 'Room3', image: '/rooms/202.JPG' },
-            { link: '/rooms/two-bedroom-villa-with-private-pool', text: 'Room4', image: '/rooms/d826.jpg' }
-          ];
+          const demoItems = [
+  { link: '/rooms/villa-4bhk', text: 'Villa 4BHK', image: '/rooms/3bhkd851leftside.jpg' },
+  { link: '/rooms/apartment-3bhk-2bhk', text: 'Apartment 3BHK & 2BHK', image: '/rooms/201.JPG' },
+  { link: '/rooms/studio-terrace-apartments', text: 'Studio & Terrace Apartments', image: '/rooms/202.JPG' },
+  { link: '/rooms/party-apartments', text: 'Party Apartments', image: '/rooms/d826.jpg' },
+  { link: '/rooms/independent-rooms', text: 'Independent Rooms', image: '/rooms/d826.jpg' }
+];
       const links = [
             { name: "Executive Rooms in MoyDom", url: "/rooms/executive-rooms-in-moydom" },
             // { name: "Elite Room With Private Balcony", url: "/rooms/elite-room-with-private-balcony" },

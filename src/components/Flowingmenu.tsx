@@ -94,11 +94,11 @@ const MenuItem: React.FC<MenuItemProps> = ({ link, text, image }) => {
 
   return (
     <div
-      className="flex-1 relative overflow-hidden  text-center shadow-[0_-1px_0_0_#fff]"
+      className="flex-1 relative overflow-hidden   text-center shadow-[0_-1px_0_0_#fff]"
       ref={itemRef}
     >
       <Link
-        className="flex items-center justify-center  relative cursor-pointer uppercase no-underline font-semibold text-green-900 text-[25px] hover:text-[#060010] focus:text-white focus-visible:text-[#060010]"
+        className="flex items-center justify-center h-[4vh] relative cursor-pointer uppercase no-underline font-semibold text-green-900 text-[22px] hover:text-[#060010] focus:text-white focus-visible:text-[#060010]"
         to={link}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

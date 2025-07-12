@@ -68,10 +68,10 @@ const rooms = [
       },
 ];
 
-export default function TwoRoom() {
+export default function Villa() {
       const [language, setLanguage] = useState<'en' | 'ar'>('en');
 
-       const demoItems = [
+      const demoItems = [
   { link: '/rooms/villa-4bhk', text: 'Villa 4BHK', image: '/rooms/3bhkd851leftside.jpg' },
   { link: '/rooms/apartment-3bhk-2bhk', text: 'Apartment 3BHK & 2BHK', image: '/rooms/201.JPG' },
   { link: '/rooms/studio-terrace-apartments', text: 'Studio & Terrace Apartments', image: '/rooms/202.JPG' },
@@ -127,7 +127,8 @@ export default function TwoRoom() {
                               </div>
                         </div>
                         <h2 className="text-2xl md:text-3xl text-center font-semibold italic text-[#073937] underline mb-10">
-                             Independent Rooms
+                            Villa 4BHK
+
 
 
                         </h2>
@@ -158,8 +159,9 @@ export default function TwoRoom() {
                               </button> */}
                         </div>
                         <div className="text-[14px] md:text-lg mt-5 text-center   md:px-20 ">
-                         
-Budget-friendly options for single travelers, featuring all essential comforts and daily housekeeping services.
+   
+Luxury villa offering four elegantly furnished bedrooms, modern bathrooms, a large living area, and a private terrace. Ideal for families and embassy delegations.
+
 
                         </div>
                         <div className="bg-green-100 py-8 mt-5 mx-2 md:mx-10">
@@ -194,3 +196,4 @@ Budget-friendly options for single travelers, featuring all essential comforts a
             </>
       );
 }
+

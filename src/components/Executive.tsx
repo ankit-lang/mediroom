@@ -63,12 +63,13 @@ export default function Executive() {
       const nextSlide = () => {
             setIndex((index + 1) % images.length);
       };
-      const demoItems = [
-            { link: '/rooms/executive-rooms-in-moydom', text: 'Room1', image: '/rooms/3bhkd851leftside.jpg' },
-            { link: '/rooms/presidential-family-suite', text: 'Room2', image: '/rooms/201.JPG' },
-            { link: '/rooms/sierra-jacuzzi-room', text: 'Room3', image: '/rooms/202.JPG' },
-            { link: '/rooms/two-bedroom-villa-with-private-pool', text: 'Room4', image: '/rooms/d826.jpg' }
-          ];
+        const demoItems = [
+  { link: '/rooms/villa-4bhk', text: 'Villa 4BHK', image: '/rooms/3bhkd851leftside.jpg' },
+  { link: '/rooms/apartment-3bhk-2bhk', text: 'Apartment 3BHK & 2BHK', image: '/rooms/201.JPG' },
+  { link: '/rooms/studio-terrace-apartments', text: 'Studio & Terrace Apartments', image: '/rooms/202.JPG' },
+  { link: '/rooms/party-apartments', text: 'Party Apartments', image: '/rooms/d826.jpg' },
+  { link: '/rooms/independent-rooms', text: 'Independent Rooms', image: '/rooms/d826.jpg' }
+];
       const links = [
             { name: "Executive Rooms in MoyDom", url: "/rooms/executive-rooms-in-moydom" },
             // { name: "Elite Room With Private Balcony", url: "/rooms/elite-room-with-private-balcony" },
@@ -106,7 +107,9 @@ export default function Executive() {
                               </div>
                         </div>
                         <h2 className="text-2xl md:text-3xl text-center font-semibold italic underline text-[#073937] mb-10">
-                              Room 1
+                           Apartment 3BHK & 2BHK
+
+
                         </h2>
                         <div className="relative w-full m-auto mb-12 lg:w-[60vw] h-[400px] overflow-hidden">
                               <img
@@ -135,7 +138,9 @@ export default function Executive() {
                               </button>
                         </div>
                         <div className="text-[14px] md:text-lg mt-5 text-center   md:px-20 ">
-                              Step into the epitome of luxury with our Two Bedroom Villa With Private Pool, spanning an impressive 1560 sq. ft. Designed to comfortably accommodate 8 guests, this exclusive private pool villa in Udaipur, features a plush king size bed, state-of-the-art amenities including a tea & coffee maker, minibar, and round-the-clock room service. Experience ultimate convenience with our on-site laundry service. The villa's elegant interior design complements the serene private pool, making it an ideal choice for families or groups seeking both luxury and relaxation.
+
+Spacious service apartments with modern amenities, kitchenettes, and balconies. Perfect for long medical stays or corporate visits.
+
                         </div>
                         <div className="bg-green-100 py-8 mt-5 mx-10">
                               <h2 className="text-center md:!text-5xl text-xl font-semibold  text-[#073937] italic mb-6">Amenities</h2>

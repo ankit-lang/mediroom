@@ -113,7 +113,7 @@ export default function Heronew() {
           <p className="text-lg hidden text-left md:block text-green-800">
             
 <SplitText
-  text=" A choice of stays in the cities you love, powered by an app that puts you in control. Now part of Moydom."
+  text=" Premium Serviced Apartments for Medical Tourists, Embassy Guests, and Official Visitors in Delhi-NCR"
   className="text-left "
   delay={100}
   duration={0.6}
@@ -254,7 +254,7 @@ export default function Heronew() {
       </div>
          </section>
         {/* //frt  */}
-         <form onSubmit={handleSubmit} className="block md:hidden realtive z-[1000] bg-green-50 mt-[-3rem] rounded-t-[5rem] p-6 !text-[#09342c] shadow-md space-y-6">
+         <form onSubmit={handleSubmit} className="block md:hidden realtive z-[1000] bg-green-50 mt-[-2rem] rounded-t-[5rem] p-3 !text-[#09342c] shadow-md space-y-6">
       <h1 className="text-4xl !font-poppins text-green-900  font-medium leading-tight">
         A better way <br /> to stay
       </h1>
