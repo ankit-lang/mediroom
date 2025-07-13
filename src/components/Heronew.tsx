@@ -143,7 +143,7 @@ export default function Heronew() {
         </div>
 
         {/* Carousel Dots */}
-        <div className=" absolute md:bottom-[100px] md:left-[50%] left-[45%] bottom-[100px] mt-6 flex justify-center space-x-2 z-30">
+        <div className=" absolute md:bottom-[120px] md:left-[50%] left-[45%] bottom-[100px] mt-6 flex justify-center space-x-2 z-30">
           {images.map((_, idx) => (
             <button
               key={idx}
@@ -259,8 +259,7 @@ export default function Heronew() {
         A better way <br /> to stay
       </h1>
       <p className="text-sm text-[#09342cb3]">
-        A choice of stays in the cities you love, powered by an app that puts you in
-        control. Now part of Marriott Bonvoy.
+        Premium Serviced Apartments for Medical Tourists, Embassy Guests, and Official Visitors in Delhi-NCR
       </p>
 
       <div className="flex items-center gap-3 border border-gray-300 rounded-full px-4 py-3 bg-white">

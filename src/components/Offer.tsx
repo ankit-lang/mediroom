@@ -74,6 +74,19 @@ export default function Offer() {
                                     </div>
                               ))}
                         </div>
+                         <div className="bg-green-700 mt-4 text-white py-4 px-6 flex flex-col sm:flex-row items-center justify-between rounded-2xl shadow-lg">
+      <div className="text-center sm:text-left">
+        <h2 className="text-xl font-semibold">Get personalized offers — call us today!</h2>
+      </div>
+      <div className="mt-2 sm:mt-0 flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
+        <a href="tel:+919810000051" className="hover:underline">
+          +91 9810000051
+        </a>
+        <a href="tel:+919333333767" className="hover:underline">
+          +91 9333333767
+        </a>
+      </div>
+    </div>
                   </div>
                   <WhatsAppButton language={language} />
                   <Footer language={language} />

@@ -472,44 +472,25 @@ class App {
     const defaultItems = [
       {
         image: `/rooms/room101.jpg`,
-        text: "Room1",
+        text: "Independent Rooms",
       },
       {
         image: `/rooms/maharaja1floor1097.jpg`,
-        text: "Room2",
+        text: "Party Apartments",
       },
       {
         image: "/rooms/diptee.JPG",
-        text: "Room3",
+        text: "Studio & Terrace Apartments",
       },
       {
         image: `/rooms/d826.jpg`,
-        text: "Room4",
+        text: "Apartment 3BHK & 2BHK",
       },
       {
         image: `/rooms/202.JPG`,
-        text: "Room 5",
+        text: "Villa 4BHK",
       },
-      {
-        image: `/rooms/201.JPG`,
-        text: "Room 6",
-      },
-      {
-        image: `/rooms/5bhkduplex.jpg`,
-        text: "Room 7",
-      },
-      {
-        image: `/rooms/4bhknewfriendd851.jpg`,
-        text: "Room 8",
-      },
-      {
-        image: `/rooms/3bhkd851newfriend.jpg`,
-        text: "Room 9",
-      },
-      {
-        image: `/rooms/3bhkd851leftside.jpg`,
-        text: "Room 10"}
-        ,
+     
       
    
     ];

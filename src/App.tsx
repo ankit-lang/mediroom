@@ -14,6 +14,7 @@ import BookingModal from './components/Overlay';
 import { useEffect, useState } from 'react';
 import Loader from './Loader';
 import Villa from './components/Villa';
+import Aboutpage from './components/Aboutpage';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
       <Route path="/rooms/studio-terrace-apartments" element={<Presidential />} />
       <Route path="/rooms/party-apartments" element={<Jacuzzi />} />
       <Route path="/rooms/independent-rooms" element={<TwoRoom />} />
+      <Route path="/about" element={<Aboutpage />} />
       {/* <Route path="/rooms/executive-rooms-in-moydom" element={<Executive />} /> */}
       {/* <Route path="/rooms/presidential-family-suite" element={<Presidential />} /> */}
       {/* <Route path="/rooms/premium-suite-with-bathtub." element={<Premium />} /> */}

@@ -72,6 +72,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
 
   const navLinks = [
     { name: t.nav.home, href: '/' },
+     { name: "About", href: '/about' },
 
     { name: t.nav.rooms, href: '/rooms' },
     { name: "Offers", href: '/offers' },

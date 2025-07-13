@@ -93,7 +93,7 @@ const RoomsSection = () => {
                               viewport={{ once: true }}
                         >
                               <h2 className="text-3xl  text-center font-serif font-semibold text-[#073937] italic mb-4">
-                                    Rooms & Suites
+                              Services & Accommodation Option
                               </h2>
                               <p className="text-gray-700 font-serif text-center md:text-lg leading-relaxed mb-6">
                               From elegant villas to modern studio apartments, our stays are thoughtfully designed with patients in mind.
