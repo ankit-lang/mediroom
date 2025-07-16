@@ -90,7 +90,7 @@ export default function RoomShowcase() {
                                                 key={index}
                                                 to={text.url}
                                                 style={{}}
-                                                className=" md:!text-[20px]  text-[15px] md:text-base text-[#073937] tracking-normal font-bold relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full hover:after:bg-orange-900 transition-all duration-300"
+                                                className=" md:!text-[22px]  text-[18px] md:text-base text-[#073937] tracking-normal font-bold relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full hover:after:bg-orange-900 transition-all duration-300"
                                           >
                                                 {text.name}
                                           </Link>

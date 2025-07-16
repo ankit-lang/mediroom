@@ -33,8 +33,8 @@ export default function ExperienceHomeSection() {
 
   return (
     <section className="py-16 bg-white">
-      <div className="container mx-auto px-6 lg:px-8">
-        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">Experience A Home Away From Home</h2>
+      <div className="container mx-auto text-green-800 px-6 lg:px-8">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center !text-green-800 mb-4">Experience A Home Away From Home</h2>
         <p className="text-center text-lg text-gray-600 mb-12">
           Our properties are designed to provide a holistic experience with personalized services — whether you stay for a week or several months.
         </p>
@@ -43,9 +43,9 @@ export default function ExperienceHomeSection() {
             <Card key={idx} className="p-6 hover:shadow-lg transition-shadow">
               <div className="flex items-center space-x-4 mb-4">
                 {item.icon}
-                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <h3 className="text-xl text-green-700 font-semibold">{item.title}</h3>
               </div>
-              <CardContent className="text-gray-700">
+              <CardContent className="">
                 {item.description}
               </CardContent>
             </Card>

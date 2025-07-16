@@ -14,7 +14,7 @@ interface FlowingMenuProps {
 
 const FlowingMenu: React.FC<FlowingMenuProps> = ({ items = [] }) => {
   return (
-    <div className="w-full  :h-[50vh] mt-20  overflow-hidden">
+    <div className="w-full   mt-20  overflow-hidden">
       <nav className="flex flex-col h-full m-0 p-0">
         {items.map((item, idx) => (
           <MenuItem key={idx} {...item} />
@@ -81,11 +81,11 @@ const MenuItem: React.FC<MenuItemProps> = ({ link, text, image }) => {
   const repeatedMarqueeContent = React.useMemo(() => {
     return Array.from({ length: 20 }).map((_, idx) => (
       <React.Fragment key={idx}>
-        <span className="text-[#060010] uppercase font-normal text-[20px] leading-[1.2] ">
+        <span className="text-[#060010] uppercase font-normal text-[12px] leading-[1.2] ">
           {text}
         </span>
         <div
-          className="w-[70px] h-[2vh] mx-[2vw] rounded-[50px] bg-cover bg-center p-[20px]"
+          className="w-[70px] h-[1vh] mx-[2vw] rounded-[50px] bg-cover bg-center p-[20px]"
           style={{ backgroundImage: `url(${image})` }}
         />
       </React.Fragment>
@@ -98,7 +98,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ link, text, image }) => {
       ref={itemRef}
     >
       <Link
-        className="flex items-center justify-center h-[4vh] relative cursor-pointer uppercase no-underline font-semibold text-green-900 text-[22px] hover:text-[#060010] focus:text-white focus-visible:text-[#060010]"
+        className="flex items-center justify-center h-[4.8vh] relative cursor-pointer uppercase no-underline font-semibold text-green-900 text-[22px] hover:text-[#060010] focus:text-white focus-visible:text-[#060010]"
         to={link}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
