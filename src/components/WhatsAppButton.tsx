@@ -18,7 +18,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ language }) => {
         href="https://wa.me/9810000051"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 bg-[#073937] text-white p-4 rounded-full shadow-lg hover:bg-orange-600 hover:scale-105  z-50 flex items-center justify-center"
+        className="fixed bottom-8 right-8 bg-[##784420] text-white p-4 rounded-full shadow-lg hover:bg-brown-600 hover:scale-105  z-50 flex items-center justify-center"
         aria-label={t.whatsapp.ariaLabel}
       >
         <BsWhatsapp size={36} />

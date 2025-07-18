@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={`bg-[#073937] text-white ${dir === 'rtl' ? 'rtl' : ''}`}>
+    <footer className={`bg-[#784420] text-white ${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto text-justify  px-4 md:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* About */}
@@ -38,11 +38,11 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
 
           {/* Quick Links */}
           <div>
-            <div className="text-xl font-semibold mb-4">{t.footer.quickLinks.title}</div>
+            <div className="text-xl font-semibold mb-4 ">{t.footer.quickLinks.title}</div>
             <ul className="space-y-2">
               {t.footer.quickLinks.links.map((link, index) => (
                 <li key={index}>
-                  <a href={link.url} className="hover:text-gold transition-custom">
+                  <a href={link.url} className=" transition-custom">
                     {link.text}
                   </a>
                 </li>
@@ -52,29 +52,27 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
 
           {/* Contact */}
           <div>
-            <div className="text-xl font-semibold mb-4">{t.footer.contact.title}</div>
+            <div className="text-xl font-semibold mb-4 text-white">{t.footer.contact.title}</div>
             <ul className="space-y-4">
-              <li className="flex items-start">
-                <MapPin size={20} className="mr-2 mt-1" />
+              <li className="flex items-start text-white">
+                <MapPin size={20} className="mr-2 mt-1 " />
                 <span>Sujan Mohinder Hospital Road, New Friends Colony, Delhi,
                 India 110025</span>
               </li>
-              <li className="flex items-center">
-                <Phone size={20} className="mr-2" />
-                <a href="tel:+911234567890" className="hover:text-gold transition-custom">
+              <li className="flex items-center text-white">
+                <Phone size={20} className="mr-2 " />
+                <a href="tel:+911234567890" className=" transition-custom text-white">
                 +91 9810000051 | +91 9333333767
                 </a>
               </li>
-              <li className="flex items-center">
-                <Mail size={20} className="mr-2" />
-                <a href="mailto:info@medistay.com" className="hover:text-gold transition-custom">
+              <li className="flex items-center text-white">
+                <Mail size={20} className="mr-2 " />
+                <a href="mailto:info@medistay.com" className=" transition-custom text-white">
                   info@moydom.in 
-
                 </a>
               </li>
-              <li className="flex items-center">
-
-                <a href="mailto:info@medistay.com" className="hover:text-gold transition-custom">
+              <li className="flex items-center text-white">
+                <a href="mailto:info@medistay.com" className=" transition-custom text-white">
                   {/* info@moydom.in */}
                 </a>
               </li>
@@ -86,9 +84,9 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
             {/* <h3 className="text-xl font-semibold mb-4">{t.footer.newsletter.title}</h3> */}
             {/* <p className="mb-4">{t.footer.newsletter.description}</p> */}
 
-            <div className="mb-4"><a href="" className='flex items-center gap-3' >   <FaFacebook size={32} color="white" /> <span>Facebook</span>  </a></div>
-            <div className="mb-4"><a href="" className='flex items-center gap-3'><BsWhatsapp color="white" size={30} />  Whatsapp</a></div>
-            <div className="mb-2"><a href="" className='flex items-center gap-3'  > <BsInstagram color="white" size={30} />  Instagram</a></div>
+            <div className="mb-4"><a href="" className='flex items-center gap-3 ' >   <FaFacebook size={32} color="white" /> <span>Facebook</span>  </a></div>
+            <div className="mb-4"><a href="" className='flex items-center gap-3 '><BsWhatsapp color="white" size={30} />  Whatsapp</a></div>
+            <div className="mb-2"><a href="" className='flex items-center gap-3 '  > <BsInstagram color="white" size={30} />  Instagram</a></div>
             {/* <form className="flex">
               <input
                 type="email"
@@ -106,7 +104,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white border-opacity-20 text-center">
-          <p>
+          <p className="">
             © {currentYear} Moydom
           </p>
           {/* <div className="mt-4 flex justify-center space-x-6">

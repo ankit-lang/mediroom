@@ -147,7 +147,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
       {/* <BookingFormnew /> */}
       {/* </div> */}
       <FadeInFromBottom>
-        <footer className="bg-[#073937] mt-10 text-white py-8 text-center">
+        <footer className="bg-[#784420] mt-10 text-white py-8 text-center">
           <motion.div
 
 
@@ -180,7 +180,6 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
               </div>
             </div>
           </motion.div>
-
         </footer>
       </FadeInFromBottom>
       <div className="h-[100vh] hidden md:block mt-10 p-20 w-full relative">
@@ -198,10 +197,10 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
       </div>
 
       <div style={{ height: '600px', position: 'relative' }}>
-        <h2 className='text-center mt-16 md:mt-0 text-3xl text-black'>Rooms Avaiable</h2>
+        <h2 className='text-center mt-16 md:mt-0 text-3xl text-[#784420]'>Rooms Avaiable</h2>
   <CircularGallery scrollSpeed={1}  bend={1} textColor="green-900" borderRadius={0.05} scrollEase={0.5}/>
 </div>
-      <section className="bg-gradient-to-b  tracking-wide from-[#white] to-white py-12 text-center px-4">
+      <section className="bg-gradient-to-b  tracking-wide from-[#fff] to-white py-12 text-center px-4">
         {/* Logo */}
         <FadeInFromBottom>
           <div className="flex justify-center ">
@@ -222,7 +221,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl md:text-3xl font-semibold italic text-[#1a2b5c] mb-8">
+          <h2 className="text-2xl md:text-3xl font-semibold italic text-[#784420] mb-8">
             <span className="font-bold font-serif flex items-center justify-center ">
               Moy Dom
             </span>
@@ -230,11 +229,11 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
         </motion.div>
 
         {/* Paragraphs */}
-        <div className="max-w-6xl font-serif mx-auto text-gray-800 space-y-6 text- text-center leading-relaxed">
+        <div className="max-w-6xl font-serif mx-auto text-[#784420] space-y-6 text- text-center leading-relaxed">
           <p className='text-sm md:text-[16px]' >
             <motion.p
 
-              className=" text-black"
+              className=" text-[#784420]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -246,7 +245,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
           <p className='text-sm md:text-[16px]' >
             <motion.p
 
-              className=" text-black"
+              className=" text-[#784420]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -259,7 +258,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
           <p className='text-center text-sm md:text-[16px] hidden md:block' >
             <motion.p
 
-              className=" text-black"
+              className=" text-[#784420]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.38 }}
@@ -272,7 +271,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
           <p className="text-center  font-medium text-sm md:text-[16px]">
             <motion.p
 
-              className=" text-black"
+              className=" text-[#784420]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}

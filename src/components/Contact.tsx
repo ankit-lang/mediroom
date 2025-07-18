@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
@@ -15,15 +16,30 @@ export default function ContactForm() {
             setForm({ ...form, [e.target.name]: e.target.value });
       };
 
-      const handleSubmit = (e) => {
-            e.preventDefault();
-            console.log("Form Submitted:", form);
-            // You can replace this with an API call
-      };
       const [language, setLanguage] = useState<'en' | 'ar'>('en');
 
       const toggleLanguage = () => {
 
+      };
+
+      const [captcha, setCaptcha] = useState('');
+      const [captchaInput, setCaptchaInput] = useState('');
+      const [captchaError, setCaptchaError] = useState('');
+
+      // Generate a simple captcha on mount
+      React.useEffect(() => {
+            setCaptcha(Math.random().toString(36).substring(2, 8));
+      }, []);
+
+      const handleSubmit = (e) => {
+            e.preventDefault();
+            if (captchaInput !== captcha) {
+                  setCaptchaError('Captcha does not match.');
+                  return;
+            }
+            setCaptchaError('');
+            console.log("Form Submitted:", form);
+            // You can replace this with an API call
       };
 
       return (
@@ -34,34 +50,11 @@ export default function ContactForm() {
                         <h2 className="text-3xl font-semibold italic font-serif text-[#13274F] mb-8">Reach Out to Us</h2>
 
                         <form onSubmit={handleSubmit} className="w-full max-w-3xl bg-white p-6 rounded-lg shadow-md">
-                              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center mb-4">
-                                    <label className="font-semibold md:text-right  md:col-span-1">Name</label>
-                                    <input
-                                          type="text"
-                                          name="name"
-                                          placeholder="Enter Name"
-                                          value={form.name}
-                                          onChange={handleChange}
-                                          className="border rounded px-4 py-2 w-full md:col-span-3"
-                                          required
-                                    />
-                              </div>
 
                               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center mb-4">
-                                    <label className="font-semibold md:text-right md:col-span-1">Email</label>
-                                    <input
-                                          type="email"
-                                          name="email"
-                                          placeholder="Enter Email"
-                                          value={form.email}
-                                          onChange={handleChange}
-                                          className="border rounded px-4 py-2 w-full md:col-span-3"
-                                          required
-                                    />
-                              </div>
-
-                              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center mb-4">
-                                    <label className="font-semibold md:text-right md:col-span-1">Phone</label>
+                                    <label className="font-semibold md:text-right md:col-span-1">
+                                          Phone <span className="text-red-600">*</span>
+                                    </label>
                                     <div className="flex gap-2 md:col-span-3">
                                           {/* <span className="border rounded px-4 py-2 flex items-center bg-white">🇮🇳</span> */}
                                           <input
@@ -75,9 +68,38 @@ export default function ContactForm() {
                                           />
                                     </div>
                               </div>
-
+                              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center mb-4">
+                                    <label className="font-semibold md:text-right  md:col-span-1">
+                                          Name <span className="text-red-600">*</span>
+                                    </label>
+                                    <input
+                                          type="text"
+                                          name="name"
+                                          placeholder="Enter Name"
+                                          value={form.name}
+                                          onChange={handleChange}
+                                          className="border rounded px-4 py-2 w-full md:col-span-3"
+                                          required
+                                    />
+                              </div>
+                              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center mb-4">
+                                    <label className="font-semibold md:text-right md:col-span-1">
+                                          Email <span className="text-red-600">*</span>
+                                    </label>
+                                    <input
+                                          type="email"
+                                          name="email"
+                                          placeholder="Enter Email"
+                                          value={form.email}
+                                          onChange={handleChange}
+                                          className="border rounded px-4 py-2 w-full md:col-span-3"
+                                          required
+                                    />
+                              </div>
                               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-start mb-6">
-                                    <label className="font-semibold md:text-right pt-2 md:col-span-1">Comments</label>
+                                    <label className="font-semibold md:text-right pt-2 md:col-span-1">
+                                          Comments <span className="text-red-600">*</span>
+                                    </label>
                                     <textarea
                                           name="comments"
                                           placeholder="Enter your message..."
@@ -85,9 +107,30 @@ export default function ContactForm() {
                                           onChange={handleChange}
                                           rows={5}
                                           className="border rounded px-4 py-2 w-full md:col-span-3"
+                                          required
                                     />
                               </div>
-
+                              {/* Captcha */}
+                              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center mb-6">
+                                    <label className="font-semibold md:text-right md:col-span-1">
+                                          Captcha <span className="text-red-600">*</span>
+                                    </label>
+                                    <div className="flex gap-2 items-center md:col-span-3">
+                                          <span className="px-4 py-2 bg-gray-100 rounded font-mono tracking-widest text-lg select-none">{captcha}</span>
+                                          <input
+                                                type="text"
+                                                name="captcha"
+                                                placeholder="Enter captcha"
+                                                value={captchaInput}
+                                                onChange={e => setCaptchaInput(e.target.value)}
+                                                className="border rounded px-4 py-2 w-full"
+                                                required
+                                          />
+                                    </div>
+                              </div>
+                              {captchaError && (
+                                    <div className="text-red-600 text-center mb-4">{captchaError}</div>
+                              )}
                               <div className="flex justify-center">
                                     <button
                                           type="submit"

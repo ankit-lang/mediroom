@@ -14,17 +14,30 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const t = translations[language];
-  const [checkIn, setCheckIn] = React.useState(new Date());
-  const [checkOut, setCheckOut] = React.useState(new Date(Date.now() + 86400000));
-  const [adults, setAdults] = React.useState(1);
-  const [children, setChildren] = React.useState(0);
-
+  const [checkIn, setCheckIn] = React.useState("");
+  const [checkOut, setCheckOut] = React.useState("");
+  const [adults, setAdults] = React.useState("1");
+  const [children, setChildren] = React.useState("0");
   const [promoCode, setPromoCode] = React.useState("");
+
+  // Captcha state
+  const [captcha, setCaptcha] = useState('');
+  const [captchaInput, setCaptchaInput] = useState('');
+  const [captchaError, setCaptchaError] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  React.useEffect(() => {
+    setCaptcha(Math.random().toString(36).substring(2, 8));
+  }, [isOpen]);
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    // setIsSubmitting(true);
-
+    if (captchaInput !== captcha) {
+      setCaptchaError('Captcha does not match.');
+      return;
+    }
+    setCaptchaError('');
+    setLoading(true);
     const formData = new URLSearchParams();
     formData.append("checkIn", checkIn);
     formData.append("checkOut", checkOut);
@@ -33,7 +46,6 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
     formData.append("promoCode", promoCode);
 
     try {
-
       // https://script.google.com/macros/s/AKfycbyLU5PYiBmiP2hnWv-Eoj4lQMu1eDq9g6vKVrkAEp5yB8_e00DQuvyOXYBR8dS5w4o/exec
       const response = await fetch(
         'https://script.google.com/macros/s/AKfycbx4AqZj-upxMSp9umUjhf3l9YBe_bg2j4SyiSoeNdSnp7mikKd5QUzRPj91-mUvJBw/exec',
@@ -49,10 +61,10 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
 
       const result = await response.json();
       alert("form Submitted Successfully")
-      // setMessage(result);
     } catch (error) {
-      // setMessage('Error submitting form');
       alert("Error submitting form", error)
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -75,7 +87,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
      { name: "About", href: '/about' },
 
     { name: t.nav.rooms, href: '/rooms' },
-    { name: "Offers", href: '/offers' },
+    // { name: "Offers", href: '/offers' },
 
     { name: t.nav.facilities, href: '/facilities' },
     { name: "Gallery", href: '/gallery' },
@@ -94,9 +106,9 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
       >
         <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 text-2xl font-bold text-[#2d2a22]">
+          <a href="/" className="flex items-center gap-2 text-3xl font-bold text-[#2d2a22]">
             <img src="/assests/logo.jpg" alt="Logo" className="w-12 h-12 rounded-full shadow border-2 border-gold" />
-            <span className="hidden sm:inline font-serif tracking-wide">Moydom</span>
+            <span className="hidden sm:inline !font-poppins tracking-wide">Moydom</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -109,7 +121,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
                   to={link.href}
                   key={link.href}
                   className={`relative px-4 py-2 rounded-full font-medium transition-all duration-200
-                    ${isActive ? 'bg-[#19735A] text-white shadow-lg' : 'text-[#2d2a22] hover:bg-gray-200 hover:text-black'}
+                    ${isActive ? 'bg-[#784420] text-white shadow-lg' : 'text-[#784420] hover:bg-[#e5ddb8] hover:text-[#784420]'}
                   `}
                   onMouseEnter={() => setHovered(link.href)}
                   onMouseLeave={() => setHovered(null)}
@@ -135,7 +147,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
           {/* Book Now Button */}
           <div className="ml-4">
             <div onClick={() => setIsOpen(true)}>
-              <Button className=" text-white  px-6 py-2 rounded-full shadow  !hover:bg-green-700 transition-all duration-200 font-semibold" />
+              <Button className=" text-white  px-6 py-2 rounded-full shadow  !hover:bg-[#784420] transition-all duration-200 font-semibold" />
             </div>
           </div>
         </div>
@@ -148,7 +160,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
                 <Link
                   to={link.href}
                   key={link.href}
-                  className="w-11/12 text-center text-lg font-medium text-green-900 py-2 rounded-full hover:bg-green/10 hover:text-green-700 transition-all duration-200"
+                  className="w-11/12 text-center text-lg font-medium text-[#784420] py-2 rounded-full hover:bg-[#e5ddb8] hover:text-[#784420] transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
@@ -164,32 +176,58 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
           <div className="bg-white p-6 rounded-lg w-full max-w-3xl relative">
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-2 right-2 text-gray-500 hover:text-gold text-4xl transition-colors duration-300"
+              className="absolute top-2 right-2 text-[#784420] hover:text-[#784420] text-4xl transition-colors duration-300"
             >
               &times;
             </button>
-            <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Captcha state */}
+            {/*
+              Add these at the top of the component if not already present:
+              const [captcha, setCaptcha] = useState('');
+              const [captchaInput, setCaptchaInput] = useState('');
+              const [captchaError, setCaptchaError] = useState('');
+              React.useEffect(() => { setCaptcha(Math.random().toString(36).substring(2, 8)); }, []);
+            */}
+            <form
+              className="grid grid-cols-1 md:grid-cols-2 gap-4"
+              onSubmit={(e) => {
+                e.preventDefault();
+                if (captchaInput !== captcha) {
+                  setCaptchaError('Captcha does not match.');
+                  return;
+                }
+                setCaptchaError('');
+                submitHandler(e);
+              }}
+            >
               <div>
-                <label className="block text-sm font-medium mb-1 text-black">Check In</label>
+                <label className="block text-sm font-medium mb-1 text-[#784420]">
+                  Check In <span className="text-red-600">*</span>
+                </label>
                 <input
                   type="date"
-                  className="w-full border rounded p-2 focus:border-[#073937] focus:ring-green-800/30 transition-colors duration-300"
+                  className="w-full border rounded p-2 focus:border-[#784420] focus:ring-[#784420]/30 transition-colors duration-300"
                   required
                   onChange={(e) => setCheckIn(new Date(e.target.value))}
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1 text-[#073937]">Check Out</label>
+                <label className="block text-sm font-medium mb-1 text-[#784420]">
+                  Check Out <span className="text-red-600">*</span>
+                </label>
                 <input
                   type="date"
-                  className="w-full border rounded p-2  focus:ring-olive/30 transition-colors duration-300"
+                  className="w-full border rounded p-2  focus:ring-[#784420]/30 transition-colors duration-300"
                   required
                   onChange={(e) => setCheckOut(new Date(e.target.value))}
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1 text-[#073937]">Adults</label>
-                <select className="w-full border rounded p-2  focus:ring-olive/30 transition-colors duration-300"
+                <label className="block text-sm font-medium mb-1 text-[#784420]">
+                  Adults <span className="text-red-600">*</span>
+                </label>
+                <select className="w-full border rounded p-2  focus:ring-[#784420]/30 transition-colors duration-300"
+                  required
                   onChange={(e) => setAdults(Number(e.target.value))}>
                   {[1, 2, 3, 4].map((n) => (
                     <option key={n}>{n}</option>
@@ -197,8 +235,11 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1 text-[#073937]">Children</label>
-                <select className="w-full border rounded p-2  focus:ring-olive/30 transition-colors duration-300"
+                <label className="block text-sm font-medium mb-1 text-[#784420]">
+                  Children <span className="text-red-600">*</span>
+                </label>
+                <select className="w-full border rounded p-2  focus:ring-[#784420]/30 transition-colors duration-300"
+                  required
                   onChange={(e) => setChildren(Number(e.target.value))}
                 >
                   {[0, 1, 2, 3].map((n) => (
@@ -207,20 +248,54 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
                 </select>
               </div>
               <div className="md:col-span-2">
-                <label className="block text-sm font-medium mb-1 text-[#073937]">Promo Code</label>
+                <label className="block text-sm font-medium mb-1 text-[#784420]">
+                  Promo Code <span className="text-red-600">*</span>
+                </label>
                 <input
                   type="text"
-                  className="w-full border rounded p-2  focus:ring-olive/30 transition-colors duration-300"
+                  className="w-full border rounded p-2  focus:ring-[#784420]/30 transition-colors duration-300"
+                  required
                   onChange={(e) => setPromoCode(e.target.value)}
                 />
+              </div>
+              {/* Captcha */}
+              <div className="md:col-span-2">
+                <label className="block text-sm font-medium mb-1 text-[#784420]">
+                  Captcha <span className="text-red-600">*</span>
+                </label>
+                <div className="flex gap-2 items-center">
+                  <span className="px-4 py-2 bg-gray-100 rounded font-mono tracking-widest text-lg select-none">{captcha}</span>
+                  <input
+                    type="text"
+                    name="captcha"
+                    placeholder="Enter captcha"
+                    value={captchaInput}
+                    onChange={e => setCaptchaInput(e.target.value)}
+                    className="border rounded px-4 py-2 w-full"
+                    required
+                  />
+                </div>
+                {captchaError && (
+                  <div className="text-red-600 text-center mt-2">{captchaError}</div>
+                )}
               </div>
               <div className="md:col-span-2 text-right">
                 <button
                   type="submit"
-                  onClick={submitHandler}
-                  className="bg-[#073937] text-white px-4 py-2 rounded hover:bg-green-700 transition-colors duration-300"
+                  className="bg-[#784420] text-white px-4 py-2 rounded hover:bg-[#784420] transition-colors duration-300"
+                  disabled={loading}
                 >
-                  Book Now
+                  {loading ? (
+                    <span className="flex items-center justify-center gap-2">
+                      <svg className="animate-spin h-5 w-5 text-white" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"/>
+                      </svg>
+                      Submitting...
+                    </span>
+                  ) : (
+                    "Book Now"
+                  )}
                 </button>
               </div>
             </form>

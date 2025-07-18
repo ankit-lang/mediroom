@@ -36,28 +36,24 @@ const RoomsSection2 = () => {
             <div className=" flex-col lg:flex-row items-center justify-center p-8 hidden md:flex bg-white">
                   {/* Carousel */}
                   <div className="lg:w-1/2 mt-8 lg:mt-0 lg:ml-12 text-center ">
-
                         <motion.div
-
-
                               initial={{ opacity: 0, y: 50 }}
                               whileInView={{ opacity: 1, y: 0 }}
                               transition={{ duration: 0.6, delay: 0.4 }}
                               viewport={{ once: true }}
                         >
-                              <h2 className="text-3xl  text-center font-serif font-semibold text-[#073937] italic mb-4">
+                              <h2 className="text-3xl  text-center font-serif font-semibold text-[#784420] italic mb-4">
                                     Facilities
                               </h2>
-                              <p className="text-gray-700 font-serif text-center md:text-lg leading-relaxed mr-5   mb-6">
+                              <p className="text-[#784420] font-serif text-center md:text-lg leading-relaxed mr-5   mb-6">
                               Spacious king-size beds, air conditioning, free Wi-Fi, Arabic food on request, elevator access, daily sanitization, and 24/7 helpdesk support.
                               </p>
                               <Link to="/facilities" className="inline-block">
-                              <button className="px-6 py-2 text-center bg-[#073937] text-white rounded hover:bg-[#4e7977]">
+                              <button className="px-6 py-2 text-center bg-[#784420] text-white rounded hover:bg-[#784420]">
                                     Learn More
                               </button>
                               </Link>
                         </motion.div>
-
                   </div>
                   <div className="relative w-full lg:w-1/2 h-[400px] overflow-hidden flex flex-col items-center">
                         <div className="relative w-full h-full flex items-center justify-center">
@@ -76,14 +72,14 @@ const RoomsSection2 = () => {
                               {/* Left Arrow */}
                               <button
                                     onClick={prevSlide}
-                                    className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-green-900 text-white p-2 rounded shadow hover:bg-green-800 z-10"
+                                    className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#784420] text-white p-2 rounded shadow hover:bg-[#784420] z-10"
                               >
                                     <ChevronLeft className="w-5 h-5" />
                               </button>
                               {/* Right Arrow */}
                               <button
                                     onClick={nextSlide}
-                                    className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-green-900 text-white p-2 rounded shadow hover:bg-green-800 z-10"
+                                    className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#784420] text-white p-2 rounded shadow hover:bg-[#784420] z-10"
                               >
                                     <ChevronRight className="w-5 h-5" />
                               </button>
@@ -94,7 +90,7 @@ const RoomsSection2 = () => {
                                     <button
                                           key={i}
                                           onClick={() => { setDirection(i > index ? 1 : -1); setIndex(i); }}
-                                          className={`w-3 h-3 rounded-full border-2 border-green-900 transition-all duration-300 ${index === i ? 'bg-green-900' : 'bg-white'}`}
+                                          className={`w-3 h-3 rounded-full border-2 border-[#784420] transition-all duration-300 ${index === i ? 'bg-[#784420]' : 'bg-white'}`}
                                           aria-label={`Go to slide ${i + 1}`}
                                     />
                               ))}
@@ -108,3 +104,6 @@ const RoomsSection2 = () => {
 };
 
 export default RoomsSection2;
+      
+
+// export default RoomsSection2;

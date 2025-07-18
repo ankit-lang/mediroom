@@ -102,6 +102,7 @@ import React, {
     
       const [containerRef, { width }] = useMeasure<HTMLDivElement>();
       const [imagesReady, setImagesReady] = useState(false);
+      const [hoveredId, setHoveredId] = useState<string | null>(null);
     
       const getInitialPosition = (item: any) => {
         const containerRect = containerRef.current?.getBoundingClientRect();
@@ -200,6 +201,7 @@ import React, {
       }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
     
       const handleMouseEnter = (id: string, element: HTMLElement) => {
+        setHoveredId(id);
         if (scaleOnHover) {
           gsap.to(`[data-key="${id}"]`, {
             scale: hoverScale,
@@ -214,6 +216,7 @@ import React, {
       };
     
       const handleMouseLeave = (id: string, element: HTMLElement) => {
+        setHoveredId(null);
         if (scaleOnHover) {
           gsap.to(`[data-key="${id}"]`, {
             scale: 1,
@@ -235,16 +238,27 @@ import React, {
               data-key={item.id}
               className="absolute box-content"
               style={{ willChange: "transform, width, height, opacity" }}
-              // onClick={() => window.open(item.url, "_blank", "noopener")}
               onMouseEnter={(e) => handleMouseEnter(item.id, e.currentTarget)}
               onMouseLeave={(e) => handleMouseLeave(item.id, e.currentTarget)}
             >
               <div
-                className="relative w-full h-full bg-cover bg-center rounded-[10px] shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.2)] uppercase text-[10px] leading-[10px]"
-                style={{ backgroundImage: `url(${item.img})` }}
+                className="relative w-full h-full bg-cover bg-center rounded-[10px] shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.2)] uppercase text-[14px] leading-[10px]"
+                style={{
+                  backgroundImage: `url(${item.img})`,
+                  // Remove blur effect
+                  filter: "none",
+                  transition: "filter 0.3s"
+                }}
               >
                 {colorShiftOnHover && (
                   <div className="color-overlay absolute inset-0 rounded-[10px] bg-gradient-to-tr from-pink-500/50 to-sky-500/50 opacity-0 pointer-events-none" />
+                )}
+                {hoveredId === item.id && (
+                  <div className="absolute inset-0 flex items-center justify-center rounded-[10px] bg-black/40">
+                    <span className="text-white text-lg font-bold text-center px-4" style={{ filter: "none" }}>
+                      {item.title || item.id}
+                    </span>
+                  </div>
                 )}
               </div>
             </div>
@@ -254,4 +268,3 @@ import React, {
     };
     
     export default Masonry;
-    

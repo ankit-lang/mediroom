@@ -33,12 +33,12 @@ export default function Highlight() {
                         transition={{ duration: 0.6, delay: 0.4 }}
                         viewport={{ once: true }}
                   >
-                        <h2 className="text-3xl font-semibold font-serif italic text-[#073937] mb-10">Highlights</h2>
+                        <h2 className="text-3xl font-semibold font-serif italic text-[#784420] mb-10">Highlights</h2>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-6 max-w-6xl mx-auto">
                               {highlights.map((item, i) => (
-                                    <div key={i} className="flex flex-col items-center gap-3 text-gray-800">
-                                          <div className="bg-white rounded-full border-2 border-[#073937] shadow-lg shadow-green-300/60 p-4 flex items-center justify-center transition-transform duration-300 hover:scale-105" style={{ boxShadow: '0 6px 24px 0 #4e7977, 0 1.5px 6px 0 #073937' }}>
-                                                {React.cloneElement(item.icon, { className: 'w-10 h-10 text-[#073937] drop-shadow-[0_2px_6px_rgba(255,135,6,0.5)]' })}
+                                    <div key={i} className="flex flex-col items-center gap-3 text-[#784420]">
+                                          <div className="bg-white rounded-full border-2 border-[#784420] shadow-lg shadow-[#784420]/30 p-4 flex items-center justify-center transition-transform duration-300 hover:scale-105" style={{ boxShadow: '0 6px 24px 0 #784420, 0 1.5px 6px 0 #784420' }}>
+                                                {React.cloneElement(item.icon, { className: 'w-10 h-10 text-[#784420] drop-shadow-[0_2px_6px_rgba(120,68,32,0.5)]' })}
                                           </div>
                                           <p className="text-sm font-serif md:text-base">{item.label}</p>
                                     </div>

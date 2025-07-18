@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaHospital, FaTrain, FaUtensils, FaConciergeBell } from 'react-icons/fa';
+import { FaHospital, FaTrain, FaUtensils, FaConciergeBell, FaUserMd, FaCar, FaShieldAlt, FaWifi, FaHome } from 'react-icons/fa';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import SplitText from './SplitText';
@@ -26,23 +26,48 @@ const features = [
     title: 'Dedicated Support',
     description: 'On-call medical help & FRRO registration assistance',
   },
+  {
+    icon: <FaUserMd size={28} />,
+    title: 'Medical Assistance',
+    description: 'Doctor on call and health support for guests.',
+  },
+  {
+    icon: <FaCar size={28} />,
+    title: 'Airport Transfers',
+    description: 'Convenient airport pickup and drop-off services.',
+  },
+  {
+    icon: <FaShieldAlt size={28} />,
+    title: '24/7 Security',
+    description: 'CCTV surveillance and secure premises.',
+  },
+  {
+    icon: <FaWifi size={28} />,
+    title: 'High-Speed WiFi',
+    description: 'Free high-speed internet in all rooms.',
+  },
+  // {
+  //   icon: <FaHome size={28} />,
+  //   title: 'Spacious Apartments',
+  //   description: '2BHK, 3BHK, and studio options for every need.',
+  // },
 ];
 
 export default function Aboutpage() {
   return (
       <>
       <Navbar language="en" toggleLanguage={() => {}} />
-    <section className="max-w-6xl mx-auto py-16 px-6">
+    <section className="max-w-6xl mx-auto py-20 px-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="text-center mb-12 mt-5"
       >
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-800">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#784420]">
          <SplitText text={ "About Us"} />
         </h2>
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+        <p className="mt-4 text-[#784420] max-w-2xl mx-auto">
           At Moydom, we’re Delhi-NCR’s most trusted accommodation provider for medical guests,
           embassy-referred travelers, and official stays. Our diverse portfolio includes Premium
           Villas, Spacious Apartments (2BHK & 3BHK), Studio & Terrace Apartments, Party
@@ -59,13 +84,13 @@ export default function Aboutpage() {
             transition={{ delay: idx * 0.2, duration: 0.5 }}
             className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-shadow"
           >
-            <div className="text-green-700 mb-4">
+            <div className="text-[#784420] mb-4">
               {feature.icon}
             </div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+            <h3 className="text-xl font-semibold text-[#784420] mb-2">
               {feature.title}
             </h3>
-            <p className="text-gray-600">
+            <p className="text-[#784420]">
               {feature.description}
             </p>
           </motion.div>

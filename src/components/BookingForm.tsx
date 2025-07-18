@@ -50,8 +50,8 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
   return (
     <section id="booking" className={` font-poppins section-padding  bg-[white] ${dir === 'rtl' ? 'rtl' : ''}`}>
       <div className="container mx-auto">
-        <h2 className="section-title text-[#073937] text-center font-serif">{t.booking.title}</h2>
-        <p className="section-subtitle text-center md:mb-12 text-[15px] md:text-lg font-serif">{t.booking.subtitle}</p>
+        <h2 className="section-title text-[#784420] text-center font-serif">{t.booking.title}</h2>
+        <p className="section-subtitle text-center md:mb-12 text-[15px] md:text-lg font-serif text-[#784420]">{t.booking.subtitle}</p>
 
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
@@ -83,7 +83,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                   >
                     <form onSubmit={handleSubmit}>
                       <div className="mb-4">
-                        <label htmlFor="name" className="block text-text-dark mb-2">
+                        <label htmlFor="name" className="block text-[#784420] mb-2">
                           {t.booking.nameLabel}
                         </label>
                         <input
@@ -93,12 +93,12 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                           required
                           value={formData.name}
                           onChange={handleChange}
-                          className="input-field border-[#073937] focus:border-[#073937]"
+                          className="input-field border-[#784420] focus:border-[#784420]"
                         />
                       </div>
 
                       <div className="mb-4">
-                        <label htmlFor="country" className="block text-text-dark mb-2">
+                        <label htmlFor="country" className="block text-[#784420] mb-2">
                           {t.booking.countryLabel}
                         </label>
                         <input
@@ -108,13 +108,13 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                           required
                           value={formData.country}
                           onChange={handleChange}
-                          className="input-field border-[#073937] focus:border-[#073937]"
+                          className="input-field border-[#784420] focus:border-[#784420]"
                         />
                       </div>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                         <div>
-                          <label htmlFor="guests" className="block text-text-dark mb-2">
+                          <label htmlFor="guests" className="block text-[#784420] mb-2">
                             {t.booking.guestsLabel}
                           </label>
                           <input
@@ -125,11 +125,11 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                             required
                             value={formData.guests}
                             onChange={handleChange}
-                            className="input-field border-[#073937] focus:border-[#073937]"
+                            className="input-field border-[#784420] focus:border-[#784420]"
                           />
                         </div>
                         <div>
-                          <label htmlFor="arrivalDate" className="block text-text-dark mb-2">
+                          <label htmlFor="arrivalDate" className="block text-[#784420] mb-2">
                             {t.booking.arrivalDateLabel}
                           </label>
                           <input
@@ -139,13 +139,13 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                             required
                             value={formData.arrivalDate}
                             onChange={handleChange}
-                            className="input-field border-[#073937] focus:border-[#073937]"
+                            className="input-field border-[#784420] focus:border-[#784420]"
                           />
                         </div>
                       </div>
 
                       <div className="mb-4">
-                        <label htmlFor="whatsapp" className="block text-text-dark mb-2">
+                        <label htmlFor="whatsapp" className="block text-[#784420] mb-2">
                           {t.booking.whatsappLabel}
                         </label>
                         <input
@@ -155,12 +155,12 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                           required
                           value={formData.whatsapp}
                           onChange={handleChange}
-                          className="input-field border-[#073937] focus:border-[#073937]"
+                          className="input-field border-[#784420] focus:border-[#784420]"
                         />
                       </div>
 
                       <div className="mb-4">
-                        <label htmlFor="purpose" className="block text-text-dark mb-2">
+                        <label htmlFor="purpose" className="block text-[#784420] mb-2">
                           {t.booking.purposeLabel}
                         </label>
                         <select
@@ -169,7 +169,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                           required
                           value={formData.purpose}
                           onChange={handleChange}
-                          className="input-field border-[#073937] focus:border-[#073937]"
+                          className="input-field border-[#784420] focus:border-[#784420]"
                         >
                           <option value="medical">{t.booking.purposeOptions.medical}</option>
                           <option value="tourism">{t.booking.purposeOptions.tourism}</option>
@@ -179,7 +179,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                       </div>
 
                       <div className="mb-4">
-                        <label htmlFor="message" className="block text-text-dark mb-2">
+                        <label htmlFor="message" className="block text-[#784420] mb-2">
                           {t.booking.messageLabel}
                         </label>
                         <textarea
@@ -188,11 +188,11 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                           rows={3}
                           value={formData.message}
                           onChange={handleChange}
-                          className="input-field border-[#073937] focus:border-[#073937]"
+                          className="input-field border-[#784420] focus:border-[#784420]"
                         ></textarea>
                       </div>
 
-                      <button type="submit" className="btn-primary bg-[#073937] w-full">
+                      <button type="submit" className="btn-primary bg-[#784420] w-full">
                         {t.booking.submitButton}
                       </button>
                     </form>
@@ -205,7 +205,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
               className="bg-cover bg-center"
               style={{ backgroundImage: "url('https://images.pexels.com/photos/4046187/pexels-photo-4046187.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')" }}
             >
-              <div className="h-full bg-[#073937] font-serif text-white p-8 bg-opacity-80 p-8 flex flex-col justify-center">
+              <div className="h-full bg-[#784420] font-serif text-white p-8 bg-opacity-80 p-8 flex flex-col justify-center">
                 <motion.div
 
 
@@ -214,26 +214,26 @@ const BookingForm: React.FC<BookingFormProps> = ({ language }) => {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   viewport={{ once: true }}
                 >
-                  <div className="text-2xl font-semibold text-white mb-6" style={{ color: 'white  ' }} >
+                  <div className="text-2xl font-semibold text-white mb-6" style={{ color: '' }} >
                     {t.booking.contactInfo.title}
                   </div>
                   <div className="space-y-4 text-white">
                     <div>
-                      <p className="font-semibold">{t.booking.contactInfo.address.label}</p>
-                      <p>Sujan Mohinder Hospital Road, New Friends Colony, Delhi,
+                      <p className="font-semibold ">{t.booking.contactInfo.address.label}</p>
+                      <p className="">Sujan Mohinder Hospital Road, New Friends Colony, Delhi,
                       India 110025</p>
                     </div>
                     <div>
-                      <p className="font-semibold">{t.booking.contactInfo.phone.label}</p>
-                      <p>+91 9810000051 | +91 9333333767</p>
+                      <p className="font-semibold ">{t.booking.contactInfo.phone.label}</p>
+                      <p className="">+91 9810000051 | +91 9333333767</p>
                     </div>
                     <div>
-                      <p className="font-semibold">{t.booking.contactInfo.email.label}</p>
-                      <p>info@moydom.in | www.moydom.in</p>
+                      <p className="font-semibold ">{t.booking.contactInfo.email.label}</p>
+                      <p className="">info@moydom.in | www.moydom.in</p>
                     </div>
                     <div>
-                      <p className="font-semibold">{t.booking.contactInfo.hours.label}</p>
-                      <p>{t.booking.contactInfo.hours.value}</p>
+                      <p className="font-semibold ">{t.booking.contactInfo.hours.label}</p>
+                      <p className="">{t.booking.contactInfo.hours.value}</p>
                     </div>
                   </div>
                 </motion.div>

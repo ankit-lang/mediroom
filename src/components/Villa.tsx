@@ -4,8 +4,12 @@ import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
 // import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // Optional icon library
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import FlowingMenu from "./Flowingmenu";
+import { FaBed, FaSnowflake, FaTv, FaDoorOpen, FaBath, FaCoffee, FaWineBottle, FaWifi, FaWater, FaToiletPaper, FaShieldAlt, FaBolt, FaBroom, FaUtensils, FaUserTie, FaLanguage, FaRegHospital, FaUserMd, FaCar, FaConciergeBell } from "react-icons/fa";
+import { MdBalcony, MdOutlineSecurity, MdOutlineCleaningServices } from "react-icons/md";
+import { GiPowerGenerator, GiMineralPearl } from "react-icons/gi";
+
 const amenities = [
   "King Size Bed",
   "Air Conditioning",
@@ -76,7 +80,7 @@ export default function Villa() {
   { link: '/rooms/apartment-3bhk-2bhk', text: 'Apartment 3BHK & 2BHK', image: '/rooms/201.JPG' },
   { link: '/rooms/studio-terrace-apartments', text: 'Studio & Terrace Apartments', image: '/rooms/202.JPG' },
   { link: '/rooms/party-apartments', text: 'Party Apartments', image: '/rooms/d826.jpg' },
-  { link: '/rooms/independent-rooms', text: 'Independent Rooms', image: '/rooms/d826.jpg' }
+//   { link: '/rooms/independent-rooms', text: 'Independent Rooms', image: '/rooms/d826.jpg' }
 ];
       const toggleLanguage = () => {
 
@@ -103,30 +107,65 @@ export default function Villa() {
       const mid = Math.ceil(amenities.length / 2);
       const left = amenities.slice(0, mid);
       const right = amenities.slice(mid);
+
+      const amenityIcons: { [key: string]: JSX.Element } = {
+        "King Size Bed": <FaBed className="text-[#784420] mr-2" />,
+        "Air Conditioning": <FaSnowflake className="text-[#784420] mr-2" />,
+        "Private Balcony & Terrace (in select units)": <MdBalcony className="text-[#784420] mr-2" />,
+        "Smart T.V.": <FaTv className="text-[#784420] mr-2" />,
+        "Wardrobe & Storage": <FaDoorOpen className="text-[#784420] mr-2" />,
+        "Bathroom with Water Heater": <FaBath className="text-[#784420] mr-2" />,
+        "Electric Kettle, Coffee & Tea Maker": <FaCoffee className="text-[#784420] mr-2" />,
+        "Mini Refrigerator": <FaWineBottle className="text-[#784420] mr-2" />,
+        "Iron with Board": <FaUtensils className="text-[#784420] mr-2" />,
+        "Free High-Speed WiFi": <FaWifi className="text-[#784420] mr-2" />,
+        "Complimentary Mineral & 24×7 RO Water": <FaWater className="text-[#784420] mr-2" />,
+        "Toiletries & Daily Housekeeping": <FaToiletPaper className="text-[#784420] mr-2" />,
+        "24/7 Security & CCTV Surveillance": <MdOutlineSecurity className="text-[#784420] mr-2" />,
+        "Power Backup": <FaBolt className="text-[#784420] mr-2" />,
+        "Daily Sanitization": <MdOutlineCleaningServices className="text-[#784420] mr-2" />,
+        "Breakfast Included": <FaUtensils className="text-[#784420] mr-2" />,
+      };
+
+      const specialGuestServiceIcons: { [key: string]: JSX.Element } = {
+        "Personal Cook & Driver": <FaUserTie className="text-[#784420] mr-2" />,
+        "Translator Services": <FaLanguage className="text-[#784420] mr-2" />,
+        "FRRO Registration Assistance": <FaRegHospital className="text-[#784420] mr-2" />,
+        "Medical Assistance & On-Call Support": <FaUserMd className="text-[#784420] mr-2" />,
+        "Car Hire & Airport Transfers": <FaCar className="text-[#784420] mr-2" />,
+        "Concierge & 24×7 Support Team": <FaConciergeBell className="text-[#784420] mr-2" />,
+      };
+
       return (
             <>
                   <div className="">
                         <Navbar language={language} toggleLanguage={toggleLanguage} />
                   </div>
-                  <div style={{ height: '600px', position: 'relative' }}>
-  <FlowingMenu items={demoItems} />
-</div>
-                  <div className="py-12 px-4  pt-32  mt-[-70vh] bg-white">
-                        <div className="  mb-5 py-6 mt-[-56vh] hidden">
-                              <div className="flex flex-wrap   justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
-                                    {links.map((text, index) => (
-                                         <Link
-                                                                                         key={index}
-                                                                                         to={text.url}
-                                                                                         style={{}}
-                                                                                         className=" !text-[20px] md:text-base text-[#073937] tracking-normal font-bold relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full hover:after:bg-orange-900 transition-all duration-300"
-                                                                                   >
-                                                                                         {text.name}
-                                                                                   </Link>
-                                    ))}
-                              </div>
-                        </div>
-                        <h2 className="text-2xl md:text-3xl text-center font-semibold italic text-[#073937] underline mb-10">
+                
+                  <div className="py-12 px-4  pt-32   bg-white">
+                        <div className="  mb-5  ">
+                                                     <div className="flex flex-wrap justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
+                                                           
+                                                         {demoItems.map((item, idx) => (
+                                                           <NavLink
+                                                             key={idx}
+                                                             to={item.link}
+                                                             className={({ isActive }) =>
+                                                               [
+                                                                 "md:!text-[22px] text-[18px] md:text-base tracking-normal font-semibold relative transition-all duration-300",
+                                                                 isActive
+                                                                   ? "bg-[#784420] text-white rounded-xl font-semibold  p-2"
+                                                                   : "text-[#784420] p-2 hover:rounded-2xl hover:bg-[#e5ddb8] hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[-2px] hover:after:h-[1px] hover:after:w-full "
+                                                               ].join(" ")
+                                                             }
+                                                           >
+                                                             {item.text}
+                                                           </NavLink>
+                                                         ))}
+                                                       </div>
+                                                   
+                                               </div>
+                        <h2 className="text-2xl md:text-3xl text-center font-semibold italic  underline mb-10">
                             Villa 4BHK
 
 
@@ -164,25 +203,34 @@ Luxury villa offering four elegantly furnished bedrooms, modern bathrooms, a lar
 
 
                         </div>
-                        <div className="bg-green-100 py-8 mt-5 mx-2 md:mx-10">
-                              <h2 className="text-center md:!text-5xl text-xl font-semibold text-[#073937] italic mb-6">Amenities</h2>
+                        <div className=" py-8 mt-5 mx-2 md:mx-10">
+                              <h2 className="text-center md:!text-5xl text-xl font-semibold  italic mb-6">Amenities</h2>
                               <div className="flex flex-col md:flex-row md:justify-center gap-12">
                                     <ul className="list-disc list-inside px-5 space-y-2 md:w-1/2">
                                           {left.map((item, idx) => (
-                                                <li key={idx}>{item}</li>
+                                                <li key={idx} className="flex items-center">
+                                                  {amenityIcons[item] || null}
+                                                  <span>{item}</span>
+                                                </li>
                                           ))}
                                     </ul>
                                     <ul className="list-disc px-5 list-inside space-y-2 md:w-1/2">
                                           {right.map((item, idx) => (
-                                                <li key={idx}>{item}</li>
+                                                <li key={idx} className="flex items-center">
+                                                  {amenityIcons[item] || null}
+                                                  <span>{item}</span>
+                                                </li>
                                           ))}
                                     </ul>
                               </div>
                               <div className="mt-8">
-        <h3 className="pl-4 text-2xl font-semibold text-[#073937] mb-4">Special Guest Services</h3>
+        <h3 className="pl-4 text-2xl font-semibold  mb-4">Special Guest Services</h3>
         <ul className="list-disc list-inside px-5 space-y-2 max-w-2xl ">
           {specialGuestServices.map((item, idx) => (
-            <li key={idx}>{item}</li>
+            <li key={idx} className="flex items-center">
+              {specialGuestServiceIcons[item] || null}
+              <span>{item}</span>
+            </li>
           ))}
         </ul>
       </div>
