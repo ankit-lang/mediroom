@@ -132,12 +132,12 @@ export default function Heronew() {
         </div>
 
         {/* Location Tag */}
-        <div className="md:mt-8 flex items-center text relative top-[-220px] md:top-0 text-[#866b1a] font-bold text-xl bg-white/20 md:bg-inherit backdrop:blur-3xl md:text-sm">
+        <div className="md:mt-8 flex items-center text relative top-[-220px] md:top-0 text-[#866b1a] font-bold text-xl bg-white/40 md:bg-inherit backdrop:blur-3xl md:text-sm">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3z" />
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 22s8-4.5 8-10-3.582-8-8-8-8 3.582-8 8 8 10 8 10z" />
           </svg>
-          <span>New friends Colony</span>
+          <span>New friends Colony </span>
           <span className="mx-2">|</span>
           <span className="font-semibold text-xl"> Delhi, 110025</span>
         </div>
@@ -255,7 +255,7 @@ export default function Heronew() {
          </section>
         {/* //frt  */}
          <form onSubmit={handleSubmit} className="block md:hidden realtive z-[1000] bg-[#e5ddb8] mt-[-2rem] rounded-t-[5rem] p-3 !text-[#866b1a] shadow-md space-y-6">
-      <h1 className="text-4xl !font-poppins text-[#866b1a]  font-medium leading-tight">
+      <h1 className="text-4xl !font-poppins non-italic text-[#866b1a]  text-center  font-medium leading-tight">
         A better way <br /> to stay
       </h1>
       <p className="text-sm text-[#866b1ab3]">

@@ -12,9 +12,9 @@ import React from "react";
 import FadeInFromBottom from "./FadeFromBottom";
 import { AnimatePresence, motion } from 'framer-motion';
 const highlights = [
-      { icon: <Waves className="w-10 h-10" />, label: "Lake Pichola Views" },
-      { icon: <UtensilsCrossed className="w-10 h-10" />, label: "Udaipur's Top Restaurant" },
-      { icon: <Droplets className="w-10 h-10" />, label: "Heated Swimming Pool" },
+      { icon: <Waves className="w-10 h-10" />, label: "Lake  Views" },
+      { icon: <UtensilsCrossed className="w-10 h-10" />, label: " Restaurant" },
+      { icon: <Droplets className="w-10 h-10" />, label: " Swimming Pool" },
       { icon: <Bath className="w-10 h-10" />, label: "Bathtub in Rooms" },
       { icon: <Bed className="w-10 h-10" />, label: "Modern Themed Rooms" },
       { icon: <TrainFront className="w-10 h-10" />, label: "7 km From Railway Station" },
