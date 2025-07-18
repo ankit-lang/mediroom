@@ -282,7 +282,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
               <div className="md:col-span-2 text-right">
                 <button
                   type="submit"
-                  className="bg-[#784420] text-white px-4 py-2 rounded hover:bg-[#784420] transition-colors duration-300"
+                  className="bg-[#784420] relative z-[1000] text-white px-4 py-2 rounded hover:bg-[#784420] transition-colors duration-300"
                   disabled={loading}
                 >
                   {loading ? (
