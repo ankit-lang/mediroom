@@ -11,15 +11,19 @@ import {
 import React from "react";
 import FadeInFromBottom from "./FadeFromBottom";
 import { AnimatePresence, motion } from 'framer-motion';
+import { FaCar, FaHospital, FaShieldAlt, FaShoppingCart, FaWifi } from "react-icons/fa";
+import { MdOutlineCleaningServices } from "react-icons/md";
 const highlights = [
-      { icon: <Waves className="w-10 h-10" />, label: "Lake  Views" },
-      { icon: <UtensilsCrossed className="w-10 h-10" />, label: " Restaurant" },
-      { icon: <Droplets className="w-10 h-10" />, label: " Swimming Pool" },
+      { icon: <Bed className="w-10 h-10" />, label: "Modern & Hygienic Rooms" },
+      { icon: <Map className="w-10 h-10" />, label: "Prime Delhi Locations" },
+      { icon: <FaHospital className="w-10 h-10" />, label: "Near Hospitals & Embassies" },
+      { icon: <UtensilsCrossed className="w-10 h-10" />, label: "Meal Services Available" },
       { icon: <Bath className="w-10 h-10" />, label: "Bathtub in Rooms" },
-      { icon: <Bed className="w-10 h-10" />, label: "Modern Themed Rooms" },
-      { icon: <TrainFront className="w-10 h-10" />, label: "7 km From Railway Station" },
-      { icon: <Martini className="w-10 h-10" />, label: "Bar" },
-      { icon: <Map className="w-10 h-10" />, label: "Travel Desk" },
+      { icon: <MdOutlineCleaningServices className="w-10 h-10" />, label: "Daily Housekeeping" },
+      { icon: <FaWifi className="w-10 h-10" />, label: "High-Speed Wi-Fi" },
+      { icon: <FaCar className="w-10 h-10" />, label: "Airport Pick-up & Travel Desk" },
+      { icon: <FaShieldAlt className="w-10 h-10" />, label: "Private Parking" },
+      { icon: <FaShoppingCart className="w-10 h-10" />, label: "Nearby Medical Stores" },
 ];
 
 export default function Highlight() {
