@@ -223,7 +223,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ language }) => {
         >
           <h2 className="text-2xl md:text-3xl font-semibold italic text-[#784420] mb-8">
             <span className="font-bold font-serif flex items-center justify-center ">
-              Moy Dom
+              MoyDom
             </span>
           </h2>
         </motion.div>
