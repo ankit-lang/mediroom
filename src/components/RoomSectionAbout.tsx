@@ -12,7 +12,7 @@ const images = [
       "/2bhk/7.jpg",
       "/studio/6.png",
       "/terace/9.png",
-      "/rooms/d826.jpg",
+      "/4bhk/3.jpg",
       
 ];
 
