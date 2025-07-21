@@ -256,7 +256,8 @@ import React, {
                 {hoveredId === item.id && (
                   <div className="absolute inset-0 flex items-center justify-center rounded-[10px] bg-black/40">
                     <span className="text-white text-lg font-bold text-center px-4" style={{ filter: "none" }}>
-                      {item.title || item.id}
+                      Rooms and Apartmens
+                      {/* {item.title || item.id} */}
                     </span>
                   </div>
                 )}
