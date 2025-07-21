@@ -470,24 +470,21 @@ class App {
     font: string
   ) {
     const defaultItems = [
+   
       {
-        image: `/rooms/room101.jpg`,
-        text: "Independent Rooms",
-      },
-      {
-        image: `/rooms/maharaja1floor1097.jpg`,
+        image: `/terace/9.png`,
         text: "Party Apartments",
       },
       {
-        image: "/rooms/diptee.JPG",
+        image: "/studio/6.png",
         text: "Studio & Terrace Apartments",
       },
       {
-        image: `/rooms/d826.jpg`,
+        image: `/2bhk/7.jpg`,
         text: "Apartment 3BHK & 2BHK",
       },
       {
-        image: `/rooms/202.JPG`,
+        image: `/4bhk/2.jpg`,
         text: "Villa 4BHK",
       },
      

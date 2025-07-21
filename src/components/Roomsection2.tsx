@@ -5,9 +5,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Link } from "react-router-dom";
 //faciliteis
 const images = [
-      "/assests/28.jpg",
-      "/assests/82.jpg",
-      "/assests/27.jpeg",
+      "/faci/medi.jpg",
+      "/faci/frro.jpg",
+      "/faci/driverandcook.jpg",
+      "/faci/trans.png",
+      "/faci/airport.png",
+      "/faci/247.jpg",
 ];
 
 const RoomsSection2 = () => {
@@ -56,13 +59,13 @@ const RoomsSection2 = () => {
                         </motion.div>
                   </div>
                   <div className="relative w-full lg:w-1/2 h-[400px] overflow-hidden flex flex-col items-center">
-                        <div className="relative w-full h-full flex items-center justify-center">
+                        <div className="relative w-full h-full flex items-center justify-center bg-gray-100">
                               <AnimatePresence initial={false} custom={direction}>
                                     <motion.img
                                           key={index}
                                           src={images[index]}
                                           alt="Room"
-                                          className="w-full h-full object-cover rounded shadow-lg absolute"
+                                          className="w-full h-full object-contain rounded shadow-lg absolute"
                                           initial={{ opacity: 0, x: direction > 0 ? 100 : -100 }}
                                           animate={{ opacity: 1, x: 0 }}
                                           exit={{ opacity: 0, x: direction > 0 ? -100 : 100 }}

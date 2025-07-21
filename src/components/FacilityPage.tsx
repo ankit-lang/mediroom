@@ -6,32 +6,32 @@ import { FaUserTie, FaCar, FaLanguage, FaRegHospital, FaConciergeBell, FaUserMd 
 
 const facilities = [
       {
-            image: "/rooms/maharaja1floor1097.jpg",
+            image: "/faci/driverandcook.jpg",
             title: "Personal Cook & Driver",
             icon: <FaUserTie className="text-[#784420] mr-2" style={{ width: '0.5in', height: '0.5in' }} />,
       },
       {
-            image: "/rooms/202.JPG",
+            image: "/faci/trans.png",
             title: "Translator Services",
             icon: <FaLanguage className="text-[#784420] mr-2" style={{ width: '0.4in', height: '0.5in' }} />,
       },
       {
-            image: "/rooms/diptee.JPG",
+            image: "/faci/frro.jpg",
             title: "FRRO Registration Assistance",
             icon: <FaRegHospital className="text-[#784420] mr-2" style={{ width: '0.4in', height: '0.5in' }} />,
       },
       {
-            image: "/rooms/5bhkduplex.jpg",
+            image: "/faci/medi.jpg",
             title: "Medical Assistance & On-Call Support",
             icon: <FaUserMd className="text-[#784420] mr-2" style={{ width: '0.4in', height: '0.5in' }} />,
       },
       {
-            image: "/rooms/room101.jpg",
+            image: "/faci/airport.png",
             title: "Car Hire & Airport Transfers",
             icon: <FaCar className="text-[#784420] mr-2" style={{ width: '0.4in', height: '0.5in' }} />,
       },
       {
-            image: "/rooms/room101.jpg", // You can update image if needed
+            image: "/faci/247.jpg", // You can update image if needed
             title: "Concierge & 24×7 Support Team",
             icon: <FaConciergeBell className="text-[#784420] mr-2" style={{ width: '0.4in', height: '0.5in' }} />,
       },
@@ -74,7 +74,7 @@ export default function FacilitiesSection() {
                                           <img
                                                 src={facility.image}
                                                 alt={facility.title}
-                                                className="w-80 h-64 object-cover rounded-lg shadow-md"
+                                                className="w-80 h-72 object-cover rounded-lg shadow-md"
                                           />
                                           <div className="mt-4 flex items-center">
                                                 {facility.icon}

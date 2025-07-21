@@ -8,18 +8,89 @@ import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
 
 const roomImages = [
-      "/assests/1.jpg",
-      "/assests/2 2.jpg",
-      "/assests/2.jpg",
-      "/assests/27.jpeg",
-      "/assests/28.jpg",
+      "/1bhk/1.jpg",
+      "/1bhk/2.jpg",
+      "/1bhk/3.jpg",
+      '/1bhk/4.jpg',
+      '/1bhk/5.jpg','/1bhk/6.jpg',
+      '/1bhk/7.jpg',
+      '/1bhk/8.jpg', '/1bhk/9.jpg',
+      '/1bhk/10.jpg', '/1bhk/11.jpg',
+      '/1bhk/12.jpg', '/1bhk/13.jpg','/1bhk/14.jpg','/1bhk/15.jpg','/1bhk/16.jpg',
+      '/1bhk/17.jpg', '/1bhk/18.jpg',
+      '/1bhk/19.jpg', '/1bhk/20.jpg',
+      '/1bhk/21.jpg', '/1bhk/22.jpg',
+      '/1bhk/23.jpg',
+      '2bhk/1.jpg','/2bhk/2.jpg','/2bhk/3.jpg',
+      '/2bhk/4.jpg','/2bhk/5.jpg',
+      '/2bhk/6.jpg','/2bhk/7.jpg',
+      '/2bhk/8.jpg','/2bhk/9.jpg',
+      '/2bhk/10.jpg','/2bhk/11.jpg',
+      '/2bhk/12.jpg','/2bhk/13.jpg',
+      '/2bhk/14.jpg','/2bhk/15.jpg',
+      '/2bhk/16.jpg','/2bhk/17.jpg',
+      '/2bhk/18.jpg','/2bhk/19.jpg',
+      '/2bhk/20.jpg','/2bhk/21.jpg',
+      '/2bhk/22.jpg','/2bhk/23.jpg',
+      '/2bhk/24.jpg','/2bhk/25.jpg',
+      '/2bhk/26.jpg','/2bhk/27.jpg',
+      '/2bhk/28.jpg','/2bhk/29.jpg',
+      '3bhk/1.jpg','/3bhk/2.jpg',
+      '/3bhk/3.jpg','/3bhk/4.jpg',
+      '/3bhk/5.jpg','/3bhk/6.jpg',
+      '/3bhk/7.jpg','/3bhk/8.jpg',
+      '/3bhk/9.jpg','/3bhk/10.jpg',
+      '/3bhk/11.jpg','/3bhk/12.jpg',
+      '/3bhk/13.jpg','/3bhk/14.jpg',
+      '/3bhk/15.jpg','/3bhk/16.jpg',
+      '/3bhk/17.jpg','/3bhk/18.jpg',
+      '/3bhk/19.jpg','/3bhk/20.jpg',
+      '/3bhk/21.jpg',
+      '/4bhk/1.jpg','/4bhk/2.jpg',
+      '/4bhk/3.jpg','/4bhk/4.jpg',
+      '/4bhk/5.jpg','/4bhk/6.jpg',
+      '/4bhk/7.jpg','/4bhk/8.jpg',
+      '/4bhk/9.jpg','/4bhk/10.jpg',
+      '/4bhk/11.jpg','/4bhk/12.jpg',
+      '/4bhk/13.jpg','/4bhk/14.jpg',
+      '/4bhk/15.jpg','/4bhk/16.jpg',
+      '/4bhk/17.jpg','/4bhk/18.jpg',
+      '/4bhk/19.jpg','/4bhk/20.jpg',
+      '/4bhk/21.jpg','/4bhk/22.jpg',
+      '/4bhk/23.jpg','/4bhk/24.jpg',
+      '/4bhk/26.jpg',
+      '/4bhk/27.jpg','/4bhk/28.jpg',
+      '/4bhk/29.jpg','/4bhk/30.jpg',
+      '/4bhk/31.jpg','/4bhk/32.jpg',
+      '/4bhk/33.jpg','/4bhk/34.jpg',
+      '/4bhk/35.jpg','/4bhk/36.jpg',
+      '/4bhk/37.jpg',
+      '/4bhk/39.jpg','/4bhk/40.jpg',
+      '/4bhk/41.jpg','/4bhk/42.jpg',
+      '/4bhk/43.jpg','/4bhk/44.jpg',
+      '/4bhk/45.jpg','/4bhk/46.jpg',
+      '/4bhk/47.jpg','/4bhk/48.jpg',
+      '/4bhk/49.jpg','/4bhk/50.jpg',
+      '/4bhk/51.jpg'
+
+   
 ];
 
 const apartmentImages = [
-      "/assests/35.jpeg",
-      "/assests/27.jpeg",
-      "/assests/28.jpg",
-      "/assests/35.jpeg",
+      "/studio/1.png",'/studio/2.png',
+      '/studio/3.png','/studio/4.png',
+      '/studio/5.png','/studio/6.png',
+      '/studio/7.png','/studio/8.png',
+      '/studio/9.png','/studio/10.png',
+      '/studio/11.png',
+      '/terace/1.png','/terace/2.png',
+      '/terace/3.png','/terace/4.png',
+      '/terace/5.png','/terace/6.png',
+      '/terace/7.png','/terace/8.png',
+      '/terace/9.png','/terace/10.png',
+      '/terace/11.png','/terace/12.png',
+      
+     
 ];
 
 export default function Gallery() {
@@ -58,13 +129,14 @@ export default function Gallery() {
                                     <h2 className="text-3xl font-bold text-center mb-6 italic text-[#784420] font-serif">Rooms</h2>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mb-12">
                                           {roomImages.map((src, i) => (
-                                                <img
-                                                      key={i}
-                                                      src={src}
-                                                      alt={`Room ${i}`}
-                                                      className="cursor-pointer rounded shadow hover:scale-105 transition-transform"
-                                                      onClick={() => openModal(roomImages, i)}
-                                                />
+                                                <div key={i} className="aspect-[4/3] h-[300px] w-full">
+                                                      <img
+                                                            src={src}
+                                                            alt={`Room ${i}`}
+                                                            className="cursor-pointer rounded shadow hover:scale-105 transition-transform w-full h-full object-cover"
+                                                            onClick={() => openModal(roomImages, i)}
+                                                      />
+                                                </div>
                                           ))}
                                     </div>
                               </>
@@ -74,13 +146,14 @@ export default function Gallery() {
                                     <h2 className="text-3xl font-bold text-center mb-6 italic text-[#784420] font-serif">Apartments</h2>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
                                           {apartmentImages.map((src, i) => (
-                                                <img
-                                                      key={i}
-                                                      src={src}
-                                                      alt={`Apartment ${i}`}
-                                                      className="cursor-pointer rounded shadow hover:scale-105 transition-transform"
-                                                      onClick={() => openModal(apartmentImages, i)}
-                                                />
+                                                <div key={i} className="aspect-[4/3] h-[300px] w-full">
+                                                      <img
+                                                            src={src}
+                                                            alt={`Apartment ${i}`}
+                                                            className="cursor-pointer rounded shadow hover:scale-105 transition-transform w-full h-full object-cover"
+                                                            onClick={() => openModal(apartmentImages, i)}
+                                                      />
+                                                </div>
                                           ))}
                                     </div>
                               </>

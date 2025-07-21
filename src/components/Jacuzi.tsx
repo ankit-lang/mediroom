@@ -17,12 +17,23 @@ const amenities = [
       "Room Service", "Laundry Service", "In room dining", "Private Pool",
       "Separate Living Room"
 ];
-const images = [
-      "/assests/28.jpg",
-      "/assests/82.jpg",
-      "/assests/27.jpeg",
-];
 
+
+const images = [
+            "/terace/1.png",
+            "/terace/2.png",
+            "/terace/3.png",
+            "/terace/4.png",
+            '/terace/5.png',
+            '/terace/6.png',
+            "/terace/7.png",
+            "/terace/8.png",
+            "/terace/9.png",
+            "/terace/10.png",
+            "/terace/11.png",
+            "/terace/12.png",
+            
+      ];
 
 const rooms = [
       {
@@ -116,6 +127,9 @@ const specialGuestServiceIcons: { [key: string]: JSX.Element } = {
   "Car Hire & Airport Transfers": <FaCar className="text-[#784420] mr-2" />,
   "Concierge & 24×7 Support Team": <FaConciergeBell className="text-[#784420] mr-2" />,
 };
+      const goToSlide = (slideIndex: number) => {
+            setIndex(slideIndex);
+      };
       return (
             <>
                   <div className="">
@@ -172,7 +186,22 @@ const specialGuestServiceIcons: { [key: string]: JSX.Element } = {
                                     <ChevronRight className="w-5 h-5" />
                               </button>
                         </div>
-                        <div className="m-auto text-center ">
+                        {/* Pagination Dots */}
+                        <div className="flex justify-center gap-2 mt-4 flex-wrap max-w-[80vw] mx-auto mb-4">
+                              {images.map((_, idx) => (
+                                    <button
+                                          key={idx}
+                                          onClick={() => goToSlide(idx)}
+                                          className={`h-2 w-2 rounded-full transition-all ${
+                                                idx === index 
+                                                ? "bg-[#784420] w-4" 
+                                                : "bg-[#784420]/40"
+                                          }`}
+                                          aria-label={`Go to slide ${idx + 1}`}
+                                    />
+                              ))}
+                        </div>
+                        <div className="m-auto text-center">
                               {/* <button className="bg-[#073937] hover:bg-green-600 text-lg text-white !py-2 !px-10 rounded">
                                     Book Now
                               </button> */}

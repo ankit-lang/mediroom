@@ -5,16 +5,15 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Link } from "react-router-dom";
 
 const images = [
-      "/rooms/3bhkd851leftside.jpg",
-      "/rooms/3bhkd851newfriend.jpg",
-      "/rooms/4bhknewfriendd851.jpg",
-      "/rooms/5bhkduplex.jpg",
-      "/rooms/maharaja1floor1097.jpg",
-      "/rooms/201.JPG",
-      "/rooms/202.JPG",
-      "rooms/d826.jpg",
-      "/rooms/diptee.JPG",
-      "rooms/room101.jpg"
+      "/4bhk/2.jpg",
+      "/3bhk/2.jpg",
+      "/1bhk/3.jpg",
+      "/4bhk/4.jpg",
+      "/2bhk/7.jpg",
+      "/studio/6.png",
+      "/terace/9.png",
+      "/rooms/d826.jpg",
+      
 ];
 
 const RoomsSection = () => {

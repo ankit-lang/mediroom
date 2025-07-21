@@ -39,9 +39,63 @@ const specialGuestServices = [
 ];
 
 const images = [
-      "/assests/28.jpg",
-      "/assests/82.jpg",
-      "/assests/27.jpeg",
+      "/4bhk/1.jpg",
+      "/4bhk/2.jpg",
+
+      "/4bhk/3.jpg",
+      "/4bhk/4.jpg",
+      "/4bhk/5.jpg",
+      "/4bhk/6.jpg",
+      "/4bhk/7.jpg",
+      "/4bhk/8.jpg",
+      "/4bhk/9.jpg",
+      "/4bhk/10.jpg",
+      "/4bhk/11.jpg",
+      "/4bhk/12.jpg",
+      "/4bhk/13.jpg",
+      "/4bhk/14.jpg",
+      "/4bhk/15.jpg",
+      "/4bhk/16.jpg",
+      "/4bhk/17.jpg",
+      "/4bhk/18.jpg",
+      "/4bhk/19.jpg",
+      "/4bhk/20.jpg",
+      "/4bhk/21.jpg",
+      "/4bhk/22.jpg",
+      "/4bhk/23.jpg",
+      "/4bhk/24.jpg",
+      // "/4bhk/25.jpg",
+      "/4bhk/26.jpg",
+      "/4bhk/27.jpg",
+      "/4bhk/28.jpg",
+
+      "/4bhk/29.jpg",
+      "/4bhk/30.jpg",
+      "/4bhk/31.jpg",
+      "/4bhk/32.jpg",
+      "/4bhk/33.jpg",
+      "/4bhk/34.jpg",
+      "/4bhk/35.jpg",
+      "/4bhk/36.jpg",
+      "/4bhk/37.jpg",
+      // "/4bhk/38.jpg",
+      "/4bhk/39.jpg",
+
+      "/4bhk/40.jpg",
+      "/4bhk/41.jpg",
+
+      "/4bhk/42.jpg",
+      "/4bhk/43.jpg",
+      "/4bhk/44.jpg",
+      "/4bhk/45.jpg",
+      "/4bhk/46.jpg",
+      "/4bhk/47.jpg",
+      "/4bhk/48.jpg",
+      "/4bhk/49.jpg",
+      "/4bhk/50.jpg",
+      "/4bhk/51.jpg",
+
+      
 ];
 
 
@@ -136,6 +190,10 @@ export default function Villa() {
         "Concierge & 24×7 Support Team": <FaConciergeBell className="text-[#784420] mr-2" />,
       };
 
+      const goToSlide = (slideIndex: number) => {
+            setIndex(slideIndex);
+      };
+      
       return (
             <>
                   <div className="">
@@ -191,6 +249,21 @@ export default function Villa() {
                               >
                                     <ChevronRight className="w-5 h-5" />
                               </button>
+                        </div>
+                        {/* Pagination Dots */}
+                        <div className="flex justify-center gap-2 mt-4 flex-wrap max-w-[80vw] mx-auto">
+                              {images.map((_, idx) => (
+                                    <button
+                                          key={idx}
+                                          onClick={() => goToSlide(idx)}
+                                          className={`h-2 w-2 rounded-full transition-all ${
+                                                idx === index 
+                                                ? "bg-[#784420] w-4" 
+                                                : "bg-[#784420]/40"
+                                          }`}
+                                          aria-label={`Go to slide ${idx + 1}`}
+                                    />
+                              ))}
                         </div>
                         <div className="m-auto text-center ">
                               {/* <button className="bg-[#073937] hover:bg-green-600 text-white !py-3 !px-10 rounded">

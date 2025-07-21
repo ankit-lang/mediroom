@@ -53,6 +53,97 @@ const rooms = [
 
 export default function Executive() {
       const [language, setLanguage] = useState<'en' | 'ar'>('en');
+      const [apartmentType, setApartmentType] = useState<'1bhk' | '2bhk' | '3bhk'>('2bhk');
+
+      const oneBhkImages = [
+            "/1bhk/1.jpg",
+            "/1bhk/2.jpg",
+            "/1bhk/3.jpg",
+            "/1bhk/4.jpg",
+            "/1bhk/5.jpg",
+            "/1bhk/6.jpg",
+            '1bhk/7.jpg',
+            '1bhk/8.jpg',
+            '1bhk/9.jpg',
+            '1bhk/10.jpg',
+            '1bhk/11.jpg',
+            '1bhk/12.jpg',
+            '1bhk/13.jpg',
+            '1bhk/14.jpg',
+            '1bhk/15.jpg',
+            '1bhk/16.jpg',
+            '1bhk/17.jpg',
+            '1bhk/18.jpg',
+            '1bhk/19.jpg',
+            '1bhk/20.jpg',
+            '1bhk/21.jpg',
+            '1bhk/22.jpg',
+            '1bhk/23.jpg',
+           
+      ];
+
+      const twoBhkImages = [
+            // "/2bhk/1.jpg",
+            "/2bhk/2.jpg",
+            "/2bhk/3.jpg",
+            "/2bhk/4.jpg",
+            "/2bhk/5.jpg",
+            "/2bhk/6.jpg",
+            "/2bhk/7.jpg",
+            "/2bhk/8.jpg",
+            "/2bhk/9.jpg",
+            "/2bhk/10.jpg",
+            "/2bhk/11.jpg",
+            "/2bhk/12.jpg",
+            "/2bhk/13.jpg",
+            "/2bhk/14.jpg",
+            "/2bhk/15.jpg",
+            "/2bhk/16.jpg",
+            "/2bhk/17.jpg",
+            "/2bhk/18.jpg",
+            "/2bhk/19.jpg",
+            "/2bhk/20.jpg",
+            "/2bhk/21.jpg",
+            '/2bhk/22.jpg',
+            '/2bhk/23.jpg',
+            '/2bhk/24.jpg',
+            '/2bhk/25.jpg',
+            '/2bhk/26.jpg',
+            '/2bhk/27.jpg',
+            '/2bhk/28.jpg',
+            '/2bhk/29.jpg',
+           
+      ];
+
+      const threeBhkImages = [
+            "/3bhk/1.jpg",
+            '/3bhk/2.jpg',
+            '/3bhk/3.jpg',
+            '/3bhk/4.jpg',
+            '/3bhk/5.jpg',
+            '/3bhk/6.jpg',
+            '/3bhk/7.jpg',
+            '/3bhk/8.jpg',
+            '/3bhk/9.jpg',
+            '/3bhk/10.jpg',
+            '/3bhk/11.jpg',
+            '/3bhk/12.jpg',
+            '/3bhk/13.jpg',
+            '/3bhk/14.jpg',
+            '/3bhk/15.jpg',
+            '/3bhk/16.jpg',
+            '/3bhk/17.jpg',
+            '/3bhk/18.jpg',
+            '/3bhk/19.jpg',
+            '/3bhk/20.jpg',
+            '/3bhk/21.jpg',
+            
+      ];
+
+      const images = 
+            apartmentType === '1bhk' ? oneBhkImages :
+            apartmentType === '2bhk' ? twoBhkImages :
+            threeBhkImages;
 
       const toggleLanguage = () => {
 
@@ -66,7 +157,11 @@ export default function Executive() {
       const nextSlide = () => {
             setIndex((index + 1) % images.length);
       };
-        const demoItems = [
+      const goToSlide = (slideIndex: number) => {
+            setIndex(slideIndex);
+      };
+
+      const demoItems = [
   { link: '/rooms/villa-4bhk', text: 'Villa 4BHK', image: '/rooms/3bhkd851leftside.jpg' },
   { link: '/rooms/apartment-3bhk-2bhk', text: 'Apartment 3BHK & 2BHK', image: '/rooms/201.JPG' },
   { link: '/rooms/studio-terrace-apartments', text: 'Studio & Terrace Apartments', image: '/rooms/202.JPG' },
@@ -148,9 +243,18 @@ const specialGuestServiceIcons: { [key: string]: JSX.Element } = {
                         </div>
                         <h2 className="text-2xl md:text-3xl text-center font-semibold italic underline text-[#073937] mb-10">
                            Apartment 3BHK & 2BHK 
-
-
                         </h2>
+                        <div className="flex justify-center mb-4">
+                              <select
+                                    value={apartmentType}
+                                    onChange={(e) => setApartmentType(e.target.value as '1bhk' | '2bhk' | '3bhk')}
+                                    className="p-2 border rounded bg-white text-[#784420]"
+                              >
+                                    <option value="1bhk">1 BHK</option>
+                                    <option value="2bhk">2 BHK</option>
+                                    <option value="3bhk">3 BHK</option>
+                              </select>
+                        </div>
                         <div className="relative w-full m-auto mb-12 lg:w-[60vw] h-[400px] overflow-hidden">
                               <img
                                     src={images[index]}
@@ -171,6 +275,21 @@ const specialGuestServiceIcons: { [key: string]: JSX.Element } = {
                               >
                                     <ChevronRight className="w-5 h-5" />
                               </button>
+                        </div>
+                        {/* Pagination Dots */}
+                        <div className="flex justify-center gap-2 mt-4 flex-wrap max-w-[80vw] mx-auto">
+                              {images.map((_, idx) => (
+                                    <button
+                                          key={idx}
+                                          onClick={() => goToSlide(idx)}
+                                          className={`h-2 w-2 rounded-full transition-all ${
+                                                idx === index 
+                                                ? "bg-[#784420] w-4" 
+                                                : "bg-[#784420]/40"
+                                          }`}
+                                          aria-label={`Go to slide ${idx + 1}`}
+                                    />
+                              ))}
                         </div>
                         <div className="m-auto text-center ">
                               {/* <button className="bg-[#073937] hover:bg-green-600 text-white !py-3 !px-10 rounded">

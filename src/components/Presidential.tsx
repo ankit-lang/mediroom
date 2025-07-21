@@ -53,11 +53,50 @@ const rooms = [
 
 export default function Presidential() {
       const [language, setLanguage] = useState<'en' | 'ar'>('en');
+      const [imageType, setImageType] = useState<'studio' | 'terrace'>('studio');
+
+      const studioImages = [
+            "/studio/1.png",
+            "/studio/2.png",
+            "/studio/3.png",
+            "/studio/4.png",
+            '/studio/5.png',
+            '/studio/6.png',
+            "/studio/7.png",
+            "/studio/8.png",
+            "/studio/9.png",
+            "/studio/10.png",
+            "/studio/11.png",
+
+
+      ];
+
+      const terraceImages = [
+            "/terace/1.png",
+            "/terace/2.png",
+            "/terace/3.png",
+            "/terace/4.png",
+            '/terace/5.png',
+            '/terace/6.png',
+            "/terace/7.png",
+            "/terace/8.png",
+            "/terace/9.png",
+            "/terace/10.png",
+            "/terace/11.png",
+            "/terace/12.png",
+            
+      ];
+
+      const images = imageType === 'studio' ? studioImages : terraceImages;
 
       const toggleLanguage = () => {
 
       };
       const [index, setIndex] = useState(0);
+
+      const goToSlide = (slideIndex: number) => {
+            setIndex(slideIndex);
+      };
 
       const prevSlide = () => {
             setIndex((index - 1 + images.length) % images.length);
@@ -148,9 +187,17 @@ export default function Presidential() {
                                                </div>
                         <h2 className="text-2xl md:text-3xl text-center font-semibold italic underline  text-[#073937] mb-10">
                               Studio & Terrace Apartments
-
-
                         </h2>
+                        <div className="flex justify-center mb-4">
+                              <select
+                                    value={imageType}
+                                    onChange={(e) => setImageType(e.target.value as 'studio' | 'terrace')}
+                                    className="p-2 border rounded"
+                              >
+                                    <option value="studio">Studio</option>
+                                    <option value="terrace">Terrace</option>
+                              </select>
+                        </div>
                         <div className="relative w-full m-auto mb-12 lg:w-[60vw] h-[400px] overflow-hidden">
                               <img
                                     src={images[index]}
@@ -172,18 +219,33 @@ export default function Presidential() {
                                     <ChevronRight className="w-5 h-5" />
                               </button>
                         </div>
-                        <div className="m-auto text-center ">
-                              {/* <button className="bg-[#073937] hover:bg-green-600 text-white !py-3 !px-10 rounded">
-                                    Book Now
-                              </button> */}
+                        {/* Pagination Dots */}
+                        <div className="flex justify-center gap-2 mt-4 flex-wrap max-w-[80vw] mx-auto mb-4">
+                              {images.map((_, idx) => (
+                                    <button
+                                          key={idx}
+                                          onClick={() => goToSlide(idx)}
+                                          className={`h-2 w-2 rounded-full transition-all ${
+                                                idx === index 
+                                                ? "bg-[#784420] w-4" 
+                                                : "bg-[#784420]/40"
+                                          }`}
+                                          aria-label={`Go to slide ${idx + 1}`}
+                                    />
+                              ))}
                         </div>
-                        <div className="text-[14px] md:text-lg mt-5 text-center   md:px-20 ">
-                        
-Cozy, fully-equipped studio units and terrace apartments for solo travelers, couples, or short-term official assignments.
-
+                        <div className="m-auto text-center">
+                              {/* Book Now button commented out for now */}
                         </div>
-                        <div className=" py-8 mt-5 mx-10">
-                              <h2 className="text-center md:!text-5xl text-xl font-semibold italic  mb-6">Amenities</h2>
+                        <div className="text-[14px] md:text-lg mt-5 text-center md:px-20">
+                              <p>
+                                    Cozy, fully-equipped studio units and terrace apartments for solo travelers, couples, or short-term official assignments.
+                              </p>
+                        </div>
+                        <div className="py-8 mt-5 mx-10">
+                              <h2 className="text-center md:!text-5xl text-xl font-semibold italic mb-6">
+                                    Amenities
+                              </h2>
                               <div className="flex flex-col md:flex-row md:justify-center gap-12">
                                     <ul className="list-disc list-inside px-5 space-y-2 md:w-1/2">
                                           {left.map((item, idx) => (
@@ -203,11 +265,11 @@ Cozy, fully-equipped studio units and terrace apartments for solo travelers, cou
                                     </ul>
                               </div>
                         </div>
-                        {/* Special Guest Services (add if needed) */}
+                        {/* Special Guest Services */}
                         <div className="mt-8 ml-4">
-                          <h3 className="pl-4 text-2xl font-semibold  mb-4">Special Guest Services</h3>
-                          <ul className="list-disc list-inside px-5 space-y-2 max-w-2xl ">
-                            { [
+                          <h3 className="pl-4 text-2xl font-semibold mb-4">Special Guest Services</h3>
+                          <ul className="list-disc list-inside px-5 space-y-2 max-w-2xl">
+                            {[
                               "Personal Cook & Driver",
                               "Translator Services",
                               "FRRO Registration Assistance",
@@ -222,9 +284,6 @@ Cozy, fully-equipped studio units and terrace apartments for solo travelers, cou
                             ))}
                           </ul>
                         </div>
-
-
-
                   </div>
                   <WhatsAppButton language={language} />
                   <Footer language={language} />
