@@ -114,11 +114,11 @@ export default function Presidential() {
             { name: "Presidential Family Suite", url: "/rooms/presidential-family-suite" },
             { name: "Two Bedroom Villa With Private Pool", url: "/rooms/two-bedroom-villa-with-private-pool" },
       ];
-       const demoItems = [
-  { link: '/rooms/villa-4bhk', text: 'Villa 4BHK', image: '/rooms/3bhkd851leftside.jpg' },
-  { link: '/rooms/apartment-3bhk-2bhk', text: 'Apartment 3BHK & 2BHK', image: '/rooms/201.JPG' },
-  { link: '/rooms/studio-terrace-apartments', text: 'Studio & Terrace Apartments', image: '/rooms/202.JPG' },
-  { link: '/rooms/party-apartments', text: 'Party Apartments', image: '/rooms/d826.jpg' },
+        const demoItems = [
+  { link: '/rooms/villa-4bhk', text: 'Villa 4BHK', image: '/4bhk/1.jpg' },
+  { link: '/rooms/apartment-3bhk-2bhk', text: 'Apartment 3BHK & 2BHK', image: '/2bhk/9.jpg' },
+  { link: '/rooms/studio-terrace-apartments', text: 'Studio & Terrace Apartments', image: '/studio/6.png' },
+  { link: '/rooms/party-apartments', text: 'Party Apartments', image: '/terace/8.png' },
 //   { link: '/rooms/independent-rooms', text: 'Independent Rooms', image: '/rooms/d826.jpg' }
 ];
       const mid = Math.ceil(amenities.length / 2);
@@ -161,9 +161,12 @@ export default function Presidential() {
                         <Navbar language={language} toggleLanguage={toggleLanguage} />
                   </div>
                  
+                  <div style={{  position: 'relative' }}>
+                                     <FlowingMenu items={demoItems} />
+                                   </div>
 
-                        <div className="py-12 px-4 bg-white pt-32 ">
-                        <div className="  mb-5  ">
+                        <div className="py-12 px-4 bg-white  ">
+                        {/* <div className="  mb-5  ">
                                                      <div className="flex flex-wrap justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
                                                            
                                                          {demoItems.map((item, idx) => (
@@ -182,9 +185,9 @@ export default function Presidential() {
                                                              {item.text}
                                                            </NavLink>
                                                          ))}
-                                                       </div>
+                                                       </div> */}
                                                    
-                                               </div>
+                                               {/* </div> */}
                         <h2 className="text-2xl md:text-3xl text-center font-semibold italic underline  text-[#073937] mb-10">
                               Studio & Terrace Apartments
                         </h2>

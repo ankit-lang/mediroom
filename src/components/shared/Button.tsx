@@ -42,7 +42,7 @@ const StyledWrapper = styled.div`
   button {
     position: relative;
     padding: 8px 45px;
-    background: #866b1a;
+    background: #F57E5F;
     font-size: 17px;
     font-weight: 500;
     color: white;
@@ -53,7 +53,7 @@ const StyledWrapper = styled.div`
   }
 
   button:hover {
-   background: #866b1a !important;
+     scale: 1.05;
   
     animation: wind 2s ease-in-out infinite;
   }

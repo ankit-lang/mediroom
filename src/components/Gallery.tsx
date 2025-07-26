@@ -112,16 +112,24 @@ export default function Gallery() {
             <>
                   <Navbar language={language} toggleLanguage={toggleLanguage} />
                   <div className="p-6 pt-32">
-                        {/* Section Navigation Dropdown */}
+                        {/* Section Navigation Tabs */}
                         <div className="flex justify-center mb-8">
-                              <select
-                                    value={section}
-                                    onChange={e => setSection(e.target.value as 'rooms' | 'apartments')}
-                                    className="px-4 py-2 rounded border border-[#784420] text-[#784420] font-semibold"
+                              <button
+                                    onClick={() => setSection('rooms')}
+                                    className={`px-4 py-2 mx-2 rounded font-semibold ${
+                                          section === 'rooms' ? 'bg-[#F57E5F] text-white' : 'bg-gray-200 text-gray-700'
+                                    }`}
                               >
-                                    <option value="rooms">Rooms</option>
-                                    <option value="apartments">Apartments</option>
-                              </select>
+                                    Rooms
+                              </button>
+                              <button
+                                    onClick={() => setSection('apartments')}
+                                    className={`px-4 py-2 mx-2 rounded font-semibold ${
+                                          section === 'apartments' ? 'bg-[#F57E5F] text-white' : 'bg-gray-200 text-gray-700'
+                                    }`}
+                              >
+                                    Apartments
+                              </button>
                         </div>
                         {/* Section Content */}
                         {section === 'rooms' && (

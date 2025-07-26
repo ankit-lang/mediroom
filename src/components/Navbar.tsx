@@ -102,12 +102,12 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
   return (
     <>
       <nav
-        className={`fixed w-full z-50 top-0 transition-all duration-300 bg-white/80 backdrop-blur-md shadow-md py-3 border-b border-olive/10 text-[#2d2a22]`}
+        className={`fixed w-full z-50 top-0 transition-all duration-300 bg-white/80 backdrop-blur-md shadow-md py-2 border-b border-olive/10 text-[#2d2a22]`}
       >
         <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 text-3xl font-bold text-[#2d2a22]">
-            <img src="/assests/logo.jpg" alt="Logo" className="w-12 h-12 rounded-full shadow border-2 border-gold" />
+          <a href="/" className="flex items-center gap-2 text-[35px] font-bold text-[#2d2a22]">
+            <img src="/assests/logo.jpg" alt="Logo" className="w-14 h-14 rounded-full shadow border-2 border-gold" />
             <span className="hidden sm:inline !font-poppins tracking-wide">Moydom</span>
           </a>
 
@@ -282,7 +282,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
               <div className="md:col-span-2 text-right">
                 <button
                   type="submit"
-                  className="bg-[#784420] relative z-[1000] text-white px-4 py-2 rounded hover:bg-[#784420] transition-colors duration-300"
+                  className="bg-orange-600 relative z-[1000] text-white px-4 py-2 rounded hover:bg-orange-800 transition-colors duration-300"
                   disabled={loading}
                 >
                   {loading ? (

@@ -22,7 +22,7 @@ const StyledWrapper = styled.div`
 //     border-radius:5px;
     font-size: 14px;
     position: relative;
-    font-family: inherit;
+    font-family: 'Times New Roman', serif;
     background: transparent;
     cursor: pointer;
   }

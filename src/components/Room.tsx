@@ -77,11 +77,13 @@ export default function RoomShowcase() {
                   </div> */}
                   
                         
-                 
+                 <div style={{  position: 'relative' }}>
+  <FlowingMenu items={demoItems} />
+</div>
 
-                  <div className="py-12 px-4 bg-white  pt-20  ">
-                        <div className="  mb-5 py-6   ">
-                              <div className="flex flex-wrap justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
+                  <div className="py-12 px-4 bg-white " style={{ fontFamily: "'Times New Roman', serif" }}>
+                        {/* <div className="  mb-5 py-6   "> */}
+                              {/* <div className="flex flex-wrap justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
     {demoItems.map((item, idx) => (
       <NavLink
         key={idx}
@@ -98,8 +100,8 @@ export default function RoomShowcase() {
         {item.text}
       </NavLink>
     ))}
-  </div>
-                              </div>
+  </div> */}
+                              {/* </div> */}
                         
                         <h2 className="text-2xl md:text-3xl text-center font-semibold italic text-[#784420] underline mb-10">
                               Rooms In MoyDom
@@ -140,4 +142,4 @@ export default function RoomShowcase() {
             </>
       );
 }
-     
+

@@ -161,11 +161,11 @@ export default function Executive() {
             setIndex(slideIndex);
       };
 
-      const demoItems = [
-  { link: '/rooms/villa-4bhk', text: 'Villa 4BHK', image: '/rooms/3bhkd851leftside.jpg' },
-  { link: '/rooms/apartment-3bhk-2bhk', text: 'Apartment 3BHK & 2BHK', image: '/rooms/201.JPG' },
-  { link: '/rooms/studio-terrace-apartments', text: 'Studio & Terrace Apartments', image: '/rooms/202.JPG' },
-  { link: '/rooms/party-apartments', text: 'Party Apartments', image: '/rooms/d826.jpg' },
+        const demoItems = [
+  { link: '/rooms/villa-4bhk', text: 'Villa 4BHK', image: '/4bhk/1.jpg' },
+  { link: '/rooms/apartment-3bhk-2bhk', text: 'Apartment 3BHK & 2BHK', image: '/2bhk/9.jpg' },
+  { link: '/rooms/studio-terrace-apartments', text: 'Studio & Terrace Apartments', image: '/studio/6.png' },
+  { link: '/rooms/party-apartments', text: 'Party Apartments', image: '/terace/8.png' },
 //   { link: '/rooms/independent-rooms', text: 'Independent Rooms', image: '/rooms/d826.jpg' }
 ];
       const links = [
@@ -217,9 +217,12 @@ const specialGuestServiceIcons: { [key: string]: JSX.Element } = {
                         <Navbar language={language} toggleLanguage={toggleLanguage} />
                   </div>
                  
+                  <div style={{  position: 'relative' }}>
+                    <FlowingMenu items={demoItems} />
+                  </div>
 
-                  <div className="py-12 px-4  pt-32  bg-white">
-                        <div className="  mb-5  ">
+                  <div className="py-12 px-4   bg-white">
+                        {/* <div className="  mb-5  ">
                               <div className="flex flex-wrap justify-center gap-4 md:gap-12 md:flex-row flex-col text-center">
                                     
                                   {demoItems.map((item, idx) => (
@@ -240,7 +243,7 @@ const specialGuestServiceIcons: { [key: string]: JSX.Element } = {
                                   ))}
                                 </div>
                             
-                        </div>
+                        </div> */}
                         <h2 className="text-2xl md:text-3xl text-center font-semibold italic underline text-[#073937] mb-10">
                            Apartment 3BHK & 2BHK 
                         </h2>
