@@ -7,6 +7,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'custom';
+  src: url("/custum.woff2");
+}
 
 .custom-shape-divider-bottom-1750753938 {
   position: absolute;
@@ -53,7 +57,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-family: 'Times New Roman', serif;
+    /* font-family: custom !important; */
     background: white;
 
     /* font-style: italic; */
@@ -66,7 +70,7 @@
   }
 
   body * {
-    font-family: 'Times New Roman', serif !important;
+    font-family:  custom, serif !important;
   }
 
   h1,

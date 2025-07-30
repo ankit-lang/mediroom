@@ -127,7 +127,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
                   onMouseLeave={() => setHovered(null)}
                   onClick={() => setHovered(link.href)}
                 >
-                  <span className="relative z-10">{link.name}</span>
+                  <span className="relative font-semibold z-10">{link.name}</span>
                 </Link>
               );
             })}

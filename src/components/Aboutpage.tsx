@@ -64,7 +64,7 @@ export default function Aboutpage() {
         transition={{ duration: 0.6 }}
         className="text-center mb-12 mt-5"
       >
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#F57E5F]">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#744A29]">
          <SplitText text={ "About Us"} />
         </h2>
         <section className="bg-white text-gray-800 px-6 py-12 md:px-16 md:py-20">
